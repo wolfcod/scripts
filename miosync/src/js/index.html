@@ -1,0 +1,3404 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--[if lt IE 7]> 				<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="ie ie6 lte9 lte8 lte7">	<![endif]-->
+<!--[if IE 7]>					<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="ie ie7 lte9 lte8 lte7">	<![endif]-->
+<!--[if IE 8]>					<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="ie ie8 lte9 lte8">		<![endif]-->
+<!--[if IE 9]>					<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="ie ie9 lte9">				<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<!--<![endif]-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=1024" />
+		<title>Welcome to MioShare</title>
+       			<link rel="stylesheet" href="js/zebra/public/css/zebra_form.css">
+		<link type="text/css" rel="stylesheet" href="css/style.css?1.0.6" />
+		<!--[if IE 7]>
+		<style>
+		.open_detail_page {
+			float:right;
+			position:absolute;
+			padding-left:50px;
+		};
+		
+		.subpage #content .fluid-right .tracks .track {
+			padding-right: 35px;
+		}
+		</style>
+		<![endif]-->
+		
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+		<link type="image/x-icon" rel="shortcut icon" href="http://eu.mio.com/favicon.ico" />
+
+        
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="js/respond.min.js"/></script>
+		<![endif]-->
+		
+		<link type="text/css" rel="stylesheet" href="css/hiders.css" />
+		<link type="text/css" rel="stylesheet" href="css/overrides.css" />
+                <link rel="stylesheet" href="js/sticky.min/sticky.min.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="js/map-update/css/jquery-ui-1.9.2.custom.css" />
+
+		<script type="text/javascript" language="javascript" src="js/map-update/js/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript" src="js/map-update/js/jquery-ui-1.9.2.min.js"></script>		
+
+				<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+		
+		<style>
+		.hidden { display: none };
+		</style>                <meta http-equiv='X-UA-Compatible' content='IE=9; requiresActiveX=true'> 
+	</head>
+	<body class="subpage browser_is_ie">
+       			
+  <!-- PAGE-HEADER -->
+      <div id="available_udpates_dialogDiv">
+			<div id ="available_udpates_dialogView" class="amu_dialog_view"></div>	
+			<div id ="available_udpates_dialogDetail" class="amu_dialog_detail"></div>	
+			<div id ="available_udpates_dialogGif" class="amu_dialog_gif"></div>
+			<div id ="available_udpates_dialogTip" class="amu_dialog_tip"></div>	
+		</div>
+		<div id="alert_message_dialogDiv" style="display:none;">
+			<div id="alert_message_dialogView" class="mapUpdate_confirmDialog_View" ></div>
+		</div>
+		<div id="confirm_message_dialogDiv" style="display:none;">
+			<div id="confirm_message_dialogView" class="mapUpdate_confirmDialog_View" ></div>
+		</div>
+		<div id="confirm_move_dialogDiv" style="display:none;">
+			<div id="confirm_move_dialogView" class="mapUpdate_confirmDialog_View" ></div>
+		</div>
+		<div id="confirm_health_check_dialogDiv" style="display:none;">
+			<div id="confirm_health_check_dialogView" class="mapUpdate_confirmDialog_View" ></div>
+		</div>
+    	<div id="confirm_mymaps_recovery_dialogDiv" style="display:none;">
+			<div id="confirm_mymaps_recovery_dialogView" class="mapUpdate_confirmDialog_View" ></div>
+		</div>
+
+		<div id="customers_own_devices" style="display:none;">
+  			
+		</div>
+     
+
+		<div id="ajax_container">
+		<!-- ajax_content_start -->
+		<div id="page">
+			<div id="page-header" class="navbar">
+      
+        <div id="unloginMapUpdateDiv" class="row-fluid menu" style="display:none;">
+          <div id="offLineMapUpdatebar">
+            <p class="pull-left"><a></a></p>
+            <p ><a class="pull-left" id="offLineMapUpdateUpdateNum"></a></p>
+            <p ><a class="pull-left" id="offLineMapUpdateUpdateName"></a></p>
+            <a id="offLineMapUpdateUpdateProcess" class="pull-left" onClick='doOfflineMapUpdateProcess();'> <i class="ico ico-arrow-right-white"></i>UPDATE NOW</a>
+            <a id="offLineMapUpdateUpdateCancel" class="pull-left"onClick='doOfflineMapUpdateCancel();'><i class="ico ico-arrow-right-white"></i>CANCEL</a>
+            <p class="pull-left">			
+               <input type="checkbox" name="offLineMapUpdateUpdateRemindCheckBox" id="offLineMapUpdateUpdateRemindCheckBox"value="1">Don’t remind me again            </p>
+          </div>		
+        </div>
+          
+        <div id="downloadProgressDiv" class="row-fluid menu" style="display:none;">
+            <div id="downloadProgressbar">
+              <p class="pull-left"><a>Downloading </a></p>
+                    <a class="pull-left" id="downloadNameFont"></a><a class="pull-left" id="downloadProcessFont"></a>
+                    <a id="downloadBarStatus" class="pull-left" href='#' onClick='doPauseDownload()'> <i class="ico ico-arrow-right-white"></i>PAUSE</a>
+                    <a id="downloadBarCancel" class="pull-left" href='#' onClick='doCancelDownload()'><i class="ico ico-arrow-right-white"></i>CANCEL</a>
+            </div>
+        </div>
+				<div class="row-fluid">
+					<h1 class="brand pull-left"><a href="landing_page.php" onclick="return loadPage('landing_page.php');">Mio</a></h1>
+					<!-- brand -->
+					<div class="row pull-right" style="display:inline-block!important;position: relative;">
+						
+						<div class="inline device_connected" style="margin:0; padding:0;float:left;">
+						
+						<div class="show_connected" style="float:left; background: url('img/sprite/ico-cell-dark-big.png') no-repeat; width:30px; height: 47px; padding:0; margin:0; margin-top: 20px; margin-right: 10px;" ></div>
+						<div class="show_reading show_syncing" style="float:left; background: url('img/sprite/ico-cell-dark-big-connected.png') no-repeat; width:30px; height: 47px; padding:0; margin:0; margin-top: 20px; margin-right: 10px;" ><img src="img/ajax-loader-2.gif" style="margin-left: 10px; margin-top:12px; width: 10px;" /></div>
+						
+						</div>
+						
+						<!-- divider -->
+						<div class="no_device_connected device pull-left divider-left">
+							<i class="ico ico-device_not_connected">Device not connected </i>
+							<p>
+								CONNECT YOUR DEVICE TO SYNC							</p>
+						</div>
+						<div class="device_connected device pull-left divider-left connected">						
+							<p><span class="connected_device_name">?</span> <span class="show_connected">connected</span><span class="show_reading">reading</span><span class="show_syncing">syncing</span></p>
+							<div class="progress">
+								<div class="bar bar-light-blue"></div>
+								<p class="percent">37%</p>
+							</div>
+							<a class="show_connected" href="device_page.php"><i class="ico ico-arrow-right">Arrow right</i>TRACKS ON DEVICE</a>
+                            </div>
+						<!-- device -->
+												<div class="account pull-left divider-left login">
+							<!--<a href="login.php" class="btn btn-orange btn-shadow">Log in</a>-->
+							<span onclick="return loadPage('login.php');" class="btn btn-orange btn-shadow">Log in</span>
+						</div>
+												<!-- account -->
+						
+						<div class="account pull-left divider-left" style=" display:block; width: 150px;">
+                         <div class="btn-group pull-right"  style="margin-top:5px;">
+                          <a href="#" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown" style="color:#ccc;"><i class="icon-flag icon-white"></i> Select language </a>
+                          <a href="#" data-toggle="dropdown" class="btn dropdown-toggle btn-inverse"><span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+							<li><a href="?language=da" class="ignore">Dansk</a></li>
+                            <li class="divider"></li>
+							<li><a href="?language=de" class="ignore">Deutsch</a></li>
+                            <li class="divider"></li>
+							<li><a href="?language=en" class="ignore">English</a></li>
+                            <li class="divider"></li>
+                            <li><a href="?language=es" class="ignore">Español</a></li>
+                            <li class="divider"></li>
+                            <li><a href="?language=fr" class="ignore">Français</a></li>
+                            <li class="divider"></li>
+                            <li><a href="?language=it" class="ignore">Italiano</a></li>
+                            <li class="divider"></li>
+                            <li><a href="?language=nl" class="ignore">Nederlands</a></li>
+                            <li class="divider"></li>
+							<li><a href="?language=no" class="ignore">Norsk</a></li>
+                            <li class="divider"></li>
+							<li><a href="?language=fi" class="ignore">Suomi</a></li>
+                            <li class="divider"></li>
+							<li><a href="?language=sv" class="ignore">Svenska</a></li>
+                            <li class="divider"></li>
+							<li><a href="?language=bg" class="ignore">?????????</a></li>
+							<li class="divider"></li>
+							<li><a href="?language=ca" class="ignore">Català</a></li>
+							<li class="divider"></li>
+							<li><a href="?language=et" class="ignore">Eesti keel</a></li>
+							<li class="divider"></li>
+							<li><a href="?language=lv" class="ignore">Latviešu valoda</a></li>
+							<li class="divider"></li>
+							<li><a href="?language=lt" class="ignore">Lietuviu kalba</a></li>
+							<li class="divider"></li>
+							<li><a href="?language=ru" class="ignore">???????</a></li>
+							<li class="divider"></li>
+							<li><a href="?language=sr" class="ignore">Srpski</a></li>
+							<li class="divider"></li>
+                            <li><a href="?language=zh-tw" class="ignore">???</a></li>
+							<li class="divider"></li>
+							<li><a href="?language=zh-ch" class="ignore">???</a></li>
+                          </ul>
+                        </div>
+						</div>
+					</div>
+				</div>
+				
+<div id="sync_overlay" class="non_canvas_sync_overlay" style="">
+	<img src="img/ajax-loader.gif" />
+	<b>Uploading <span class="uploading_recordings_number"> </span>  recording(s) to your MioShare account, syncing  <span class="syncing_tracks_number"> </span>   saved track(s) to your device.</b> <a href="dashboard.php">Go to dashboard to take a look</a>
+</div>				<!-- row-fluid -->
+                <div class="row-fluid menu show_in_ie windows" style="display:none;">
+					<p class="pull-left">To be able to use MioShare you will first need to install a browser plugin</p>
+					<a class="pull-left" href="http://download.mio.com/MioCyclo/Plugin/setup_1.0.27.1.exe">
+						<i class="ico ico-arrow-right-white"></i>Please download it from here</a>
+				</div>
+				<div class="row-fluid menu show_in_ie mac" style="display:none;">
+					<p class="pull-left">To be able to use MioShare you will first need to install a browser plugin</p>
+					<a class="pull-left" href="http://download.mio.com/MioCyclo/Plugin/mioPlugin_1.0.24.3.dmg">
+						<i class="ico ico-arrow-right-white"></i>Please download it from here</a>
+				</div>
+			</div>
+			<!-- PAGE-HEADER -->
+			<div id="baner" class="carousel slide row-fluid">
+				<div class="carousel-inner span12">
+					<div class="active item ">
+						<img src="http://eu.mio.com/cyclo/sandbox/web/v3/img/pic.biker.jpg" alt="Biker background" style="visibility:hidden"  />
+						<div id="ajax_content" class="container">
+							<div class="hero-unit span12">
+      							<img src="http://eu.mio.com/cyclo/sandbox/web/v3/img/pic.cyclos.png" alt="Mio Cyclo"  style="float:left;" />
+								
+								<div class="show_in_not_ie bottom offset5" style="padding:0">
+								
+									<h2>MioShare</h2>
+                                    <h3>Keep track of your recordings</h3>
+                                    
+									<div class="text not_support_win" style="display:none;"><span class="transparent-bg">We're very sorry but <strong>MioShare currently does not support your browser.</strong><br />
+		   Please use Internet Explorer (32-bit) to get access.<br />
+           <strong>Alternatively you can use the MioShare desktop application to access MioShare. </strong>Please check the Quick Start Guide that came with your device on how to do that.</span></div>
+									<div class="text not_support_mac" style="display:none;">
+										<span class="transparent-bg">
+											We're very sorry but <strong>MioShare currently does not support your browser.</strong><br />
+											Please use Safari to get access.<br />
+											<strong/>
+											<strong/>
+										</span>
+									</div>
+									<div class="row-fluid update_win" style="display:none;">
+                                        <hr/>
+											<h4 style="color:#FFFFFF;">Important message before installing the new Mio Cyclo v2</h4>
+											<span style="color:#fff;font-size:14px;">Please make sure that the latest MioShare desktop application 2.24 is installed before updating to the Mio Cyclo v2 software. You can install this version via 
+											<a href="http://download.mio.com/MioCyclo/GPST/setup.exe"><b style="color:#FFFFFF;">this link MioShare 2.24</b></a>
+											</span>
+                                   	</div>
+									<div class="row-fluid update_mac" style="display:none;">
+                                        <hr/>
+										<span style="color:red;font-size:14px;display:none;" class="update_mac">It is not yet possible to update your Mio Cyclo device using a MAC computer. This tool is currently being developed and will soon be available.</span>
+										</span>
+                                   	</div>
+								</div>
+                                <div class="show_in_ie bottom offset5" style="padding:0; position:relative; margin-top: 5%;">
+									<h2 style="line-height:40px">MioShare</h2>
+                                    <h3>Keep track of your recordings</h3>
+                                    <div class="text">MioShare allows you to <strong>store your tracks</strong> recorded with the MioCyclo devices safely in the cloud. <br />
+You can also <strong>search trough thousands of tracks</strong> already stored using the nicest bike paths. Or why not <strong>create a track yourself?</strong></div>
+                                    <div class="plugin_not_installed text" style="display:none;"><span class="transparent-bg">You'll need to install or update the Cyclo browser plugin first before you can continue.</span></div>
+									<span onclick="return loadPage('dashboard.php');" class="plugin_installed show_in_ie btn">Proceed to MioShare</span>
+									<a href="http://download.mio.com/MioCyclo/Plugin/setup_1.0.27.1.exe" class="show_in_ie btn windows" style="display:none;">DOWNLOAD LATEST PLUG-IN</a>
+									<a href="http://download.mio.com/MioCyclo/Plugin/mioPlugin_1.0.24.3.dmg" class="btn mac" style="display:none;">DOWNLOAD LATEST PLUG-IN</a>
+									<div class="row-fluid update_win" style="display:none;">
+                                        <hr/>
+											<h4 style="color:#FFFFFF;">Important message before installing the new Mio Cyclo v2</h4>
+											<span style="color:#fff;font-size:14px;">Please make sure that the latest MioShare desktop application 2.24 is installed before updating to the Mio Cyclo v2 software. You can install this version via 
+											<a href="http://download.mio.com/MioCyclo/GPST/setup.exe"><b style="color:#FFFFFF;">this link MioShare 2.24</b></a>
+											</span>
+                                   	</div>
+									<div class="row-fluid update_mac" style="display:none;">
+                                        <hr/>
+										<span style="color:red;font-size:14px;" class="update_mac">It is not yet possible to update your Mio Cyclo device using a MAC computer. This tool is currently being developed and will soon be available.</span>
+										</span>
+                                   	</div>
+								</div>
+							</div>
+							
+						</div>
+						<!-- row -->
+					</div>
+					<!-- item -->
+				</div>
+				<!-- carousel-inner USE AS NEEDED-->
+				<div class="pagination" style="display:none;">
+					<ul>
+						<li>
+							<a href="#">1</a>
+						</li>
+						<li>
+							<a href="#">2</a>
+						</li>
+						<li>
+							<a href="#" class="pagination_hover">3</a>
+						</li>
+						<li>
+							<a href="#">4</a>
+						</li>
+					</ul>
+				</div>
+				<!-- pagination -->
+			</div>
+			<!-- BANNER -->
+			<div id="teaser" class="row-fluid">
+				<span class="span3">
+				<span class="text">
+					ABOUT				</span> <span class="heading">Keep your<br />data safe<br /> for free.</span> </span>
+				<span  class="span3 divider-left">
+				<span class="text">MY TRACKS</span> <span class="heading">Analyse<br />your<br />recordings.</span> </span>
+				<span  class="span3 divider-left">
+				<span class="text">MY DEVICE</span> <span class="heading">Manage<br />your mio<br />cyclo.</span> </span>
+				<span class="span3 divider-left">
+				<span class="text">EXPLORE</span> <span class="heading">Get ideas<br />for your<br />next ride.</span> </span>
+			</div>
+			
+			<div id="page-footer" class="navbar row-fluid">
+	<div class="pull-right">
+		<!--<ul class="nav">
+			<li>
+				<a href="">Sitemap</a>						</li>
+			<li class="divider-vertical"></li>
+			
+		</ul>-->
+
+		<a href="#" class="copy"> &copy; 2013 MiTAC Europe Ltd.  All rights reserved. </a>				</div>
+</div>			<!-- PAGE-FOOTER -->
+		</div>
+		<!-- PAGE -->
+		<!-- ajax_content_end -->
+		</div>
+		
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="http://eu.mio.com/cyclo/sandbox/web/v3/js/bootstrap.js"></script>
+
+	<script type="text/javascript" src="js/jquery.ezmark.js"></script>
+	<script type="text/javascript" src="js/jquery.selectbox-0.6.1.js"></script>
+	<script type="text/javascript" src="js/jquery.tinyscrollbar.min.js"></script>
+	<script type="text/javascript" language="javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/jsSHA/sha.js"></script>
+	<script type="text/javascript" language="javascript" src="js/json/json2.js"></script>
+	<script type="text/javascript" language="javascript" src="js/moment.js"></script>
+	
+	<script type="text/javascript" src="js/sticky.min/sticky.min.js"></script>
+	<link rel="stylesheet" href="js/sticky.min/sticky.min.css" type="text/css" />
+	
+	<script src="js/zebra/zebra_form.js"></script>
+  <!--
+    @Desc: Remove older plugins.js replace develop version
+    @Date: 2013-01-05 13:44:00
+    @Author: Charles.su
+ -->
+	<script type="text/javascript" language="javascript" src="js/hq-js/hashtable.js"></script>
+	<script type="text/javascript" language="javascript" src="js/hq-js/Mitac_Device_Sync.js"></script>
+	<script type="text/javascript" language="javascript" src="js/hq-js/ArrayList.js"></script>
+  
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA9Wi-pCrfmTxsYocuDmxmjvfc1eqj5T08&sensor=true"></script>
+	
+  <!--
+    @Desc Merge MioShare and MapUpdate should include js and css template
+    @Date 2013-01-05 13:44:00 
+    @Author Charles.su
+  -->
+
+  <script type = "text/javascript" >
+var MIOSHARE_DIALOG_BUTTON_UPDATE = "UPDATE";
+var MIOSHARE_DIALOG_BUTTON_CLOSE = "CLOSE";
+var MIOSHARE_DIALOG_BUTTON_BACK = "BACK";
+var MIOSHARE_DIALOG_BUTTON_INSTALLATION = "INSTALLATION";
+var MIOSHARE_DIALOG_BUTTON_DOWNLOAD = "DOWNLOAD";
+var MIOSHARE_DIALOG_BUTTON_OK = "OK";
+var MIOSHARE_DIALOG_BUTTON_YES = "YES";
+var MIOSHARE_DIALOG_BUTTON_NO = "NO";
+var MIOSHARE_DIALOG_BUTTON_CHANGE = "CHANGE";
+var MIOSHARE_DIALOG_BUTTON_RECOVER = "RECOVER";
+var MIOSHARE_DIALOG_BUTTON_DOWNLOAD_RETRY = "RETRY";
+var MIOSHARE_DIALOG_BUTTON_DOWNLOAD_LATER = "DOWNLOAD LATER";
+
+var MIOSHARE_DIALOG_TITLE_INSTALLATION = "Installation";
+var MIOSHARE_DIALOG_TITLE_AVAILABLE_UDPATES = "AVAILABLE UPDATES";
+var MIOSHARE_DIALOG_TITLE_RELEASE_NOTES = "RELEASE NOTES";
+var MIOSHARE_DIALOG_TITLE_CHANGE_PATH = "CHANGE DOWNLOAD LOCATION";
+var MIOSHARE_DIALOG_TITLE_BACKUP = "BACKUP";
+var MIOSHARE_DIALOG_TITLE_RECOVER_MY_DEVICE = "RECOVER MY DEVICE";
+
+var MIOSHARE_DIALOG_ITEMS_FIRMWARE = "firmware";
+var MIOSHARE_DIALOG_ITEMS_SOFTWARE = "software";
+var MIOSHARE_DIALOG_ITEMS_MAPS = "maps";
+
+var MIOSHARE_DIALOG_CONTENT_COUNT_NEW_AVAILABLE = "new available updates for your device";
+var MIOSHARE_DIALOG_CONTENT_CHECK_FOR_AVAILABLE = "Checking for available updates...";
+var MIOSHARE_DIALOG_CONTENT_NO_AVAILABLE = "There are no available updates at this time.";
+var MIOSHARE_DIALOG_CONTENT_WAIT_FOR_INSTALL = "Wait for begin Install FW or SW or Map ...";
+var MIOSHARE_DIALOG_CONTENT_INSTALLING = "Installing";
+var MIOSHARE_DIALOG_CONTENT_100SERIES_NEW_AVAILABLE = "New Firmware available for your Cyclo 100/105 device";
+var MIOSHARE_DIALOG_CONTENT_LOADING = "Loading...";
+var MIOSHARE_DIALOG_CONTENT_INSTALL = "Install";
+var MIOSHARE_DIALOG_CONTENT_SUCCESSFULLY = "successfully";
+var MIOSHARE_DIALOG_CONTENT_CHANGE_PATH_1 = "Moving data from ";
+var MIOSHARE_DIALOG_CONTENT_CHANGE_PATH_2 = " to ";
+var MIOSHARE_DIALOG_CONTENT_BACKUP_COPY_1 = "Copying ";
+var MIOSHARE_DIALOG_CONTENT_BACKUP_COPY_2 = " maps to your computer...";
+
+var MIOSHARE_DIALOG_TIP_NOTE = "Note:";
+var MIOSHARE_DIALOG_TIP_CYCLO1XX_DOWNLOAD_1 = "1. After download, please decompress the rar file and read the instruction first.";
+var MIOSHARE_DIALOG_TIP_CYCLO1XX_DOWNLOAD_2 = "2. You have to close MioShare first before you perform the firmware upgrade procedure.";
+var MIOSHARE_DIALOG_TIP_CYCLO3XX_DOWNLOAD_1 = "For the upgrade to be successful make sure to";
+var MIOSHARE_DIALOG_TIP_CYCLO3XX_DOWNLOAD_2 = "1. Keep the MioShare page open";
+var MIOSHARE_DIALOG_TIP_CYCLO3XX_DOWNLOAD_3 = "2. Keep your device connected to the computer";
+var MIOSHARE_DIALOG_TIP_CYCLO3XX_DOWNLOAD_4 = "3. Keep your internet connection on.";
+var MIOSHARE_DIALOG_TIP_CYCLO3XX_INSTALL = "Do not close this page nor disconnect your device during installation, or your device may fail to boot.";
+var MIOSHARE_DIALOG_TIP_CHANGE_PATH = "Do not close this page during the data moving, or the change of download location will be failed.";
+var MIOSHARE_DIALOG_TIP_RECOVERY_MY_DEVICE = "RECOVER MY DEVICE";
+var MIOSHARE_DIALOG_TIP_RECOVERY_MY_DEVICE_DESC = "(If your device is abnormal, you can recover it here.)";
+
+
+var MIOSHARE_DIALOG_VIEW_NOT_ENOUGH_INSTALL_SPACE_TITLE = "Not enough free space on your device.";
+var MIOSHARE_DIALOG_VIEW_NOT_ENOUGH_INSTALL_SPACE_CONTENT = "Please remove some unwanted map data from your system memory to free up your device space first.";
+
+var MIOSHARE_ALERT_FIRMWARE_UPDATE_1 = "Please follow below steps to finish firmware update:";
+var MIOSHARE_ALERT_FIRMWARE_UPDATE_2 = "1. Pull out USB cable and device side will update the firmware automatically (1~2 minutes) ";
+var MIOSHARE_ALERT_FIRMWARE_UPDATE_3 = "2. Restart the device after firmware update finishes ";
+var MIOSHARE_ALERT_FIRMWARE_UPDATE_4 = "3. Pull in USB cable again to continue software and map update  Note: Please make sure the device battery is not low to avoid the firmware update failed.";
+var MIOSHARE_ALERT_MOVEPATH_NOT_ENOUGH_1 = "Not enough free space in ";
+var MIOSHARE_ALERT_MOVEPATH_NOT_ENOUGH_2 = ". Please remove some files to free up your computer space first.";
+var MIOSHARE_ALERT_RECOVERY_WAIT_OTHER_PROCESS = "Please wait others MapUpdate installation.";
+var MIOSHARE_ALERT_CONTACT_SERVICE = "Something error. Please contact service.";
+var MIOSHARE_ALERT_RECOVERY_SUCCESSFULLY = "Recovery license file successfully.";
+var MIOSHARE_ALERT_NOT_ENOUGH_FREE_SPACE = "Not enough free space on your computer.";
+var MIOSHARE_ALERT_PLEASE_PULL_OUT_USB_FIRMWARE_UPDATE = "Please pull out USB cable to continue firmware update on your device. It may need 1~2 minutes. After update finishes, please restart your device and then you can enjoy your new system.";
+
+var MIOSHARE_ERROR_NETWORK_ERROR = "Network Error, please try later.";
+var MIOSHARE_ERROR_RELOAD_PAGE = "Network Error, please reload page.";
+var MIOSHARE_ERROR_NOT_SAME_UUID = "Connection Error, please connect the correct device and reload page.";
+var MIOSHARE_ERROR_APPLY_ERROR = "Apply Error, please contact service center.";
+var MIOSHARE_ERROR_CHANGE_PATH_ERROR = "Please key-in the legal path at download path.";
+var MIOSHARE_ERROR_NO_PERMISSION = "You have no create folders/files permission, please contact your system administrator.";
+var MIOSHARE_ERROR_ENTER_ACTIVATION_CODE_ON_DEVICE = "Please enter the activation code on the device to register, then re-connect the device and start the update.";
+var MIOSHARE_ERROR_ENTER_NOT_ENOUGH_FREE_SPACE_ON_COMPUTER = "Not enough free space on your computer for the data download. Please remove some files to free up your computer space first.";
+
+var MIOSHARE_CONFIRM_INIT_INSTALL_TIP = "Download of available data is found on your computer. Do you want to install it to your device now?";
+var MIOSHARE_CONFIRM_INSTALLING_TIP = " did not finish installing to your device. Do you want to reinstall it now?";
+var MIOSHARE_CONFIRM_MOVEPATH_LONGTIME_TIP = "This may need a little long time to move the data to the new location. Do you want to change the download location now?";
+var MIOSHARE_CONFIRM_MAPS_DELETEALL_TIP_1 = "Do you want to delete all ";
+var MIOSHARE_CONFIRM_MAPS_DELETEALL_TIP_2 = " maps from your device? It will be backed up to your computer. And you can reinstall them conveniently later.";
+var MIOSHARE_CONFIRM_MAPS_DELETEALL_NOT_ENOUGH_1 = "Not enough free space on your computer for data backup. Do you still want to delete all ";
+var MIOSHARE_CONFIRM_MAPS_DELETEALL_NOT_ENOUGH_2 = " maps from your device?";
+var MIOSHARE_CONFIRM_MAPS_LICENSE_MISSED = "Some map data files are missed. Your device may not work normally. Do you want to recover?";
+var MIOSHARE_CONFIRM_NOT_ENOUGH_FREE_SPACE_ON_YOUR_COMPUTER_FOR_DATA_DOWNLOAD = "Not enough free space on your computer for the data download. Please remove some files to free up your computer space first.";
+
+var MIOSHARE_MAPS_TITLE_MAPLISTOF = "MAP LIST OF";
+var MIOSHARE_MAPS_TITLE_REGIONS = "REGIONS";
+var MIOSHARE_MAPS_NAVIBAR_MYMAPS = "MY MAPS";
+
+var MIOSHARE_DOWNLOAD_PROGESSBAR_DOWNLOADING = "Downloading ";
+var MIOSHARE_DOWNLOAD_PROGESSBAR_PAUSE = "PAUSE";
+var MIOSHARE_DOWNLOAD_PROGESSBAR_CANCEL = "CANCEL";
+var MIOSHARE_DOWNLOAD_PROGESSBAR_CONTINUE = "CONTINUE";
+
+var MIOSHARE_TIP_N_NEW_UPDATES_AVAILABLE_FOR_YOUR_DEVICE = " new updates are available for your device ";
+var MIOSHARE_TIP_UPDATE_NOW = "UPDATE NOW";
+var MIOSHARE_TIP_UPDATE_CANCEL = "CANCEL";
+var MIOSHARE_TIP_DO_NOT_REMIND_ME_AGAIN = "Don’t remind me again";
+
+var MIOSHARE_TXT_SORT_COUNTRY = "Country";
+var MIOSHARE_TXT_SORT_SIZE = "MIOSHARE_TXT_SORT_SIZE";
+var MIOSHARE_TXT_MAPS = "Maps"; 
+
+var MIOSHARE_TXT_CHECK_FOR_UPDATES = "CHECK FOR UPDATES"; 
+var MIOSHARE_TXT_CHECKING_FOR_UPDATES = "CHECKING FOR UPDATES"; 
+var MIOSHARE_TXT_UPDATES_AVAILABLE = "UPDATES AVAILABLE"; 
+</script>
+  <!--<link type="text/css" rel="stylesheet" href="js/map-update/css/mapUpdateStyle.css" /> -->
+  <script type="text/javascript" language="javascript"  src="js/map-update/js/mapupdate_config.js"></script>
+  <script type="text/javascript" language="javascript"  src="js/map-update/js/mapupdate_countryV3.js"></script>
+	<script type="text/javascript" language="javascript"  src="js/map-update/js/mapupdate_process.js"></script>
+  <script type="text/javascript" language="javascript"  src="js/map-update/js/mapupdate_view.js"></script>
+  <script type="text/javascript" language="javascript"  src="js/map-update/js/mapupdate_listener.js"></script>
+
+  <!-- END -->
+  
+	<div id="recordings_delete_all_modal" class="hide">
+			<div class="modal my-modal  in" style="" aria-hidden="false">
+				<div class="modal-header">
+					<button type="button" class="close">
+						×
+					</button>
+					<h3>DELETE</h3>
+				</div>
+				<div class="modal-body">
+					<p>You are about to delete all your recordings, this cannot be undone.<br/>Do you want to proceed?</p>
+				</div>
+				<div class="modal-footer" style="background-color:#FFFFFF">
+					<button class="btn" id="close_this_modal" data-dismiss="modal" aria-hidden="true">CANCEL</button>
+					<button class="btn btn-primary" id="recordings_confirm_delete_all_recording" style="color:#FFFFFF">DELETE</button>
+				  </div>
+	
+			</div>
+			<div class="modal-backdrop  in"></div>
+			
+		</div>
+<div id="firmware_modal" class="hide">
+			<div class="modal my-modal  in" style="" aria-hidden="false">
+				<div class="modal-header">
+					<button type="button" class="close">
+						×
+					</button>
+					<h3>NEW FIRMWARE AVAILABLE FOR YOUR CYCLO 100/105 DEVICE</h3>
+				</div>
+				<div class="modal-body">
+					<p>
+You can download a Zip file with the latest software as well as the update instructions <a id="firmware_link" href="">HERE</a>.</p>
+					<p>Please make sure to close MioShare once you started the FW update.</p>
+				</div>
+				<div class="modal-footer" style="background-color:#FFFFFF">
+					<span style="color: red; text-align: left; width: 450px; float: left;">This update will delete all recordings on your device. Please make sure to upload them to MioShare before continuing.</span>
+					<button class="btn" id="firmware_modal_close" data-dismiss="modal" aria-hidden="true"><a id="firmware_link" href="">OK</a></button>
+				  </div>
+	
+			</div>
+			<div class="modal-backdrop  in"></div>
+			
+		</div>
+	
+	
+<script>
+
+/*
+var control = new DeviceControl();
+var extraLibs = new ExtraLibs();
+var PluginObj = extraLibs.getPluginObject();
+var GSPluginObj = extraLibs.getPluginCyc100Object();
+var display = new DeviceDisplay();
+*/
+
+var control = new DeviceControl();
+
+var PluginObj = control.getPluginObject();
+var GSPluginObj = control.getPluginCyc100Object();
+
+var browserType = control.getBrowserType();
+
+var dataDrive;
+var systemDrive;
+var activityFiles=[];
+var trackFiles=[];
+var activityLibrary=[];
+var trackLibrary=[];
+var UUID;
+var HardwareDisplayName;
+var SKUID;
+
+
+var examinateFile;
+var examinateContent;
+
+var downloadData;
+
+var current_device_status;
+var no_device_timeout;
+
+var navigation_stack = [];
+
+
+var logged_in = false;
+var date = new Date();
+date.setTime(date.getTime() + (900 * 1000));
+$.cookie('logged_in', logged_in, { expires:date });
+
+var sync_queue_in_progress=false;
+var sync_queue_info=false;
+var current_sync_queue_info=false;
+
+
+var track_in_process = false;
+
+var deviceFirmStr = "";
+
+var platform = window.navigator.platform;
+var platformStr = (platform === "Win32") ? "win" : "mac";
+var mac = false;
+var gloginChecked = false;
+var gmyMapsDetailHTML = "";
+
+var needToBuildActivity = true;
+// special inits foreach page
+/*	2012/12/14 09:14:00 remove of autoFillUserName on Login.php by Charles
+var page_inits = [['landing_page.php','background_on_init=true; banerBackground();pageBackground();scrollbarLoad();ieBeforeAfter();'],['device_page.php','outputActivityListing();ezmark();'],['logoff.php','loadHomeScreen();logged_in=false;'],['list_view.php','scrollbarLoad();checkDevicePresenttracks();'],['login.php','ezmark();$("select").selectbox();autoFillUserName();']];
+*/
+// var page_inits = [['landing_page.php','background_on_init=true; banerBackground();pageBackground();scrollbarLoad();ieBeforeAfter();'],['device_page.php','outputActivityListing();ezmark();reloadDevicePage();'],['logoff.php','loadHomeScreen();logged_in=false;'],['list_view.php','scrollbarLoad();checkDevicePresenttracks();'],['login.php','ezmark();$("select").selectbox();']];
+var page_inits = [['landing_page.php','background_on_init=true; banerBackground();pageBackground();scrollbarLoad();ieBeforeAfter();'],['device_page.php','outputActivityListing();ezmark();buildDevicePage();'],['logoff.php','loadHomeScreen();logged_in=false;'],['list_view.php','scrollbarLoad();checkDevicePresenttracks();'],['login.php','ezmark();$("select").selectbox();']];
+
+function release () {
+	if (platformStr === 'win') control.releaseConnThread();
+}
+
+function preInit() {
+	current_device_status = control.initialPlugin(PluginObj,usbConnectListener);
+	control.initialCYC100Plugin(GSPluginObj, usbConnectListenerE);
+	if (mac) {
+		if(current_device_status==true) {
+			init_cyclo_300();
+		} else {
+			no_device_timeout = setTimeout(function(){ init_no_device_found(); }, 2000);
+		}
+	}
+	else {
+		no_device_timeout = setTimeout(function(){ init_no_device_found(); }, 2000);
+	}
+	
+	//if(current_device_status==true) {
+	//	init_cyclo_300();
+	//} else {
+	no_device_timeout = setTimeout(function(){ init_no_device_found(); }, 2000);
+	//}	
+}
+function init_cyclo_300() {
+	prev_device_status = $.cookie('connection_status');
+	$.cookie('connection_status', current_device_status);
+	if( $.cookie('connection_status')=='true' ) {
+		device_found();
+	} else {
+		device_disconnected();
+	}
+}
+function init_no_device_found() {
+	//prev_device_status = $.cookie('connection_status');
+	//current_device_status = control.initialPlugin(PluginObj,usbConnectListener);
+	if( $.cookie('connection_status')=='true' ) {
+		//do nothing here, because there is a callback to the listener.
+		//device_found();
+	} else {
+		current_device_status = false;
+		$.cookie('connection_status', current_device_status);
+		device_disconnected();
+	}
+}
+function init_cyclo_100() {
+	prev_device_status = $.cookie('connection_status');
+	//current_device_status = control.initialPlugin(PluginObj,usbConnectListener);
+
+	
+	current_device_status = true;
+	$.cookie('connection_status', current_device_status);
+	if( $.cookie('connection_status')=='true' ) {
+		device_found();
+	} else {
+		device_disconnected();
+	}
+}
+function initOSPath() {
+	if (platform.indexOf("Mac") > - 1) {
+		gConfigPath = MIOSHARE_PATH_CONFIG_PATH_MAC;
+		gDefaultPath = MIOSHARE_PATH_DEFAULT_PATH_MAC;
+	} else {
+		gConfigPath = MIOSHARE_PATH_CONFIG_PATH;
+		gDefaultPath = MIOSHARE_PATH_DEFAULT_PATH;
+	}
+
+	
+}
+// start connect-device
+function device_found() {
+	UUID = control.getUUID();
+	$.cookie('conneted_UUID',UUID);
+	setTimeout("device_found1()", 1000);
+}
+function device_found1() {
+	HardwareDisplayName = control.getHardwareDisplayName();
+	$.cookie('conneted_name',HardwareDisplayName);
+
+	$('input[name=UUID]').val(UUID);
+	setTimeout("device_found2()", 1000);
+}
+function device_found2() {
+	SKUID = control.getSKUID();
+	$('input[name=SKUID]').val(SKUID);
+
+	$('input[name=device]').val(HardwareDisplayName);
+
+	$('.connected_device_name').html(HardwareDisplayName);
+	setTimeout("device_found3()", 3000);
+}
+function device_found3() {
+	$('body').addClass('device_connected').removeClass('continue_without_device').removeClass('cyclo100connected').removeClass('cyclo300connected');
+	if(control.getHardwareDisplayName()=='Mio Cyclo 100'||control.getHardwareDisplayName()=='Mio Cyclo 105') $('body').addClass('cyclo100connected');
+	else $('body').addClass('cyclo300connected');
+	//uuid = control.getUUID();
+	
+	deviceFirmStr = control.getFirmwareVersion();
+	systemDrive = control.getSystemDrive();
+	dataDrive = control.getDataDrive();
+	//mapUpdateDeviceConnect();
+
+
+	GetDataDriveFreeFlashFunc();
+	
+	check_if_device_registered();
+	
+	//$('body').addClass('syncing');
+	$('body').addClass('reading');
+	if (needToBuildActivity) {
+		buildActivityListing();
+	}
+	
+	if(control.getHardwareDisplayName()=='Mio Cyclo 100'||control.getHardwareDisplayName()=='Mio Cyclo 105') {
+		$('.small_device_image').attr('src','img/pic.cyclo100-small.png');
+	} else {
+		$('.small_device_image').attr('src','img/pic.cyclo300-small.png');
+	}
+	$('.small_device_image').attr('alt',control.getHardwareDisplayName());
+	//$('#open_track_listing').show();
+	$('.tracks .listing_container .track').show();
+}
+// end connect-device
+function preCheckServerInfo() {
+	$("#downloadProgressDiv").hide();
+	initDialog();
+	initOSPath();
+	gDestPath = msc.getDownloadLocation().split(";")[1];
+	if (gDestPath != "Fail") {
+	  //$('#update_Available_span').show();
+	  //uuid = control.getUUID();
+      gModelName = control.getHardwareDisplayName();
+	  gSystemDrive = control.getSystemDrive();
+	  gAppDestPath = gSystemDrive + MIOSHARE_PATH_DEVICE_PROGRAM;
+	  gRomDestPath = gSystemDrive;
+	  gMapDestPath = gSystemDrive + MIOSHARE_PATH_DEVICE_MAP;
+	  //gUUIDFileName = uuid + MIOSHARE_EXTENSION_FILE_EXTENSION;
+	  gUUIDFileName = UUID + MIOSHARE_EXTENSION_FILE_EXTENSION;
+	  gAppVersion	 = msc.getAppVersion();
+	  gRomVersion = control.getFirmwareVersion();
+	  var result = msc.checkLogExist();
+	  //msLogger("DEBUG","preCheckServerInfo get Result is " + result);
+	} 
+
+}
+
+function reloadDevicePage() {	
+	msLogger("DEBUG","[reloadDevicePage] START");
+	msLogger("DEBUG","reloadDevicePage Get gloginChecked is " + gloginChecked);
+	jQuery("#downloadProgressDiv").hide();
+	// if (!gloginChecked) {
+		if(jQuery.cookie('connection_status')=='true' ) {
+	    	initDialog();
+	    	initOSPath();
+	    	// checkClickFlag = false;
+			msLogger("DEBUG","[reloadDevicePage] Mapupdate info START");
+	    	gDestPath = msc.getDownloadLocation().split(";")[1];
+	    	if (gDestPath != "Fail") {
+	      	jQuery('#update_Available_span').show();
+	      	jQuery("#downloadProgressDiv").hide();
+	      	gModelName = control.getHardwareDisplayName();
+	      	gSystemDrive = control.getSystemDrive();
+	      	gAppDestPath = gSystemDrive + MIOSHARE_PATH_DEVICE_PROGRAM;
+	      	gRomDestPath = gSystemDrive;
+	      	gMapDestPath = gSystemDrive + MIOSHARE_PATH_DEVICE_MAP;
+	      	//gUUIDFileName = uuid + MIOSHARE_EXTENSION_FILE_EXTENSION;
+			gUUIDFileName = UUID + MIOSHARE_EXTENSION_FILE_EXTENSION;
+	      	msLogger("DEBUG","reloadDevicePage get getAppVersion Start");
+	      	gAppVersion	 = msc.getAppVersion();
+	      	gRomVersion = control.getFirmwareVersion();
+	      	msLogger("DEBUG","[reloadDevicePage] outputMapsListing setTime 3 sec after to do");
+		  
+	      	if (!gloginChecked) {
+	      		gloginChecked = true;
+		    	msc.checkLogExist();
+		    	setTimeout("outputMapsListing()", 600);
+		    	gmyMapsDetailHTML = preBuildDetailMapInfo();
+		    	// The mio data & drive space bar	
+		    } else {
+		    	setTimeout("outputMapsListing()", 600);
+				jQuery("#eachDetailRegionDiv").html("");
+				jQuery("#eachDetailRegionDiv").html(gmyMapsDetailHTML);
+		    }
+	      	jQuery("#setting_download_location_text").val(msc.getDownloadLocation().split(";")[1]);
+	    } else {
+	      jQuery("#update_Available_span").hide();
+	      jQuery("#change_download_path_Div").hide();
+	      msLogger("DEBUG","[reloadDevicePage] Create folder/file FAIL!!!");
+	      showAlert(MIOSHARE_ERROR_NO_PERMISSION);
+	    }
+	}
+  	msLogger("DEBUG","[reloadDevicePage] Mapupdate info STOP");
+  // }
+	// msLogger("DEBUG","[reloadDevicePage] STOP");
+}
+
+function check_if_device_registered() {
+	var stamp=new Date().getTime();
+	$.get('controller.php?UUID=' + UUID + '&stamp='+stamp,function(data, textStatus, jqXHR){
+		if(data.indexOf('1')!=-1) {
+			$('body').addClass('connected_device_is_registered');
+		} else {
+			$('body').addClass('connected_device_is_not_registered');
+		}
+	});
+}
+
+// start disconnect-device
+function device_disconnected() {
+	$('#sync_overlay').hide();
+	
+	$.cookie('conneted_UUID','');
+	$.cookie('conneted_name','');
+	$('input[name=UUID]').val('');
+	$('input[name=SKUID]').val('');
+	$('input[name=device]').val('');
+	$('.connected_device_name').html('');
+	$('body').removeClass('device_connected').removeClass('connected_device_is_registered').removeClass('connected_device_is_not_registered').removeClass('cyclo100connected').removeClass('cyclo300connected');	
+	$('.tracks .listing_container .track').hide();
+	$('#open_recording_listing').addClass('active');
+	$('#open_track_listing').removeClass('active');
+	$('#recording_listing_container').show();
+	$('#track_listing_container').hide();
+	$('.recording_listing .track').remove();
+	//Clear Tracks on My Device View
+	$('#recording_listing_container:not(.online)').html("");
+	$(".trackOnDeviceNotInAccount").remove();
+	// $("#track_listing_container").html("");
+	// $("#track_listing_container_autoSync").html("");
+	
+	$('#track_listing_container .track_listing .device').remove();
+	$('#track_listing_container .manual_control .device').remove();
+	
+	if ( $('#track_listing_container .track_listing .track').length < 1 ) {
+		//no any track on account
+		$('#track_listing_container .manual_control').remove();
+	}
+  	// mapUpdateDeviceDisconnect();
+
+	sync_queue_in_progress=false;
+	sync_queue_info=false;
+	current_sync_queue_info=false;
+	activityLibrary=[];
+	trackLibrary=[];
+	checkDevicePresenttracks();
+	needToBuildActivity = true;
+}
+function mapUpdateDeviceConnect() {
+  /* Remove Mapupdate 2013/03/21 By Charles.su   */
+ //  var uuid_fk = "00022AC1FC9202004501909F7966C1B1";
+	// var skuid_fk = "8690";
+	// var model_fk = "Mio Cyclo 505 HC";
+	// var system_fk = "Z:\\";
+	// var data_fk = "Y:\\";
+
+  	gSkuID = control.getSKUID();
+	gModelName = control.getHardwareDisplayName();
+	gAppVersion	= msc.getAppVersion();
+ 	gRomVersion = control.getFirmwareVersion();
+ // 	gSkuID = skuid_fk;
+	// gModelName = skuid_fk;
+	// gAppVersion	= "3111";
+ // 	gRomVersion = "32423(Rsdfsdf11";
+  	initOSPath();
+	msLogger("DEBUG","mapUpdateDeviceConnect logged_in " + logged_in + " And connection Status is " + $.cookie('connection_status'));
+  	if (logged_in && $.cookie('connection_status') == 'true') {
+  		$('.update_Available').show();  
+		$("#unloginMapUpdateDiv").hide();
+	} else {
+		msLogger("DEBUG","mapUpdateDeviceConnect preCheckServerInfo");
+		preCheckServerInfo();
+	}
+}
+function mapUpdateDeviceDisconnect() {
+  /* Remove Mapupdate 2013/03/21 By Charles.su  */
+  $('.update_Available').hide();  
+	jQuery("#downloadProgressDiv").hide();
+	clearLastInterval();
+	gloginChecked = false;
+
+}
+// end disconnect-device
+function copyFileListenerMac(status, total, current) {}
+function cb(){}
+
+function usbConnectListener(status, total, current){
+	//if (extraLibs.checkPlugin()) {
+		switch(status) {
+			case errorList.get("E_MITAC_PLUGIN_OK"):
+				if (deviceType == "" || deviceType != "GS") {
+					if (deviceType != "Mio") {
+						deviceType = "Mio";
+						var tempPath = control.getTempFolder();
+						if (mac) {
+							control.copyFileSync(control.getSystemDrive() + "device.xml", tempPath+"device.xml", copyFileListenerMac );
+						}
+						else {
+							control.copyFileSync(control.getSystemDrive() + "device.xml", tempPath+"device.xml", cb );
+						}
+					}
+				}
+				
+				current_device_status = true;
+				$.cookie('connection_status','true');
+				clearTimeout(no_device_timeout);
+				init_cyclo_300();
+				//device_found();					
+			break;			
+			case errorList.get("E_MITAC_PLUGIN_DISCONNECTED"):
+				if (deviceType == "Mio") {
+					deviceType = "";
+				}
+				$.cookie('connection_status','false');
+				device_disconnected();
+			break;		
+			default: break;
+		}
+	//}
+}
+
+// for global set
+function usbConnectListenerE(status, total, current) {
+	if (status != 0) {
+		if (deviceType == "" || deviceType != "Mio") {
+			deviceType = "";
+			$.cookie('connection_status','false');
+			device_disconnected();
+		}
+	}
+	else {
+		if (deviceType == "" || deviceType != "Mio") {
+			deviceType = "GS";
+			
+			// Check the firmware update for Cyclo 100 series
+			if (platformStr == 'win')	checkFirmwareForUpdate();
+			
+			if (!initialStatus) {
+				var tempPath = control.getTempFolder();
+				initialStatus = true;
+				clearTimeout(no_device_timeout);
+				init_cyclo_100();
+			} else {
+				$.cookie('connection_status',true);
+				device_found();
+			}
+		}
+	}
+}
+
+function reGetDataDriveFreeFlash() {
+	var retryResult = control.getDataDriveFreeFlash();
+	if (retryResult == ""|| retryResult == 0) {
+		setTimeout("reGetDataDriveFreeFlash()", 500);
+	}
+	else {
+		displayDataCapaticy(retryResult);
+	}
+}
+
+function GetDataDriveFreeFlashFunc() {
+	var dataResult = control.getDataDriveFreeFlash();
+
+	if (dataResult == "" || dataResult == 0) {
+		setTimeout("reGetDataDriveFreeFlash()", 500);
+	}
+	else {
+		displayDataCapaticy(dataResult);
+	}
+}
+function displayDataCapaticy(result) {
+	var percent;
+	if (deviceType == "Mio") {
+		percent = 100-parseInt(result/1048576);
+	} else if(deviceType == "GS") {
+		percent = 100-parseInt((100 / 52416) * result);
+	}
+	$('.percent').html(percent+'%');
+	if(percent==0) percent=1;
+	$('.bar-light-blue').css('width',percent+'%');
+	
+	
+	var total_filesize = 0;
+	//for(i in activityLibrary) {
+	var activityIndex;
+	for(activityIndex in activityLibrary) {
+		//total_filesize = total_filesize + activityLibrary[i]['o_filesize'];
+		total_filesize = total_filesize + activityLibrary[activityIndex]['o_filesize'];
+	}
+	if(control.getHardwareDisplayName()!='Mio Cyclo 100'&&control.getHardwareDisplayName()!='Mio Cyclo 105') {
+		$('.total_recordings_size').html(Math.round(total_filesize/1048576*100)/100);
+		$('#total_recordings_percentage').css('width',Math.round(total_filesize/1048576*100)/100+'%');
+	}
+	if(control.getHardwareDisplayName()!='Mio Cyclo 100'&&control.getHardwareDisplayName()!='Mio Cyclo 105') {
+		total_filesize = 0;
+		//for(i in trackLibrary) {
+		var trackIndex;
+		for(trackIndex in trackLibrary) {
+			//total_filesize = total_filesize + trackLibrary[i]['o_filesize'];
+			total_filesize = total_filesize + trackLibrary[trackIndex]['o_filesize'];
+		}	
+		total_filesize = parseFloat(Math.round(total_filesize*100))/100;
+		$('.total_tracks_size').html(Math.round(total_filesize/1048576*100)/100);
+		$('#total_tracks_percentage').css('width',Math.round(total_filesize/1048576*100)/100+'%');
+	}
+	
+}
+function buildActivityListing() {
+	needToBuildActivity = false;
+	activityFiles=[];
+	activityLibrary=[];
+	trackFiles=[];
+	trackLibrary=[];
+	if(control.getHardwareDisplayName()=='Mio Cyclo 100'||control.getHardwareDisplayName()=='Mio Cyclo 105') {
+		buildActivityListing100();
+	} else {
+		buildActivityListing300();
+	}
+}
+function buildActivityListing100() {
+	files = control.loadFileList(dataDrive);
+	if(files != errorList.get("E_MITAC_PLUGIN_CHECK_DIR_EXIST_FAIL") && (files!='none')) {
+		for(i in files) {
+			var ifile = files[i];
+			var temp = ifile.split('.');
+			var extension = temp[temp.length-1];
+			if(extension=='gpx') {
+				activityFiles[activityFiles.length]=ifile;
+			}
+		}
+	}
+	
+	if( control.checkFileExist(systemDrive+'RCF.txt') ) {
+		activityLibrary=[];
+		var temp_activityLibrary = JSON.parse(control.loadFile(systemDrive+'RCF.txt'));
+		for(i in temp_activityLibrary) {
+			if(control.checkFileExist(dataDrive+temp_activityLibrary[i]['o_file'])) activityLibrary.push(temp_activityLibrary[i]);
+		}
+	}
+	
+	if(activityFiles.length>0) {
+		setTimeout('preBuildActivityHeaders100()',50);
+	} else {
+		activityLibrary = [];
+		//$('body').removeClass('syncing');
+		$('body').removeClass('reading');
+		outputActivityListing();
+	}
+}
+function preBuildActivityHeaders100() {
+	if(control.checkFileExist(systemDrive+activityFiles[0])==false) {
+		result = control.copyFileSync(dataDrive+activityFiles[0], systemDrive+activityFiles[0], copyFileListener);
+	} else {
+		examinateFile = activityFiles.shift();
+		var in_cache=false;
+		for(i in activityLibrary) {
+			if(activityLibrary[i]['o_file']==examinateFile) in_cache=true;
+		}
+		if(!in_cache) {
+			examinateContent = trim(control.loadFile(systemDrive+examinateFile));
+			setTimeout('buildActivityHeaders100()',50);
+		} else {
+			if(activityFiles.length!=0) {
+				setTimeout('preBuildActivityHeaders100()',50);
+			} else {
+				//$('body').removeClass('syncing');
+				$('body').removeClass('reading');
+				
+				temp_activityLibrary=[];
+				for(i in activityLibrary) {
+					if(control.checkFileExist(activityLibrary[i]['o_file_location'])) temp_activityLibrary.push(activityLibrary[i]);
+				}
+				activityLibrary=temp_activityLibrary;
+				
+				outputActivityListing();				
+				control.saveStringToFile(JSON.stringify(activityLibrary), systemDrive+'RCF.txt');
+			}	
+		}
+	}
+}
+function buildActivityHeaders100(){
+	ifile=examinateFile;
+	raw_content=examinateContent;
+	
+	/*var result = new Object();
+	result['o_file']=ifile;
+	result['o_file_location']=systemDrive+ifile;
+	result['o_profile']='Cyclo 100';
+	
+	var dom_content = $.parseXML(raw_content);
+	dom_content=$(dom_content);
+	result['o_track_name']=ifile.replace('.gpx','');
+	
+	result['o_time'] = dom_content.find('st\\:activity').attr('startTime');
+	var raw_time = result['o_time'].split('T');
+	date = raw_time[0].split('-');
+	var date = date[2]+'/'+date[1]+'/'+date[0];
+	
+	result['o_length'] = parseInt(parseFloat(dom_content.find('st\\:activity').attr('distanceEntered'))*1000);
+	result['o_timelength'] = dom_content.find('st\\:activity').attr('timeEntered');
+	result['o_timelength'] = result['o_timelength'].split(':');
+	result['o_timelength'] = 60*parseInt(result['o_timelength'][0])+parseInt(result['o_timelength'][1]);
+	
+	//alert(result['o_file_location']);
+	result['o_filesize'] = control.checkFileSize(result['o_file_location']);
+	//alert(result['o_filesize']);
+	
+	var sub_content = raw_content.substring(0,1499);
+	var shaObj = new jsSHA(sub_content, "ASCII");		
+	var hash = shaObj.getHash("SHA-512", "HEX");
+	result['o_hash']=hash;
+		
+	activityLibrary[activityLibrary.length]=result;
+	*/
+	
+	var result = new Object();
+		var file_path = "";
+		if (mac) {
+			file_path = ifile.split('/');
+		}
+		else {
+			file_path = ifile.split('\\');
+		}
+		result['o_file']=ifile;
+		result['o_file_location']=systemDrive+ifile;
+		
+		//alert(result['o_file_location']);
+		result['o_filesize'] = control.checkFileSize(result['o_file_location']);
+		//alert(control.checkFileSize(result['o_file_location']));
+		var dom_content = $.parseXML(raw_content);
+
+		dom_content=$(dom_content);
+		var track_name = dom_content.find('gpx > trk > name').text();
+		if(track_name=='none'||track_name==''||track_name=='NaN') {
+			var file_path = "";
+			if (mac) {
+				file_path = ifile.split('/');
+			}
+			else {
+				file_path = ifile.split('\\');
+			}
+			
+			track_name = file_path[file_path.length-1].replace('.gpx','');
+		}
+		result['o_track_name']=track_name;
+		result['o_type'] = dom_content.find('gpx > trk > type').text();
+		
+		
+		var overview = dom_content.find('gpx > trk > extensions');
+
+		overview.children().each(function(){
+			result['o_'+$(this)[0].nodeName]=$(this).text();
+		});	
+		
+		if( typeof(result['o_timelength'])!='undefined' ) {
+			result['o_timelength']=result['o_timelength']/60;
+		}
+		
+		if( typeof(result['o_time'])!='undefined' ) {
+			/*
+			var sub_content = raw_content.substring(0,1499);
+			var shaObj = new jsSHA(sub_content, "ASCII");		
+			var hash = shaObj.getHash("SHA-512", "HEX");
+			*/
+			
+			var hash = control.getSHA512(result['o_file_location']);
+			result['o_hash']=hash;
+			if(result['o_time']!='none'&&result['o_time']!=''&&result['o_time']!='NaN') {
+				var raw_time = result['o_time'].split('T');
+				date = raw_time[0].split('-');
+				var date = date[2]+'/'+date[1]+'/'+date[0];
+			} else date = '<center>-</center>';
+		
+			activityLibrary[activityLibrary.length]=result;
+			
+		}
+	
+	if(activityFiles.length!=0) {
+		setTimeout('preBuildActivityHeaders100()',50);
+	} else {
+		//$('body').removeClass('syncing');
+		$('body').removeClass('reading');
+		
+		temp_activityLibrary=[];
+		for(i in activityLibrary) {
+			if(control.checkFileExist(activityLibrary[i]['o_file_location'])) temp_activityLibrary.push(activityLibrary[i]);
+		}
+		activityLibrary=temp_activityLibrary;
+		
+		outputActivityListing();
+		control.saveStringToFile(JSON.stringify(activityLibrary), systemDrive+'RCF.txt');
+	}	
+}
+
+function buildActivityListing300() {
+	var check_profile_tracks = 0;
+	var files = "";
+	if (mac) {
+		files = control.loadFileList(dataDrive + 'Dodge/Tracks/');
+	}
+	else {
+		files = control.loadFileList(dataDrive+'Dodge\\Tracks\\');
+	}
+	
+	if(files != errorList.get("E_MITAC_PLUGIN_CHECK_DIR_EXIST_FAIL") && (files!='none')) {
+		for(i in files) {
+			if (files[i].substr(0,1) !== ".") {
+				var temp = files[i].split('.');
+				if(temp[temp.length-1]=='gpx') {
+					if (mac) {
+						trackFiles[trackFiles.length]=dataDrive+'Dodge/Tracks/'+files[i];
+					}
+					else {
+						trackFiles[trackFiles.length]=dataDrive+'Dodge\\Tracks\\'+files[i];
+					}
+					
+				} else {
+					
+					if( files[i].charAt(0)=='[' && files[i].charAt(files[i].length-1)==']' ) {
+						var profFolder = files[i].substr(1,files[i].length-2);
+						var profileFiles = "";
+						if (mac) {
+							profileFiles = control.loadFileList(dataDrive+'Dodge/Tracks/'+profFolder+'/');
+						}
+						else {
+							profileFiles = control.loadFileList(dataDrive+'Dodge\\Tracks\\'+profFolder+'\\');
+						}
+						
+						if(profileFiles != errorList.get("E_MITAC_PLUGIN_CHECK_DIR_EXIST_FAIL") && (profileFiles!='none')) {
+							check_profile_tracks=check_profile_tracks+1;
+							//for(i in files2) {
+							for(var filesIndex = 0; filesIndex < profileFiles.length; filesIndex++) {
+								var temp = profileFiles[filesIndex].split('.');
+								if(temp[temp.length-1]=='gpx') {
+									if (mac) {
+										activityFiles[activityFiles.length]=dataDrive+'Dodge/Tracks/'+profFolder+'/'+profileFiles[filesIndex];
+									}
+									else {
+										activityFiles[activityFiles.length]=dataDrive+'Dodge\\Tracks\\'+profFolder+'\\'+profileFiles[filesIndex];
+									}
+								}
+							}
+						}
+					
+					}
+					
+				}
+			}
+		}
+	}
+	
+	if(check_profile_tracks==0) {
+		var profileCount=6;
+		for(var loper=0;loper<=profileCount;loper++) {
+			var files = "";
+			if (mac) {
+				files = control.loadFileList(dataDrive+'Dodge/Tracks/Profile'+loper+'/');
+			}
+			else
+			{
+				files = control.loadFileList(dataDrive+'Dodge\\Tracks\\Profile'+loper+'\\');
+			}
+			
+			if(files != errorList.get("E_MITAC_PLUGIN_CHECK_DIR_EXIST_FAIL") && (files!='none')) {
+				for(i in files) {
+					var temp = files[i].split('.');
+					if(temp[temp.length-1]=='gpx') {
+						if (mac) {
+							activityFiles[activityFiles.length]=dataDrive+'Dodge/Tracks/Profile'+loper+'/'+files[i];
+						}
+						else {
+							activityFiles[activityFiles.length]=dataDrive+'Dodge\\Tracks\\Profile'+loper+'\\'+files[i];
+						}
+						
+					}
+				}
+			}
+		}
+		var files = "";
+		if (mac) {
+			files = control.loadFileList(dataDrive+'Dodge/Tracks/');
+		}
+		else
+		{
+			files = control.loadFileList(dataDrive+'Dodge\\Tracks\\');
+		}
+		
+		if(files != errorList.get("E_MITAC_PLUGIN_CHECK_DIR_EXIST_FAIL") && (files!='none')) {
+			for(i in files) {
+				if (files[i].substr(0,1) !== ".") {
+					var temp = files[i].split('.');
+					if(temp[temp.length-1]=='gpx') {
+						if (mac) {
+							trackFiles[trackFiles.length]=dataDrive+'Dodge/Tracks/'+files[i];
+						}
+						else {
+							trackFiles[trackFiles.length]=dataDrive+'Dodge\\Tracks\\'+files[i];
+						}
+					}
+				}
+			}
+		}
+	}
+	try {
+
+		if( control.checkFileExist(systemDrive+'RCF.txt') ) {
+			temp_activityLibrary = JSON.parse(control.loadFile(systemDrive+'RCF.txt'));
+			for(i in temp_activityLibrary) {
+				if(control.checkFileExist(temp_activityLibrary[i]['o_file_location'])) activityLibrary.push(temp_activityLibrary[i]);
+			}
+		}
+		if( control.checkFileExist(systemDrive+'TCF.txt') ) {
+			temp_content = control.loadFile(systemDrive+'TCF.txt');
+			temp_trackLibrary = JSON.parse(temp_content);
+			for(i in temp_trackLibrary) {
+				if(control.checkFileExist(temp_trackLibrary[i]['o_file_location'])) trackLibrary.push(temp_trackLibrary[i]);
+			}
+		}
+	} catch (err) {
+
+	}
+	if(activityFiles.length>0) {
+		setTimeout('preBuildActivityHeaders300()',50);
+	} else if(trackFiles.length>0) {
+		activityLibrary=[];
+		setTimeout('preBuildTrackHeaders300()',50);
+	} else {
+		activityLibrary=[];
+		trackLibrary=[];
+		//$('body').removeClass('syncing');
+		$('body').removeClass('reading');
+		outputActivityListing();
+	}	
+}
+
+
+function preBuildActivityHeaders300() {
+	var in_cache=false;
+	
+	if (activityFiles.length > 0) {
+		var ifile = activityFiles.shift();
+		//var in_cache=false;
+		for(i in activityLibrary) {
+			if(activityLibrary[i]['o_file_location']==ifile) in_cache=true;
+		}
+	}
+	else {
+		in_cache=true;
+	}
+	if(!in_cache) {
+		examinateFile=ifile;
+		var raw_content = trim(control.loadFile(ifile));
+		//control.saveStringToFile(raw_content, ifile);
+		examinateContent=raw_content;
+		setTimeout('buildActivityHeaders300()',50);
+	} else {
+		if(activityFiles.length > 0) {
+			setTimeout('preBuildActivityHeaders300()',50);
+		} else if(trackFiles.length > 0) {
+			setTimeout('preBuildTrackHeaders300()',50);
+		} else {
+			//$('body').removeClass('syncing');
+			$('body').removeClass('reading');
+			outputActivityListing();
+			control.saveStringToFile(JSON.stringify(activityLibrary), systemDrive+'RCF.txt');
+		}
+	}
+}
+function preBuildTrackHeaders300() {
+	//For Safari specical design, there should be no chance to run this function when the trackFiles equals to 0, but in Safari it does.
+	var in_cache=false;
+	
+	if (trackFiles.length > 0) {
+		var ifile = trackFiles.shift();
+		//var in_cache=false;
+		for(i in trackLibrary) {
+			if(trackLibrary[i]['o_file_location']==ifile) in_cache=true;
+		}
+	}
+	else {
+		in_cache=true;
+	}
+	
+	if(!in_cache) {
+		examinateFile=ifile;
+		var raw_content = trim(control.loadFile(ifile));
+		//control.saveStringToFile(raw_content, ifile);
+		examinateContent=raw_content;
+		setTimeout('buildTrackHeaders300()',50);
+	} else {
+		if(trackFiles.length > 0) {
+			setTimeout('preBuildTrackHeaders300()',50);
+		} else {
+			//$('body').removeClass('syncing');
+			$('body').removeClass('reading');
+			outputActivityListing();
+			control.saveStringToFile(JSON.stringify(activityLibrary), systemDrive+'RCF.txt');
+			control.saveStringToFile(JSON.stringify(trackLibrary), systemDrive+'TCF.txt');
+		}
+	}
+}
+
+function buildActivityHeaders300(){ 
+	ifile=examinateFile;
+	examinateContent = trim(examinateContent);
+	if (examinateContent != "") {
+		raw_content=examinateContent;
+		if(raw_content.indexOf('<INPUT ')==-1) {	
+			
+			var result = new Object();
+			var file_path = "";
+			if (mac) {
+				file_path = ifile.split('/');
+			}
+			else {
+				file_path = ifile.split('\\');
+			}
+			
+			result['o_file']=file_path[file_path.length-1];
+			result['o_file_location']=ifile;
+			
+			//alert(result['o_file_location']);
+			result['o_filesize'] = control.checkFileSize(result['o_file_location']);
+			//alert(control.checkFileSize(result['o_file_location']));
+			try 
+			{
+				var dom_content = $.parseXML(raw_content);
+				dom_content=$(dom_content);
+				var track_name = dom_content.find('gpx > trk > name').text();
+				
+				if(track_name=='none'||track_name==''||track_name=='NaN') {
+					var file_path = "";
+					if (mac) {
+						file_path = ifile.split('/');
+					}
+					else {
+						file_path = ifile.split('\\');
+					}
+					
+					track_name = file_path[file_path.length-1].replace('.gpx','');
+				}
+				result['o_track_name']=track_name;
+				result['o_type'] = dom_content.find('gpx > trk > type').text();
+				
+				
+				var overview = dom_content.find('gpx > trk > extensions');
+
+				overview.children().each(function(){
+					result['o_'+$(this)[0].nodeName]=$(this).text();
+				});	
+				
+				if( typeof(result['o_timelength'])!='undefined' ) {
+					result['o_timelength']=result['o_timelength']/60;
+				}
+				
+				if( typeof(result['o_time'])!='undefined') {
+					/*
+					var sub_content = raw_content.substring(0,1499);
+					var shaObj = new jsSHA(sub_content, "ASCII");		
+					var hash = shaObj.getHash("SHA-512", "HEX");
+					*/
+					var hash = control.getSHA512(result['o_file_location']);
+					result['o_hash']=hash;
+					if(result['o_time']!='none'&&result['o_time']!=''&&result['o_time']!='NaN') {
+						var raw_time = result['o_time'].split('T');
+						date = raw_time[0].split('-');
+						var date = date[2]+'/'+date[1]+'/'+date[0];
+					} else date = '<center>-</center>';
+				
+					activityLibrary[activityLibrary.length]=result;
+					
+				}
+			}
+			catch ( err )
+			{
+			
+			}		
+		}
+	}
+	if(activityFiles.length > 0) {
+		setTimeout('preBuildActivityHeaders300()',50);
+	} else if(trackFiles.length > 0) {
+		setTimeout('preBuildTrackHeaders300()',50);
+	} else {
+		//$('body').removeClass('syncing');
+		$('body').removeClass('reading');
+		outputActivityListing();
+		control.saveStringToFile(JSON.stringify(activityLibrary), systemDrive+'RCF.txt');
+	}
+	
+}
+
+function buildTrackHeaders300(){
+	ifile=examinateFile;
+	examinateContent = trim(examinateContent);
+	if (examinateContent != "") {
+		raw_content=examinateContent;
+		if(raw_content.indexOf('<INPUT ')==-1) {	
+			
+			var result = new Object();
+			var file_path = "";
+			if (mac) {
+				file_path = ifile.split('/');
+			}
+			else {
+				file_path = ifile.split('\\');
+			}
+			result['o_file']=file_path[file_path.length-1];
+			result['o_file_location']=ifile;
+			
+			//alert(result['o_file_location']);
+			result['o_filesize'] = control.checkFileSize(result['o_file_location']);
+			//alert(control.checkFileSize(result['o_file_location']));
+			try 
+			{
+				var dom_content = $.parseXML(raw_content);
+
+				dom_content=$(dom_content);
+				
+				//Added the filter here, only allows the MIO Cyclo and RouteYou.com of creator to upload the gpx files.
+				var creatorText = dom_content.find('gpx').attr('creator');
+				if (creatorText.indexOf('http://www.mio.com/cyclo/') != -1 || creatorText === 'RouteYou') {
+					var track_name = dom_content.find('gpx > trk > name').text();
+
+					if(track_name=='none'||track_name==''||track_name=='NaN') {
+						var file_path = "";
+						if (mac) {
+							file_path = ifile.split('/');
+						}
+						else
+						{
+							file_path = ifile.split('\\');
+						}
+						track_name = file_path[file_path.length-1].replace('.gpx','');
+					}
+					result['o_track_name']=track_name;
+					/*
+					var sub_content = raw_content.substring(0,1499);
+					var shaObj = new jsSHA(sub_content, "ASCII");		
+					var hash = shaObj.getHash("SHA-512", "HEX");
+					*/
+					var hash = control.getSHA512(result['o_file_location']);
+					result['o_hash']=hash;
+					trackLibrary[trackLibrary.length]=result;
+				}
+			}
+			catch ( err )
+			{
+			
+			}
+		}
+	}
+	if(trackFiles.length > 0) {
+		setTimeout('preBuildTrackHeaders300()',50);
+	} else {
+		//$('body').removeClass('syncing');
+		$('body').removeClass('reading');
+		outputActivityListing();
+		control.saveStringToFile(JSON.stringify(activityLibrary), systemDrive+'RCF.txt');
+		control.saveStringToFile(JSON.stringify(trackLibrary), systemDrive+'TCF.txt');
+	}
+	
+}
+
+var uploaded_hashes = [];
+var uploading_hashes = [];
+function buildDevicePage() {
+	// Remove By Charles.su 2013/04/01
+	// if (logged_in) {
+	// 	reloadDevicePage();
+	// } 
+}
+
+function outputActivityListing() {
+	var start = 0;
+	var end = 0;
+	start = new Date().getTime();
+
+	if(sync_queue_in_progress==false) {
+		trySyncInit();
+	}
+	var deviceFileSize = 0;
+	var deviceFilesTotalSize = 0;
+	// var total_filesize = 0;
+	if(activityLibrary.length==0) {
+		$('#blankstate_content').show();
+	} else {
+		$('#recording_listing_container:not(.online)').append('<div class="row recording_listing"></div>');
+		for(i in activityLibrary) {
+			$('.recording_listing').append('<div class="track" hash="'+activityLibrary[i]['o_hash']+'"><div class="description pull-left"><h3 class="name" time="'+activityLibrary[i]['o_time']+'">'+activityLibrary[i]['o_file']+'</h3><p class="data">'+moment.utc(activityLibrary[i]['o_time']).fromNow()+' | '+Math.round(activityLibrary[i]['o_length']/1000)+' km | '+Math.round(activityLibrary[i]['o_timelength'])+' min.</p></div><div class="pull-right"><p class="notforcyclo100 size pull-left">'+Math.round(activityLibrary[i]['o_filesize']/1048576)+' MB</p><a href="#" class="pull-left"></a> <a href="#" class="track_page_delete_recording" hash="'+activityLibrary[i]['o_hash']+'"><img src="img/sprite/ico-trash-dark.png" title="Delete from your device" /></a></div></div>');			
+			deviceFilesTotalSize = deviceFilesTotalSize + activityLibrary[i]['o_filesize'];
+		}
+	}
+
+	if(control.getHardwareDisplayName()!='Mio Cyclo 100'&&control.getHardwareDisplayName()!='Mio Cyclo 105') {
+		$('.total_recordings_size').html(Math.round(deviceFilesTotalSize/1048576*100)/100);
+		$('#total_recordings_percentage').css('width',Math.round(deviceFilesTotalSize/1048576*100)/100+'%');
+	}
+	
+	if(control.getHardwareDisplayName()!='Mio Cyclo 100'&&control.getHardwareDisplayName()!='Mio Cyclo 105') {
+		var serverList = $('#track_listing_container .track_listing .track');
+		var deviceFiles = "";
+		var deviceTracksPath = "";
+		if (mac) {
+			deviceFiles = control.loadFileList(dataDrive + 'Dodge/Tracks/');
+		} else {
+			deviceFiles = control.loadFileList(dataDrive + "\\Dodge\\Tracks\\");
+		}
+
+		var deviceSHA = 0; 
+		var serverShaArr = new Array();
+		var serverTitleArr = new Array();
+		// light on checckBox
+		$("#track_listing_container .track_listing .track").each(function(){
+		     serverShaArr.push($(this).attr("hash"));
+		     serverTitleArr.push($(this).attr("title").replace(/[,/\\:*?""<>|]/g,"_"));
+		});
+
+		for (var device_count = 0; device_count < deviceFiles.length; device_count++) {
+			if ((deviceFiles[device_count].indexOf('[') === -1) && (deviceFiles[device_count].toUpperCase().indexOf('.GPX') !== -1 ) && (deviceFiles[device_count].substr(0,1) !== "." )) {
+				if (serverList.length < 1 && $('#track_listing_container .manual_control').length < 1 ) {
+					$(".blankstate_content").hide();
+					$(".fluid-right .tracks #track_listing_container").append('<div class="row manual_control"><div class="row track_listing"></div></div>');
+				}
+				var gpxPath = "";
+				if (mac) {					
+					gpxPath = dataDrive + 'Dodge/Tracks/' + deviceFiles[device_count];
+					deviceSHA = control.getSHA512(gpxPath);
+					deviceFileSize = control.checkFileSize(gpxPath);
+				} else {
+					gpxPath = dataDrive + "\\Dodge\\Tracks\\" + deviceFiles[device_count];
+					deviceSHA = control.getSHA512(gpxPath);
+					deviceFileSize = control.checkFileSize(gpxPath);
+				}
+				deviceFilesTotalSize += deviceFileSize;
+				var deviceTitle = deviceFiles[device_count].substr(0, deviceFiles[device_count].toUpperCase().indexOf('.GPX'));				
+				try {
+					var trackIsInAccount = true;
+					// if ($.inArray(deviceTitle, serverTitleArr) != -1) {
+					// 	$(".track[compareTitle=\"" + deviceTitle + "\"] .size").html(Math.round(deviceFileSize/1024)+' KB');
+					// 	$(".track[compareTitle=\"" + deviceTitle + "\"] i:first").removeClass('hide');
+					// 	$(".track[compareTitle=\"" + deviceTitle + "\"] i:last").addClass('hide');
+					// 	$("#track_listing_container .track_listing .track[compareTitle=\"" + deviceTitle + "\"] .pull-right .manual_controller .manual_form .device_save").attr('checked', 'checked');
+					// } else {
+					// 	trackIsInAccount = false;
+					// }
+					if ($.inArray(deviceSHA, serverShaArr) != -1) {
+						$(".track[hash=\"" + deviceSHA + "\"] .size").html(Math.round(deviceFileSize/1024)+' KB');
+						$(".track[hash=\"" + deviceSHA + "\"] i:first").removeClass('hide');
+						$(".track[hash=\"" + deviceSHA + "\"] i:last").addClass('hide');
+						$("#track_listing_container .track_listing .track[hash=\"" + deviceSHA + "\"] .pull-right .manual_controller .manual_form .device_save").attr('checked', 'checked');
+					} else {
+						trackIsInAccount = false;
+					}
+					var temp_content = control.loadFile(gpxPath);
+					var dom_content = $.parseXML(temp_content);
+					dom_content = $(dom_content);						
+					// Added the filter here, only allows the MIO Cyclo and RouteYou.com of creator to upload the gpx files.
+					var creatorText = dom_content.find('gpx').attr('creator');
+					// var creatorText = "Test loadGPX Time";
+					if (creatorText.indexOf('http://www.mio.com/cyclo/') != -1 || creatorText === 'RouteYou') {
+						$('#track_listing_container_autoSync .track_listing').append('<div class="track device trackOnDevice trackOnDeviceNotInAccount"><div class="description pull-left"><h3 class="name">' + deviceFiles[device_count]
+						+ '</h3>'
+						+ '</div><div class="pull-right"><p class="notforcyclo100 size pull-left">' + Math.round(deviceFileSize/1024)
+						+ ' KB</p></div></div>');
+						if (trackIsInAccount == false) {
+							$('#track_listing_container .track_listing').append('<div class="track device trackOnDevice trackOnDeviceNotInAccount"><div class="description pull-left"><h3 class="name">' + deviceFiles[device_count]
+							+ '</h3>'
+							+ '</div><div class="pull-right"><p class="notforcyclo100 size pull-left">' + Math.round(deviceFileSize/1024)
+							+ ' KB</p></div></div>');
+						}
+					} else {
+						$('#track_listing_container_autoSync .track_listing').append('<div class="track device trackOnDevice trackOnDeviceNotInAccount"><div class="description pull-left"><h3 class="name">' + deviceFiles[device_count]
+						+ '</h3><span style="color:red;">This track has not been created using MioShare, therefore it is not possible to visualize this track.</span>'
+						+ '</div><div class="pull-right"><p class="notforcyclo100 size pull-left">' + Math.round(deviceFileSize/1024)
+						+ ' KB</p></div></div>');
+						if (trackIsInAccount == false) {
+							$('#track_listing_container .track_listing').append('<div class="track device trackOnDevice trackOnDeviceNotInAccount"><div class="description pull-left"><h3 class="name">' + deviceFiles[device_count]
+							+ '</h3><span style="color:red;">This track has not been created using MioShare, therefore it is not possible to visualize this track.</span>'
+							+ '</div><div class="pull-right"><p class="notforcyclo100 size pull-left">' + Math.round(deviceFileSize/1024)
+							+ ' KB</p></div></div>');
+						}
+					}
+				} catch (err) {
+					// $('#track_listing_container_autoSync .track_listing').append('<div class="track device trackOnDevice"><div class="description pull-left"><h3 class="name">' + deviceFiles[device_count]
+					// + '</h3><span style="color:red;">This track has not been created using MioShare, therefore it is not possible to visualize this track.</span>'
+					// + '</div><div class="pull-right"><p class="notforcyclo100 size pull-left">' + Math.round(deviceFileSize/1024)
+					// + ' KB</p></div></div>');
+					// $('#track_listing_container .track_listing').append('<div class="track device trackOnDevice"><div class="description pull-left"><h3 class="name">' + deviceFiles[device_count]
+					// + '</h3><span style="color:red;">This track has not been created using MioShare, therefore it is not possible to visualize this track.</span>'
+					// + '</div><div class="pull-right"><p class="notforcyclo100 size pull-left">' + Math.round(deviceFileSize/1024)
+					// + ' KB</p></div></div>');
+				}
+			}
+		}
+		deviceFilesTotalSize = parseFloat(Math.round(deviceFilesTotalSize*100))/100;
+		$('.total_tracks_size').html(Math.round(deviceFilesTotalSize/1048576*100)/100);
+		$('#total_tracks_percentage').css('width',Math.round(deviceFilesTotalSize/1048576*100)/100+'%');
+
+	}
+
+	
+	if(control.getHardwareDisplayName()=='Mio Cyclo 100'||control.getHardwareDisplayName()=='Mio Cyclo 105') {
+		$('.small_device_image').attr('src','img/pic.cyclo100-small.png');
+	} else {
+		$('.small_device_image').attr('src','img/pic.cyclo300-small.png');;
+	}
+	$('.small_device_image').attr('alt',control.getHardwareDisplayName());
+	
+	checkDevicePresenttracks();
+	
+	sortByAZ('#recording_listing_container');
+	sortByAZ('#track_listing_container');
+ 	sortByAZ('#track_listing_container_autoSync');
+ 	end = new Date().getTime();
+}
+
+function navigate_go_back() {
+	var current = navigation_stack.pop();
+	if(navigation_stack.length>0) loadPage(navigation_stack[navigation_stack.length-1]);
+}
+
+function loadPage(url) {
+	var stamp=new Date().getTime();	
+	if(url.indexOf('?')==-1) turl = url+'?ajax_call='+stamp;
+	else turl = url+'&ajax_call='+stamp;
+	navigation_stack.push(url);
+
+	/*
+	var fixURL = "http://eu.mio.com/cyclo/sandbox/ajax/landing_page.php";
+	var state = {		
+		url : fixURL
+	};
+	History.replaceState(state, "", fixURL);
+*/
+	$.get(turl,function(data){
+		$('#ajax_container').html(data);
+		GetDataDriveFreeFlashFunc();				
+		$('input[name=UUID]').val(control.getUUID());
+		$('input[name=SKUID]').val( control.getSKUID() );
+		$('input[name=device]').val(control.getHardwareDisplayName());
+		$('.connected_device_name').html(control.getHardwareDisplayName());
+		$('[rel=tooltip]').tooltip();
+		if(sync_queue_info!=false) {
+			$('.uploading_recordings_number').html(current_sync_queue_info[0]);
+			$('.syncing_tracks_number').html((current_sync_queue_info[1]+current_sync_queue_info[2]+current_sync_queue_info[3]));
+			$('#sync_overlay').show();
+		}
+		var url_page = url.split('/');
+		url_page=url_page.pop();
+		url_page = url_page.split('?');
+		url_page=url_page[0];
+		for(i in page_inits) {
+			if(page_inits[i][0]==url_page) {
+				eval(page_inits[i][1]);
+			}
+		}
+		if ((url.indexOf('explore.php') > -1 && !(url.indexOf('explore.php?rid') > -1)) || url.indexOf('create') > -1){
+			if ((control.getHardwareDisplayName()=='Mio Cyclo 100'||control.getHardwareDisplayName()=='Mio Cyclo 105') && $.cookie('connection_status')=='true')  {
+				$.sticky('<i class="icon-info-sign icon-white"></i> <b style=\'color:#FF0000\'>The Mio Cyclo 100/105 range is not capable of storing tracks, therefor you will not be able to upload your track to the device</b>');
+			}
+		}
+		if (logged_in && $.cookie('connection_status') == 'true') {
+			if(track_in_process && $.cookie('connection_status')) $.sticky('<i class="icon-info-sign icon-white"></i> MioShare is processing your recordings and/or tracks. This might take a while. You will see a notification once everything has been processed.');
+		}
+	});
+	return false;
+}
+function displayUpdate() {
+	var timer = setInterval(function(){
+		if ($("#teaser").length) {
+			if (!logged_in) {
+				$('body').removeClass('syncing');
+			}
+			
+			if (platformStr == "win") {
+				$('.update_win').show();
+			}
+			else if (mac){
+				$('.update_mac').show();
+			}
+			clearInterval(timer);
+		}
+	},2000);
+}
+
+function loadHomeScreen() {
+	loadPage('landing_page.php');	
+}
+
+function logoff() {
+	var stamp=new Date().getTime();
+	var url = 'logoff.php';
+	logged_in = false;
+	$.cookie('logged_in', null);
+	$.get(url+'?ajax_call='+stamp,function(data){
+		$('#sync_overlay').hide();
+		gloginChecked = false;
+		// preCheckServerInfo();
+		loadHomeScreen();
+	});
+	return false;
+}
+
+function trySyncInit() {
+	if (logged_in == true) {
+		if ($.cookie('logged_in') !== 'true') {
+			$.get('controller.php?action=check_tracks_in_queue',function(data){
+				if (data === 'true') {
+					var date = new Date();
+					date.setTime(date.getTime() + (900 * 1000));
+					$.cookie('logged_in', logged_in, { expires:date });
+				}
+				else{
+					logged_in = false;
+					loadPage('login.php');
+					return false;
+				}
+			});
+		}
+	}
+	if( $.cookie('connection_status')=='true' && logged_in==true ) {
+		//alert('starting sync check');
+		sync_queue_in_progress=true;
+		$('body').addClass('syncing');
+		//do sync check
+		var activity_meta=[];
+		for(i in activityLibrary) {
+			//activity_hashes[activity_hashes.length]=activityLibrary[i]['o_hash'];
+			var meta = JSON.stringify(activityLibrary[i]);
+			activity_meta[activity_meta.length] = activityLibrary[i]['o_hash'];
+		}
+		var track_hashes=[];
+		for(i in trackLibrary) {
+			track_hashes[track_hashes.length]=trackLibrary[i]['o_hash'];
+		}
+		//$.post('controller.php','action=check_sync&activity_hashes='+activity_hashes.join(',')+'&track_hashes='+track_hashes.join(','),function(data){
+		$.post('controller.php','action=check_sync&activity_meta=' + JSON.stringify(activityLibrary) + '&track_hashes='+track_hashes.join(','),function(data){
+
+			if(data=='[~][~][~]') {
+				// no sync needed
+				$('#sync_overlay').hide();
+				if(sync_queue_info!=false) {
+				
+					if((sync_queue_info[0] > 0) && ($.cookie('set_recordings')!='delete_after_upload')) {
+						var linktxt=' <span id="delete_all_recordings"><a href="#">Delete all uploaded recordings from the device</a></span>';
+					} else {
+						var linktxt='';
+					}
+				
+					$.sticky('<i class="icon-info-sign icon-white"></i> '+sync_queue_info[0]+' recordings uploaded and '+sync_queue_info[1]+' tracks synced successfully.'+linktxt);
+					track_in_process=true;
+				}
+				$('body').removeClass('syncing');
+				
+				sync_queue_info=false;
+			} else {
+			
+				data=data.split('[~]');
+			
+				if(data[0]=='') data[0]=[]; else data[0]=data[0].split(',');
+				if(data[1]=='') data[1]=[]; else data[1]=data[1].split(',');
+				if(data[2]=='') data[2]=[]; else data[2]=data[2].split('[~~~]');
+				if(data[3]=='') data[3]=[]; else data[3]=data[3].split(',');
+				
+				if(data[0].length>0) {
+					if(sync_queue_info==false) sync_queue_info=[data[0].length,(data[1].length+data[2].length+data[3].length)];
+					current_sync_queue_info=[data[0].length,data[1].length,data[2].length,data[3].length];
+					$('.uploading_recordings_number').html(data[0].length);
+					$('.syncing_tracks_number').html((data[1].length+data[2].length+data[3].length));
+					$('#sync_overlay').show();
+					for(i in activityLibrary) {
+						if(activityLibrary[i]['o_hash']==data[0][0]) {
+							$('body').addClass('syncing');
+							setTimeout(function(){ uploadActivity(activityLibrary[i]); },50);
+							return false;
+						}
+					}
+				}
+				
+				
+				if(data[1].length>0) {
+					if(sync_queue_info==false) sync_queue_info=[data[0].length,(data[1].length+data[2].length+data[3].length)];
+					current_sync_queue_info=[data[0].length,data[1].length,data[2].length,data[3].length];
+					$('.uploading_recordings_number').html(data[0].length);
+					$('.syncing_tracks_number').html((data[1].length+data[2].length+data[3].length));
+					$('#sync_overlay').show();
+					for(i in trackLibrary) {
+						if(trackLibrary[i]['o_hash']==data[1][0]) {
+							$('body').addClass('syncing');
+							setTimeout(function(){ uploadTrack(trackLibrary[i]); },50);
+							return false;
+						}
+					}
+				}
+				
+				
+				if((data[2].length>0)&&(control.getHardwareDisplayName()!='Mio Cyclo 100'&&control.getHardwareDisplayName()!='Mio Cyclo 105')) {
+					
+					if(sync_queue_info==false) sync_queue_info=[data[0].length,(data[1].length+data[2].length+data[3].length)];
+					current_sync_queue_info=[data[0].length,data[1].length,data[2].length,data[3].length];
+					$('.uploading_recordings_number').html(data[0].length);
+					$('.syncing_tracks_number').html((data[1].length+data[2].length+data[3].length));
+					$('#sync_overlay').show();
+					
+					for(i in data[2]) {
+						var elm = data[2][i].split('[~~]');
+						var pathDest = "";
+						var fileName = elm[0].replace(/[,/\\:*?""<>|]/g,"_");
+						if (mac) {
+							pathDest = dataDrive+'Dodge/Tracks/' + fileName + '.gpx';
+							if( control.checkFileExist(pathDest) ) {
+								for (var duplicatedCount = 1; duplicatedCount < data[2].length + 1 ; duplicatedCount++) {
+									pathDest = dataDrive+'Dodge/Tracks/'+ fileName + '(' + duplicatedCount + ')' + '.gpx';
+									if( !control.checkFileExist(pathDest) ) break;
+								}
+							}
+						}
+						else {
+							pathDest = dataDrive+'Dodge\\Tracks\\' + fileName + '.gpx';
+							if( control.checkFileExist(pathDest) ) {
+								for (var duplicatedCount = 1; duplicatedCount < data[2].length + 1 ; duplicatedCount++) {
+									pathDest = dataDrive+'Dodge\\Tracks\\' + fileName + '(' + duplicatedCount + ')' + '.gpx';
+									if( !control.checkFileExist(pathDest) ) break;
+								}
+							}
+						}
+						downloadData = elm;
+						$('body').addClass('syncing');
+						var result = control.download(elm[2],pathDest,trackDownloadListener, false);
+						return false;
+					}
+										
+				}
+				
+				
+				if((data[3].length>0)&&(control.getHardwareDisplayName()!='Mio Cyclo 100'&&control.getHardwareDisplayName()!='Mio Cyclo 105')) {
+					
+					if(sync_queue_info==false) sync_queue_info=[data[0].length,(data[1].length+data[2].length+data[3].length)];
+					current_sync_queue_info=[data[0].length,data[1].length,data[2].length,data[3].length];
+					$('.uploading_recordings_number').html(data[0].length);
+					$('.syncing_tracks_number').html((data[1].length+data[2].length+data[3].length));
+					$('#sync_overlay').show();
+					
+					var hash = data[3][0];						
+					
+					$('body').addClass('syncing');
+					var new_trackLibrary=[];
+					for(i in trackLibrary) {
+						if(trackLibrary[i]['o_hash']==hash) {
+							var result = control.deleteFile(trackLibrary[i]['o_file_location']);
+							control.deleteFile(trackLibrary[i]['o_file_location'].replace('.gpx','.bin'));
+							GetDataDriveFreeFlashFunc();
+							/*switch(result) {
+								case errorList.get("E_MITAC_PLUGIN_OK"):
+									//document.getElementById("DeleteFileResult").innerHTML = "Delete File Result: file delete finish";
+								break;
+								
+								case errorList.get("E_MITAC_PLUGIN_DELETE_FILE_FAIL"):
+									//document.getElementById("DeleteFileResult").innerHTML = "Delete File Result: delete file fail";
+								break;
+								
+								case errorList.get("E_MITAC_PLUGIN_CHECK_FILE_EXIST_FAIL"):
+									//document.getElementById("DeleteFileResult").innerHTML = "Delete File Result: file does not exist";
+								break;
+							}*/
+
+						} else {
+							new_trackLibrary.push(trackLibrary[i]);
+						}
+					}
+					trackLibrary=new_trackLibrary;							
+					control.saveStringToFile(JSON.stringify(trackLibrary), systemDrive+'TCF.txt');
+					$('body').removeClass('syncing');
+					setTimeout('trySyncInit()',50);
+					return false;
+				}
+			}
+		});
+	}
+}
+
+function trackDownloadListener(status , current, total) {
+	switch(status) {
+		case errorList.get("E_MITAC_PLUGIN_DOWNLOAD_STATUS_CONNECT_NETWORK"):
+		//$.sticky('<b>Download File Result: start</b>');
+		break;
+		
+		case errorList.get("E_MITAC_PLUGIN_DOWNLOAD_STATUS_PROCESS"):
+		//$.sticky('<b>Download File Result: downloading</b>');
+		break;
+		
+		case errorList.get("E_MITAC_PLUGIN_DOWNLOAD_STATUS_FINISH"):
+			var result = new Object();
+			result['o_file']=downloadData[0]+'.gpx';
+			var deleteTrackPath = "";
+			if (mac) {
+				result['o_file_location']=dataDrive+'Dodge/Tracks/'+downloadData[0]+'.gpx';
+				deleteTrackPath = "._" + result['o_file_location'];
+				control.deleteFile(deleteTrackPath);
+			}
+			else {
+				result['o_file_location']=dataDrive+'Dodge\\Tracks\\'+downloadData[0]+'.gpx';
+				deleteTrackPath = dataDrive+'Dodge\\Tracks\\'+downloadData[0]+'.gpx.md5';
+				control.deleteFile(deleteTrackPath);
+			}
+				
+			
+			result['o_filesize'] = control.checkFileSize(result['o_file_location']);
+			result['o_track_name']=downloadData[0];
+			result['o_hash']=downloadData[1];
+			trackLibrary[trackLibrary.length]=result;
+			control.saveStringToFile(JSON.stringify(trackLibrary), systemDrive+'TCF.txt');
+			$('body').removeClass('syncing');
+			GetDataDriveFreeFlashFunc();
+			setTimeout('trySyncInit()',50);
+		break;
+		
+		case errorList.get("E_MITAC_PLUGIN_DOWNLOAD_STATUS_USER_CANCEL"):
+		//$.sticky('<b>Download File Result: user cancel</b>');
+		break;
+		
+		case errorList.get("E_MITAC_PLUGIN_DOWNLOAD_STATUS_FAIL"):
+			setTimeout('trySyncInit()',50);
+		//$.sticky('<b>Download File Result: fail</b>');
+		break;
+		
+		case errorList.get("E_MITAC_PLUGIN_DOWNLOAD_DATA_ERROR"):
+			setTimeout('trySyncInit()',50);
+		//$.sticky('<b>Download File Result: data error</b>');
+		break;
+		
+		case errorList.get("E_MITAC_PLUGIN_CHECK_DISK_FULL"):
+		//$.sticky('<b>Download File Result: dest disk is full</b>');
+		break;
+		
+		default:
+		//$.sticky('<b>Download File Result: error</b>');
+		break;
+	}
+
+}
+
+function copyFileListener(status, current, total)
+{
+	switch(status)
+	{
+		case errorList.get("E_MITAC_PLUGIN_COPY_STATUS_START"):
+
+		break;
+		   
+		case errorList.get("E_MITAC_PLUGIN_COPY_STATUS_PROCESS"):
+
+		break;
+		  
+		case errorList.get("E_MITAC_PLUGIN_COPY_STATUS_FINISH"):
+			
+			preBuildActivityHeaders100();
+			
+		break;
+			  
+		case errorList.get("E_MITAC_PLUGIN_COPY_STATUS_FAIL"):
+
+		break;
+		
+		case errorList.get("E_MITAC_PLUGIN_COPY_STATUS_NO_RESPONSE"):
+
+		break;
+	}
+}
+
+function singleTrackDownloadListener(status , current, total) {
+
+
+
+	switch(status) {
+		case errorList.get("E_MITAC_PLUGIN_DOWNLOAD_STATUS_CONNECT_NETWORK"):
+		//$.sticky('<b>Download File Result: start</b>');
+		break;
+		
+		case errorList.get("E_MITAC_PLUGIN_DOWNLOAD_STATUS_PROCESS"):
+		//$.sticky('<b>Download File Result: downloading</b>');
+		break;
+		
+		case errorList.get("E_MITAC_PLUGIN_DOWNLOAD_STATUS_FINISH"):
+		var result = new Object();
+		result['o_file']=downloadData[0]+'.gpx';
+		
+		if (mac) {
+			result['o_file_location']=dataDrive+'Dodge/Tracks/'+downloadData[0]+'.gpx';
+			deleteTrackPath = "._" + result['o_file_location'];
+			control.deleteFile(deleteTrackPath);
+		}
+		else {
+			result['o_file_location']=dataDrive+'Dodge\\Tracks\\'+downloadData[0]+'.gpx';
+			deleteTrackPath = result['o_file_location']+'.md5';
+			control.deleteFile(deleteTrackPath);
+		}
+		
+		result['o_filesize'] = control.checkFileSize(result['o_file_location']);
+		result['o_track_name']=downloadData[0];
+		result['o_hash']=downloadData[1];
+		trackLibrary[trackLibrary.length]=result;
+		control.saveStringToFile(JSON.stringify(trackLibrary), systemDrive+'TCF.txt');
+		
+		$('.track[hash='+downloadData[1]+'] .auto_controller i:first').removeClass('hide');
+		$('.track[hash='+downloadData[1]+'] .auto_controller i:last').addClass('hide');
+		
+		$('.track[hash='+downloadData[1]+'] .size').html(Math.round(result['o_filesize']/1024)+' KB');
+		
+		GetDataDriveFreeFlashFunc();
+		
+		$('body').removeClass('syncing');
+		
+		break;
+		
+		case errorList.get("E_MITAC_PLUGIN_DOWNLOAD_STATUS_USER_CANCEL"):
+		//$.sticky('<b>Download File Result: user cancel</b>');
+		break;
+		
+		case errorList.get("E_MITAC_PLUGIN_DOWNLOAD_STATUS_FAIL"):
+		//$.sticky('<b>Download File Result: fail</b>');
+		break;
+		
+		case errorList.get("E_MITAC_PLUGIN_DOWNLOAD_DATA_ERROR"):
+		//$.sticky('<b>Download File Result: data error</b>');
+		break;
+		
+		case errorList.get("E_MITAC_PLUGIN_CHECK_DISK_FULL"):
+		//$.sticky('<b>Download File Result: dest disk is full</b>');
+		break;
+		
+		default:
+		//$.sticky('<b>Download File Result: error</b>');
+		break;
+	}
+
+}
+
+
+var colors = ['#FF9900','#FF9900','#FF9900','#FF9900','#FF9900','#0099FF','#0099FF','#0099FF'];
+function addDashboardRoute(latLonPath,colorCounter) {
+	for(i in latLonPath) {
+		bounds.extend(latLonPath[i]);
+	}
+	var pLine = new google.maps.Polyline({
+		path: latLonPath,
+		strokeColor: colors[colorCounter],
+		strokeOpacity: 1.0,
+		strokeWeight: 2
+	});
+	pLine.setMap(map);
+	map.fitBounds(bounds);
+}
+
+function addDashboardMarker(lat,lon,title){
+	myLatlng = new google.maps.LatLng(lat,lon);
+	var marker = new google.maps.Marker({
+		  position: myLatlng,
+		  map: map,
+		  title:title,
+		  icon: "http://maps.google.com/mapfiles/ms/icons/orange-dot.png"
+	  });
+	bounds.extend(myLatlng);
+	map.fitBounds(bounds);
+}
+function addNewDashboardMarker(lat,lon,title){
+	if (lat != undefined && lon != undefined){
+		myLatlng = new google.maps.LatLng(lat,lon);
+		var marker = new google.maps.Marker({
+			  position: myLatlng,
+			  map: map,
+			  title:title,
+			  icon: "http://maps.google.com/mapfiles/ms/icons/ltblue-dot.png"
+		  });
+		bounds.extend(myLatlng);
+		map.fitBounds(bounds);
+	}
+}
+
+var bounds;
+var map;
+var poly;
+function initialize_dashboard_gmap() {
+	bounds = new google.maps.LatLngBounds();
+	var myLatlng = new google.maps.LatLng(51.833,4.533);	
+	var mapOptions = {
+		center: myLatlng,
+		zoom: 2,
+		scrollwheel: false,
+		navigationControl: true,
+		mapTypeControl: false,
+		scaleControl: true,
+		draggable: true,
+		disableDefaultUI: false,
+		mapTypeId: google.maps.MapTypeId.TERRAIN
+	};
+	map = new google.maps.Map(document.getElementById("map_canvas"),mapOptions);
+	
+}
+
+var dashboardanimation=false;
+function animateDashboard() {
+	var again=false;
+	
+	var loop_value = parseFloat($('#total_distance').attr('loop_value'));
+	var current_value = parseFloat($('#total_distance').attr('current_value'));	
+	if( loop_value > current_value ) {	
+		current_value=current_value+20;
+		if(loop_value < current_value) current_value = loop_value; 
+		$('#total_distance').attr('current_value',current_value);
+		$('#total_distance').html(Math.round(current_value/100)/10).css('display','inline');
+		again=true;
+	}
+	
+	var loop_value = parseFloat($('#max_speed').attr('loop_value'));
+	var current_value = parseFloat($('#max_speed').attr('current_value'));	
+	if( loop_value > current_value ) {	
+		current_value=current_value+0.01;
+		if(loop_value < current_value) current_value = loop_value; 
+		$('#max_speed').attr('current_value',current_value);
+		$('#max_speed').html(Math.round(current_value*10)/10).css('display','inline');
+		again=true;
+	}
+	
+	var loop_value = parseFloat($('#total_ascent').attr('loop_value'));
+	var current_value = parseFloat($('#total_ascent').attr('current_value'));	
+	if( loop_value > current_value ) {	
+		current_value=current_value+0.5;
+		if(loop_value < current_value) current_value = loop_value; 
+		$('#total_ascent').attr('current_value',current_value);
+		$('#total_ascent').html(Math.round(current_value)).css('display','inline');
+		again=true;
+	}
+	
+	var loop_value = parseFloat($('#total_calories').attr('loop_value'));
+	var current_value = parseFloat($('#total_calories').attr('current_value'));	
+	if( loop_value > current_value ) {	
+		current_value=current_value+1;
+		if(loop_value < current_value) current_value = loop_value; 
+		$('#total_calories').attr('current_value',current_value);
+		$('#total_calories').html(Math.round(current_value)).css('display','inline');
+		again=true;
+	}
+	
+	if(again) {
+		setTimeout('animateDashboard()',5);
+	} else {
+		dashboardanimation=false;
+	}
+}
+
+function uploadActivity(activity) {
+	var meta = JSON.stringify(activity);
+	var filecontent = trim(control.loadFile(activity['o_file_location']));
+	var poss_delete_hash=activity['o_hash'];
+	var params = 'action=upload_track&sha512='+activity['o_hash']+'&meta='+meta+'&upload_track='+filecontent;
+	$.post('controller.php',params,function(data){
+		if (data === 'true') {
+			$('#dashboard_not_blankstate').show();
+			$('#dashboard_blankstate').hide();
+			if( $.cookie('set_recordings')=='delete_after_upload' ) {
+				// delete track if setting says so				
+				var new_activityLibrary=[];
+				for(i in activityLibrary) {
+					if(activityLibrary[i]['o_hash']==poss_delete_hash) {
+						var result = control.deleteFile(activityLibrary[i]['o_file_location']);
+						
+						control.deleteFile(activityLibrary[i]['o_file_location'].replace('.gpx','.bin'));
+						control.deleteFile(activityLibrary[i]['o_file_location'].replace('.gpx','.fit'));
+						
+						if(control.getHardwareDisplayName()=='Mio Cyclo 100' || control.getHardwareDisplayName()=='Mio Cyclo 105') {
+							result = control.deleteFile(dataDrive+activityLibrary[i]['o_file']);
+						}
+					} else {
+						new_activityLibrary.push(activityLibrary[i]);
+					}
+				}
+				activityLibrary=new_activityLibrary;							
+				control.saveStringToFile(JSON.stringify(activityLibrary), systemDrive+'RCF.txt');
+			}
+			
+			if($('#total_distance').length > 0) {
+
+				var dom_content = $.parseXML(filecontent);
+				dom_content=$(dom_content);
+				var point = dom_content.find('trkpt:first');
+					
+				addNewDashboardMarker( point.attr('lat'),point.attr('lon'),activity['o_track_name']);
+				//addDashboardRoute(points,6);
+				
+
+				var loop_value = parseFloat($('#total_distance').attr('loop_value')) + parseFloat(activity['o_length']);
+				$('#total_distance').attr('loop_value',loop_value);
+				
+				var loop_value = parseFloat($('#max_speed').attr('loop_value'));			
+				if( activity['o_maxspeed'] > loop_value ) $('#max_speed').attr('loop_value',activity['o_maxspeed']);
+				
+				var loop_value = parseFloat($('#total_ascent').attr('loop_value')) + parseFloat(activity['o_totalascent']);
+				$('#total_ascent').attr('loop_value',loop_value);
+				
+				var loop_value = parseFloat($('#total_calories').attr('loop_value')) + parseFloat(activity['o_calories']);
+				$('#total_calories').attr('loop_value',loop_value);
+				
+				
+				if(dashboardanimation==false) setTimeout('animateDashboard()',100);
+				
+				
+			}	
+			$('body').removeClass('syncing');
+			setTimeout('trySyncInit()',50);
+		}
+		else {
+			logged_in = false;
+			loadPage('login.php');
+			return false;
+		}
+	});
+}
+
+function uploadTrack(track) {
+	var meta = JSON.stringify(track);
+	var filecontent = control.loadFile(track['o_file_location']);
+	var params = 'action=upload_track&sha512='+track['o_hash']+'&meta='+meta+'&upload_track='+filecontent;
+	$.post('controller.php',params,function(data){	
+		$('body').removeClass('syncing');
+		setTimeout('trySyncInit()',50);
+	});
+}
+
+function checkDevicePresenttracks() {
+	var deviceHashes=[];
+	for(i in activityLibrary) {
+		deviceHashes.push(activityLibrary[i]['o_hash']);
+	}
+	for(i in trackLibrary) {
+		deviceHashes.push(trackLibrary[i]['o_hash']);
+	}
+	$('.online .viewer_track').each(function(){
+		if($.inArray($(this).attr('hash'),deviceHashes)!=-1) $(this).find('.device_present').show();
+		else $(this).find('.device_present').hide();
+	});
+	return false;
+}
+
+function trim(s) {
+	return $.trim(s);
+	s = s.replace(/(^\s*)|(\s*$)/gi,"");
+	s = s.replace(/[ ]{2,}/gi," ");
+	s = s.replace(/\n /,"\n");
+	s = s.replace(/(\r\n|\n|\r)/,'');
+	return s;
+}
+function do_custom_submit() {
+	//alert('do_custom_submit');
+}
+function check_tracks_in_queue() {
+	if(logged_in  && $.cookie('connection_status') == 'true'){
+		$.get('controller.php?action=check_tracks_in_queue',function(data){
+			if(data=='yes' && track_in_process==false) {
+				// show message
+				$.sticky('<i class="icon-info-sign icon-white"></i> MioShare is processing your recordings and/or tracks. This might take a while. You will see a notification once everything has been processed.');
+				track_in_process=true;
+			}
+			if(data=='no' && track_in_process==true) {
+				// hide message
+				$.sticky('<i class="icon-info-sign icon-white"></i> MioShare has processed all your recordings and/or tracks Go to  <a href="list_view.php">MY TRACKS</a>   to take a look.');
+				track_in_process=false;
+			}
+			if(data=='yes') track_in_process=true; else track_in_process=false;
+			setTimeout('check_tracks_in_queue()',15000);
+		});
+	} else {
+		setTimeout('check_tracks_in_queue()',15000);
+	}
+}
+
+function sortMapsBySize(id){
+	var mylist = $(id);
+	var listitems = mylist.children('.track').get();
+	listitems.sort(function(a, b) {
+	   var compA = $(a).find('.data_row_mapDetailed').text().toUpperCase();
+	   var compB = $(b).find('.data_row_mapDetailed').text().toUpperCase();
+	   return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
+	})
+	var tmpStr = "";
+	$.each(listitems, function(idx, itm) { 
+		tmpStr += itm.outerHTML;
+	});
+	mylist.html(tmpStr); 
+}
+
+function sortMapsByAZ(id){
+	var mylist = $(id);
+	var listitems = mylist.children('.track').get();
+	listitems.sort(function(a, b) {
+	   var compA = $(a).find('#data_name_right_mapDetailed').text().toUpperCase();
+	   var compB = $(b).find('#data_name_right_mapDetailed').text().toUpperCase();
+	   return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
+	})
+	var tmpStr = "";
+	$.each(listitems, function(idx, itm) { 
+		tmpStr += itm.outerHTML;
+	});
+	mylist.html(tmpStr); 
+}
+
+function sortByAZ(id){
+	var mylist = $(id);
+	var listitems = mylist.children('.track').get();
+	listitems.sort(function(a, b) {
+	   var compA = $(a).find('.name').text().toUpperCase();
+	   var compB = $(b).find('.name').text().toUpperCase();
+	   return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
+	})
+	$.each(listitems, function(idx, itm) { mylist.append(itm); });
+}
+function sortBySize(id){
+	var mylist = $(id);
+	var listitems = mylist.children('.track').get();
+	listitems.sort(function(a, b) {
+	   var compA = $(a).find('.size').text().toUpperCase();
+	   var compB = $(b).find('.size').text().toUpperCase();
+	   return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
+	})
+	$.each(listitems, function(idx, itm) { mylist.append(itm); });
+}
+function sortByDate(id){
+	var mylist = $(id);
+	var listitems = mylist.children('.track').get();
+	listitems.sort(function(a, b) {
+	   var compA = $(a).find('.name').attr('time').toUpperCase();
+	   var compB = $(b).find('.name').attr('time').toUpperCase();
+	   return (compA > compB) ? -1 : (compA < compB) ? 1 : 0;
+	})
+	$.each(listitems, function(idx, itm) { mylist.append(itm); });
+}
+function checkFirmwareForUpdate(){
+	$.getJSON('firmware.versions.js.php', function(data) {
+		$.each(data, function(key, val) {
+			if(key==control.getSKUID()) {
+				deviceFirmStr = control.getFirmwareVersion();
+				//var deviceFirmStr = display.getFirmwareVersion();
+				//F-IGB-2O-121011W
+				var deviceFirm = deviceFirmStr.split('-');
+				var deviceFirmVal = deviceFirm[deviceFirm.length - 1];
+				
+				//F-IGB-2O-121121W.zip
+				var serverFirmVal = val.substr(val.lastIndexOf('-') + 1, 7);
+			
+				if(deviceFirmVal != serverFirmVal) {
+					$('#firmware_link').attr('href','downloads/firmware/100/'+val);
+					$('#firmware_modal').show();
+				}
+				$('#firmware_modal_close').live('click',function(){
+					window.location = 'downloads/firmware/100/'+val;
+					$('#firmware_modal').hide();
+				});
+			}
+		});		
+	});
+}
+</script>
+
+<script>
+/* ** RUN TIME START ** */
+
+//For mac control
+if (platform.indexOf("Mac") > - 1) mac=true;
+if (platformStr == "win") {
+	$('.update_win').show();
+}
+else if (mac){
+	$('.update_mac').show();
+}
+
+var checkPlugin = false;
+if ((browserType.ie && window.navigator.platform  == "Win32" && window.navigator.cpuClass == "x86") || (mac && browserType.safari)) {
+	checkPlugin = control.checkPlugin();
+	if (checkPlugin) {
+		$('body').addClass('plugin_is_installed');
+		preInit();
+	}
+	else {
+		$('.plugin_installed').hide();
+		$('.plugin_not_installed').show();
+		$('.login').hide();
+
+		if (browserType.ie && window.navigator.platform  == "Win32" && window.navigator.cpuClass == "x86") {
+			$('.windows').show();
+		}
+		else if (mac && browserType.safari){
+			$('.mac').show();
+		}
+	}
+}
+else {
+	$('.login').hide();
+	$('body').addClass('browser_is_not_ie').removeClass('browser_is_ie');
+	if (platformStr == "win") {
+		$('.not_support_win').show();
+	}
+	else if (mac){
+		$('.not_support_mac').show();
+	}
+}
+
+var edit_mode = false;
+$(document).ready(function() {
+	jQuery("#downloadProgressDiv").hide();
+	setTimeout('check_tracks_in_queue()',500);
+	/*$('.dropdown-parrent').live('mouseenter',function(){;
+		$(this).children('.dropdown').show();
+	}).live('mouseleave',function(){
+		$(this).children('.dropdown').hide();
+	});*/
+
+	$('a:not(.ignore)').live('click',function(){
+		
+		edit_mode = false;
+		
+		if($(this).attr('href').indexOf('#')==-1) {
+			var stamp=new Date().getTime();
+			var url = $(this).attr('href');
+			
+			if (url.indexOf('.exe') == -1 && url.indexOf('.pdf') == -1 && url.indexOf('.dmg') == -1 && url.indexOf('.zip') == -1) {
+				var stamp=new Date().getTime();
+				if(url.indexOf('?')==-1) turl = url+'?ajax_call='+stamp;
+				else turl = url+'&ajax_call='+stamp;
+				
+				navigation_stack.push(url);
+			
+				$.get(turl,function(data){
+				
+					$('#ajax_container').html(data);
+					GetDataDriveFreeFlashFunc();				
+					$('input[name=UUID]').val(control.getUUID());
+					$('input[name=SKUID]').val( control.getSKUID() );
+					$('input[name=device]').val(control.getHardwareDisplayName());
+					$('.connected_device_name').html(control.getHardwareDisplayName());
+					$('[rel=tooltip]').tooltip();
+					if(sync_queue_info!=false) {
+						$('.uploading_recordings_number').html(current_sync_queue_info[0]);
+						$('.syncing_tracks_number').html((current_sync_queue_info[1]+current_sync_queue_info[2]+current_sync_queue_info[3]));
+						$('#sync_overlay').show();
+					}
+					var url_page = url.split('/');
+					url_page=url_page.pop();
+					url_page = url_page.split('?');
+					url_page=url_page[0];
+					for(i in page_inits) {
+						if(page_inits[i][0]==url_page) {
+							eval(page_inits[i][1]);
+						}
+					}
+					if ((url.indexOf('explore.php') > -1 && !(url.indexOf('explore.php?rid') > -1)) || url.indexOf('create') > -1){
+						if ((control.getHardwareDisplayName()=='Mio Cyclo 100'||control.getHardwareDisplayName()=='Mio Cyclo 105') && $.cookie('connection_status')=='true') {
+							$.sticky('<i class="icon-info-sign icon-white"></i> <b style=\'color:#FF0000\'>The Mio Cyclo 100/105 range is not capable of storing tracks, therefor you will not be able to upload your track to the device</b>');
+						}
+					}
+					if (logged_in && $.cookie('connection_status') == 'true') {
+						if(track_in_process) $.sticky('<i class="icon-info-sign icon-white"></i> MioShare is processing your recordings and/or tracks. This might take a while. You will see a notification once everything has been processed.');
+					}
+				});
+
+			}
+			else{
+				return true;
+			}
+		} else {
+			var url = $(this).attr('href');
+			var url_page = url.split('#');
+			url_page=url_page.pop();
+			if(url_page=="login"){
+				loginShow();
+			}
+			if(url_page=="register"){
+				registerShow();
+			}
+		}
+		return false;
+	});
+	
+	$('.device_save').live('change',function(){
+		if( $(this).is(':checked') ) {
+			
+			var loper = $(this);
+			while(!loper.hasClass('track')) loper=loper.parent();
+			
+			//var route_id = $(this).parent().parent().parent().parent().attr('route_id');
+			var route_id = loper.attr('route_id');
+			//var hash = $(this).parent().parent().parent().parent().attr('hash');
+			var hash = loper.attr('hash');
+			//var location = $(this).parent().parent().parent().parent().attr('location');
+			var location = loper.attr('location');
+			//var title = $(this).parent().parent().parent().parent().attr('title');
+			var title = loper.attr('title');
+			downloadData = [title,hash,location];
+			var pathDest = "";
+			
+			var fileName = title.replace(/[,/\\:*?""<>|]/g,"_");
+			
+			if (mac) {
+				pathDest = dataDrive+'Dodge/Tracks/' + fileName + '.gpx';
+			}
+			else{
+				pathDest = dataDrive+'Dodge\\Tracks\\' + fileName + '.gpx';
+			}
+			
+			$('body').addClass('syncing');
+			var result = control.download(location,pathDest,singleTrackDownloadListener, false);
+			
+		} else {
+			$('body').addClass('syncing');
+			
+			var loper = $(this);
+			while(!loper.hasClass('track')) loper=loper.parent();
+			
+			//var hash = $(this).parent().parent().parent().parent().attr('hash');
+			var hash = loper.attr('hash');
+			$(".track[hash=\"" + hash + "\"] .size").html('');
+
+			$(this).parent().parent().next().find('i:first').addClass('hide');
+			$(this).parent().parent().next().find('i:last').removeClass('hide');
+			var new_trackLibrary=[];
+			for(i in trackLibrary) {
+				if(trackLibrary[i]['o_hash']==hash) {
+					var result = control.deleteFile(trackLibrary[i]['o_file_location']);
+					control.deleteFile(trackLibrary[i]['o_file_location'].replace('.gpx','.bin'));
+				} else {
+					new_trackLibrary.push(trackLibrary[i]);
+				}
+			}
+			trackLibrary=new_trackLibrary;							
+			control.saveStringToFile(JSON.stringify(trackLibrary), systemDrive+'TCF.txt');
+			GetDataDriveFreeFlashFunc();
+			$('body').removeClass('syncing');
+		}
+	});
+	
+	$('.navigate_go_back').live('click',function(){
+		navigate_go_back();
+	});
+	
+	$('.open_detail_page').live('click',function(){
+		loadPage($(this).attr('rel'));
+		return false;
+	});
+	
+	$('.edit_open_container').live('click',function(){
+		if(!$(this).hasClass('disabled')) {
+			$('.viewer_track').each(function(){
+				$(this).children('*').hide();
+				$(this).children('.edit').show();
+			});
+			$('#regular_form').hide();
+			$('#edit_form').show();
+			edit_mode=true;
+		}
+		return false;
+	});
+	$('.save_edit').live('click',function(){
+		var deleted = [];
+		var edited = [];
+		var deleted_hash = [];
+		
+		$('.viewer_track.deleted').each(function(){
+			deleted.push( $(this).attr('route_id') );
+			deleted_hash.push( $(this).attr('hash') );
+			$(this).remove();
+		});
+
+		$('.viewer_track').each(function(){
+			$(this).children('*').show();
+			$(this).children('.edit, .deleted').hide();
+			
+			if( $(this).find('input').val()!=$(this).find('.name').html() ) {
+				edited.push( $(this).attr('route_id')+'[~]'+$(this).find('input').val() );
+				$(this).find('.name').html($(this).find('input').val());
+			}
+			
+		});
+		if(deleted.length>0 || edited.length>0) {
+			$.post('controller.php','action=edit_mioshare&deleted='+deleted.join(',')+'&edited='+encodeURIComponent(edited.join('[~~]')),function(data){
+			
+			});
+			//start to delete the device recording or track
+	
+			$('body').addClass('syncing');
+			var new_activityLibrary=[];
+			var new_trackLibrary=[];
+			var activityChanged = false;
+			var trackChanged = false;
+			for ( deleteIndex in deleted_hash) {
+				for(recordingIndex in activityLibrary) {
+					if(activityLibrary[recordingIndex]['o_hash'] == deleted_hash[deleteIndex]) {
+						activityChanged = true;
+						var result = control.deleteFile(activityLibrary[recordingIndex]['o_file_location']);
+						control.deleteFile(activityLibrary[recordingIndex]['o_file_location'].replace('.gpx','.bin'));
+						control.deleteFile(activityLibrary[recordingIndex]['o_file_location'].replace('.gpx','.fit'));
+						if(control.getHardwareDisplayName()=='Mio Cyclo 100' || control.getHardwareDisplayName()=='Mio Cyclo 105') {
+							result = control.deleteFile(dataDrive+activityLibrary[recordingIndex]['o_file']);
+						}
+						activityLibrary.splice(recordingIndex, 1);
+					}
+					/*
+					else {
+						new_activityLibrary.push(activityLibrary[i]);
+					}
+					*/
+				}
+				//To delete the track on 300 device, Path: dataDrive\
+				for (trackIndex in trackLibrary) {
+					if(trackLibrary[trackIndex]['o_hash'] == deleted_hash[deleteIndex]) {
+						trackChanged = true;
+						var result = control.deleteFile(trackLibrary[trackIndex]['o_file_location']);
+						control.deleteFile(trackLibrary[trackIndex]['o_file_location'].replace('.gpx','.bin'));
+						control.deleteFile(trackLibrary[trackIndex]['o_file_location'].replace('.gpx','.fit'));
+						trackLibrary.splice(trackIndex,1);
+						/*
+						if(display.getHardwareDisplayName()=='Mio Cyclo 100' || display.getHardwareDisplayName()=='Mio Cyclo 105') {
+							result = control.deleteFile(dataDrive+trackLibrary[trackIndex]['o_file']);
+						}
+					} else {
+						new_trackLibrary.push(trackLibrary[trackIndex]);
+					*/
+					}
+					
+				}
+				
+			}
+			
+			if (activityChanged) {
+				//activityLibrary = new_activityLibrary;
+				control.saveStringToFile(JSON.stringify(activityLibrary), systemDrive+'RCF.txt');
+			}
+			if (trackChanged) {
+				//trackLibrary = new_trackLibrary;
+				control.saveStringToFile(JSON.stringify(trackLibrary), systemDrive+'TCF.txt');
+			}
+			$('body').removeClass('syncing');
+			GetDataDriveFreeFlashFunc();
+		}
+		$('#regular_form').show();
+		$('#edit_form').hide();
+		edit_mode=false;
+		
+		var tcol = $('.overview > .online:visible .track');
+		if(tcol.length==0) {
+			$('.edit_open_container, #search_tool button').addClass('disabled');
+			$('#search_tool input').attr('disabled','disabled');
+			$('.overview > .online:visible .blankstate_content').show();
+		} else {
+			$('.edit_open_container, #search_tool button').removeClass('disabled');
+			$('#search_tool input').removeAttr('disabled');
+		}
+		$('#recording_listing_container > .section').each(function(){
+			var tcol = $(this).find('.track');
+			if(tcol.length==0) $(this).remove();
+		});
+		
+		return false;
+	});
+	$('.cancel_edit').live('click',function(){
+		$('.viewer_track').each(function(){
+			$(this).removeClass('deleted');
+			$(this).children('*').show();
+			$(this).children('.edit, .deleted').hide();
+			if( $(this).find('input').val()!=$(this).find('.name').html() ) {
+				$(this).find('input').val($(this).find('.name').html());
+			}
+		});
+		
+		$('#regular_form').show();
+		$('#edit_form').hide();
+		edit_mode=false;
+		return false;
+	});
+	
+	$('#open_recording_listing').live('click',function(){
+		if(edit_mode) return false;
+		$(this).addClass('active');
+		$("#add_track_container .span6").hide();
+		$('#open_track_listing').removeClass('active').css('z-index',50);
+		$('#recording_listing_container').show();
+		$('#track_listing_container').hide();
+		$('#track_listing_container_online').hide();
+		$('#track_listing_container_autoSync').hide();
+		$('.delete_all_recordings').show();
+		$('.delete_all_tracks').hide();
+		
+		var tcol = $('#recording_listing_container .track');
+		if(tcol.length==0) {
+			$('.edit_open_container, #search_tool button').addClass('disabled');
+			$('#search_tool input').attr('disabled','disabled');
+		} else {
+			$('.edit_open_container, #search_tool button').removeClass('disabled');
+			$('#search_tool input').removeAttr('disabled');
+		}
+		
+		scrollbarLoad();
+	});
+	
+	$('#open_track_listing').live('click',function(){
+		if(edit_mode) return false;
+		$(this).addClass('active');
+		$("#add_track_container .span6").hide();
+		$('#open_recording_listing').removeClass('active').css('z-index',50);
+		$('#open_maps_listing').removeClass('active').css('z-index',50);
+		$('#myMaps_title').hide();
+		
+		if ($('#tracks-manual').is(':checked')) {
+			$('#track_listing_container').show();
+			$('#track_listing_container_autoSync').hide();
+		} else {
+			$('#track_listing_container').hide();
+			$('#track_listing_container_autoSync').show();
+		}
+
+		$('#recording_listing_container').hide();
+		$('#track_listing_container_online').show();
+		$('#maps_listing_container').hide();
+		$('.delete_all_recordings').hide();
+		$('.delete_all_tracks').show();
+	    $("#sort-by1-div").show();
+	    $("#sort-by3-div").hide();
+		
+		var tcol = $('#track_listing_container_online .track');
+		if(tcol.length==0) {
+			$('.edit_open_container, #search_tool button').addClass('disabled');
+			$('#search_tool input').attr('disabled','disabled');
+		} else {
+			$('.edit_open_container, #search_tool button').removeClass('disabled');
+			$('#search_tool input').removeAttr('disabled');
+		}
+		scrollbarLoad();
+	});
+  
+ 	$('#open_maps_listing').live('click',function(){
+		if(edit_mode) return false;
+		$(this).addClass('active');
+		$('#open_track_listing').removeClass('active').css('z-index',50);
+	    $('#open_recording_listing').removeClass('active').css('z-index',50);
+		$('#myMaps_title').show();
+		$('#eachRegion_Navibar').html("");
+	    // $('#eachDetailRegionSortDiv').show();
+		$('#maps_listing_container').show();
+	    $('#eachDetailRegionDiv').hide();
+	    $('#allRegionDiv').show();
+		$('#track_listing_container').hide();
+	    $('#recording_listing_container').hide();
+	    $('.delete_all_recordings').hide();
+		$('.delete_all_tracks').hide();
+	    $("#sort-by1-div").hide();
+	    $("#sort-by3-div").hide();
+
+	    $("#eachRegion_heading_title").show();
+	    $("#eachRegion_heading_title").html(MIOSHARE_MAPS_TITLE_REGIONS);
+    	
+    	var tcol = $('#maps_listing_container .track');
+		if(tcol.length==0) {
+			$('.edit_open_container, #search_tool button').addClass('disabled');
+			$('#search_tool input').attr('disabled','disabled');
+		} else {
+			$('.edit_open_container, #search_tool button').removeClass('disabled');
+			$('#search_tool input').removeAttr('disabled');
+		}
+		
+		scrollbarLoad();
+	});
+	// start login-procedure
+	$('#login_form').live('submit',function(){
+		var params = $(this).serialize();
+		$.post('controller.php','action=login&'+params,function(data){
+			if(parseInt(data)==1) {
+				/*
+				if (jQuery("#persist_box").attr("checked")){
+					var user_info = params.split("&");
+					var user_account = user_info[0].split("=")[1];
+					var user_password = user_info[1].split("=")[1];
+					jQuery.cookie('user_account', user_account, { expires: 30 });
+					jQuery.cookie('user_password', user_password, { expires: 30 });
+				}
+				
+				
+				var searchedString = "detail_page.php?";
+				var _url = document.URL.split("eu.mio.com/mioshare/"); 			
+				var index = _url[1].indexOf(searchedString);
+				if (index == -1) 
+				{
+					loadPage('dashboard.php');
+				}
+				else
+				{
+					window.location.href = document.URL;
+				}
+				
+				*/
+				var date = new Date();
+				date.setTime(date.getTime() + (900 * 1000));
+				$.cookie('logged_in', 'true', { expires:date });
+				
+				logged_in=true;
+				loadPage('dashboard.php');
+				jQuery("#downloadProgressDiv").hide();
+
+				trySyncInit();
+			} else {
+				$('#login_form .wrong').show();
+			}
+		});
+		return false;
+	});
+	// end login-procedure
+	
+	$('#pwd_form').live('submit',function(){
+		var form = $('#pwd_form').data('Zebra_Form');
+		if( form.validate() ) {
+			var params = $(this).serialize();
+			var stamp=new Date().getTime();;
+			var url = 'account.php?ajax_call='+stamp;
+			$.post(url,params,function(data){  
+				$('#ajax_container').html(data);
+				GetDataDriveFreeFlashFunc();				
+				$('input[name=UUID]').val(control.getUUID());
+				$('input[name=SKUID]').val( control.getSKUID() );
+				$('input[name=device]').val(control.getHardwareDisplayName());
+				$('.connected_device_name').html(control.getHardwareDisplayName());
+				if(sync_queue_info!=false) {
+					$('.uploading_recordings_number').html(current_sync_queue_info[0]);
+					$('.syncing_tracks_number').html((current_sync_queue_info[1]+current_sync_queue_info[2]+current_sync_queue_info[3]));
+					$('#sync_overlay').show();
+				}		
+				for(i in page_inits) {
+					if(page_inits[i][0]==url) {
+						eval(page_inits[i][1]);
+					}
+				}
+			});
+		}
+		return false;
+	});
+	// start update-account-info
+	$('#acc_form').live('submit',function(){
+		var form = $('#acc_form').data('Zebra_Form');
+		if( form.validate() ) {
+			var params = $(this).serialize();
+			var stamp=new Date().getTime();;
+			var url = 'account.php?ajax_call='+stamp;
+			$.post(url,params,function(data){  
+				$('#ajax_container').html(data);
+				GetDataDriveFreeFlashFunc();				
+				$('input[name=UUID]').val(control.getUUID());
+				$('input[name=SKUID]').val( control.getSKUID() );
+				$('input[name=device]').val(control.getHardwareDisplayName());
+				$('.connected_device_name').html(control.getHardwareDisplayName());
+				if(sync_queue_info!=false) {
+					$('.uploading_recordings_number').html(current_sync_queue_info[0]);
+					$('.syncing_tracks_number').html((current_sync_queue_info[1]+current_sync_queue_info[2]+current_sync_queue_info[3]));
+					$('#sync_overlay').show();
+				}		
+				for(i in page_inits) {
+					if(page_inits[i][0]==url) {
+						eval(page_inits[i][1]);
+					}
+				}
+			});
+		}
+		return false;
+	});
+	// end update-account-info
+	// start user-registration
+	$('#registration_form').live('submit',function(){
+		var form = $('#registration_form').data('Zebra_Form');
+		if( form.validate() ) {
+			var params = $(this).serialize();
+			var stamp=new Date().getTime();;
+			var url = 'login.php?ajax_call='+stamp;
+			$.post(url,params,function(data){  
+				$('#ajax_container').html(data);
+				GetDataDriveFreeFlashFunc();				
+				$('input[name=UUID]').val(control.getUUID());
+				$('input[name=SKUID]').val( control.getSKUID() );
+				$('input[name=device]').val(control.getHardwareDisplayName());
+				$('.connected_device_name').html(control.getHardwareDisplayName());
+				if(sync_queue_info!=false) {
+					$('.uploading_recordings_number').html(current_sync_queue_info[0]);
+					$('.syncing_tracks_number').html((current_sync_queue_info[1]+current_sync_queue_info[2]+current_sync_queue_info[3]));
+					$('#sync_overlay').show();
+				}		
+				for(i in page_inits) {
+					if(page_inits[i][0]==url) {
+						eval(page_inits[i][1]);
+					}
+				}
+			});
+		}
+		return false;
+	});
+	// end user-registration
+	
+	//$('#settings_form').live('submit',function(){
+	$('#save_settings_form').live('click',function(){
+		var params = $('#settings_form').serialize();
+		$.get('controller.php?action=change_settings&'+params,function(data){
+			$('button.close').click();
+			
+			if( $('#recordings-delete-all-no').is(':checked') ) {
+				$('.recordings_settings_output .dont_delete_after_upload').show();
+				$('.recordings_settings_output .delete_after_upload').hide();
+			} else {
+				$('.recordings_settings_output .dont_delete_after_upload').hide();
+				$('.recordings_settings_output .delete_after_upload').show();
+			}
+			
+			if( $('#tracks-manual').is(':checked') ) {
+				$('#delete_all_tracks a').show();
+				$('#track_listing_container').addClass('manual_control');
+				
+				if ($('#open_track_listing').hasClass('active')) {
+					$('#track_listing_container_autoSync').hide();
+					$('#track_listing_container').show();
+				}
+				
+				$('.tracks_settings_output .manual_sync').show();
+				$('.tracks_settings_output .auto_sync').hide();
+			} else {
+				$('#delete_all_tracks a').hide();
+				if ($('#open_track_listing').hasClass('active')) {
+					$('#track_listing_container_autoSync').show();
+					$('#track_listing_container').hide();
+				}
+				$('.tracks_settings_output .manual_sync').hide();
+				$('.tracks_settings_output .auto_sync').show();
+			}
+		});
+		return false;
+	});
+	
+	$('.viewer_track input').live('click',function(e){
+		e.stopPropagation();
+	});
+	
+	$('.viewer_track .undo_delete').live('click',function(){
+		$(this).parent().parent().removeClass('deleted').find('.edit').show();
+		$(this).parent().parent().find('.deleted').hide();
+	});
+	$('.viewer_track .edit').live('click',function(){
+		if (!$(this).parent().hasClass('deleted')){
+			$(this).parent().addClass('deleted').find('.edit').hide();
+			$(this).parent().find('.deleted').show();
+		}
+		//$(this).parent().parent().parent().addClass('deleted').find('.edit').hide();
+		//$(this).parent().parent().parent().find('.deleted').show();
+	});
+	$('.viewer_track').live('click',function(){
+		var browserName = navigator.appName;
+		if ($('#routeyou_iframe').length > 0) {
+			if (browserName == 'Microsoft Internet Explorer') {	
+				document.getElementById('routeyou_iframe').document.execCommand('Stop');
+			} else {
+				// document.getElementById('routeyou_iframe').stop();
+			}
+		}
+
+		if ($('#MioShare_iframe').length > 0) {
+			if (browserName == 'Microsoft Internet Explorer') {	
+				document.getElementById('MioShare_iframe').document.execCommand('Stop');
+			} else {
+				// document.getElementById('MioShare_iframe').stop();
+			}
+		}
+		if($(this).attr('route_id')!='?' && edit_mode==false) {
+			$("#add_track_container .span6").hide();
+			if ($('#open_recording_listing').hasClass('active')) {
+
+				var url = 'http://www.mioshare.com/render/';
+                //check gpx file 20130329              
+			    var gRid=$(this).attr('route_id');
+             	url = url + $(this).attr('route_id');                                 
+                             
+                $.post('checkgpx.php',{rid:gRid},function(msg){
+                	var url = 'http://www.mioshare.com/render/';
+                  	url = url + gRid;  
+	                //***********************************
+	                //if file is not exsit load routeyouframe
+	                //***********************************
+                    if(msg=="okok"){
+                    	if ($('#MioShare_iframe').length > 0) {
+	                        $('#routeyou_iframe').remove();
+	                        $('#MioShare_iframe')[0].src = url;
+                        }else {
+                            $('#routeyou_iframe').remove();
+                            $('#content .content').append('<iframe id="MioShare_iframe" src="http://www.mioshare.com/render/' + gRid + '" style="overflow-y:hidden; overflow-x:hidden; display:none; height: 700px; border: none; width:100%;"></iframe>');
+                        }
+					 	if($("#add_track_container .span6").is(':hidden')) {
+	                    	$('#MioShare_iframe').show();
+						}                        
+           			} else {
+                        if ($('#routeyou_iframe').length > 0 ) {
+                            $('#MioShare_iframe').remove();
+                            var url = $('#routeyou_iframe')[0].src;
+                            var pattern = /route_id=[0-9]+/;
+                            url = url.replace(pattern, 'route_id='+gRid);
+                            $('#routeyou_iframe')[0].src = url;
+                        } else {
+                            $('#MioShare_iframe').remove();
+             		        $('#content .content').append('<iframe id="routeyou_iframe" src="viewer.php?route_id=' + gRid + '&language=en" style="overflow-y:hidden; overflow-x:hidden; display:none; height: 700px; border: none; width:100%;"></iframe>');
+                        }
+					 	if($("#add_track_container .span6").is(':hidden')) {
+                            $('#routeyou_iframe').show();
+						}                                  
+                   }                                                                        
+                },"text");
+				 //end of recording file check and display //
+				//UI
+				$('.viewer_track.active').removeClass('active');
+				$(this).addClass('active');
+			} else {
+				if($('#MioShare_iframe').length > 0 ) {
+					$('#MioShare_iframe').remove();
+				}
+				if($('#routeyou_iframe').length > 0 ) {
+					var url = $('#routeyou_iframe')[0].src;
+					var pattern = /route_id=[0-9]+/;
+					url = url.replace(pattern, 'route_id='+$(this).attr('route_id'));
+					$('#routeyou_iframe')[0].src = url;
+				} else {
+					$('#content .content').append('<iframe id="routeyou_iframe" src="viewer.php?route_id=' + $(this).attr('route_id') + '&language=en" style="overflow-y:hidden; overflow-x:hidden; display:none; height: 700px; border: none; width:100%;"></iframe>');
+				}		
+			 	if($("#add_track_container .span6").is(':hidden')) {
+                    $('#routeyou_iframe').show();
+				}  	
+				$('.viewer_track.active').removeClass('active');
+				$(this).addClass('active');
+			}
+		}
+		//return false;
+	});
+	
+	$('#location').live('change',function(){
+		$.cookie('search_location', $('#location').val());
+	});
+	$('#max_length').live('change',function(){
+		$.cookie('search_max_length', $('#max_length').val());
+	});
+	$('#min_length').live('change',function(){
+		$.cookie('search_min_length', $('#min_length').val());
+	});
+	$('#explorer_submit').live('click',function(){
+		$('#explore_form').submit();
+		return false;
+	});
+	
+	$('.open_add_container').live('click',function(){
+		$('#routeyou_iframe').remove();
+		$('#MioShare_iframe').remove();
+		$('#add_track_container').show();
+		$("#add_track_container .span6").show();
+		return false;
+	});
+	
+	$('.change_settings').live('click',function(){
+		$('#settings_modal').show();
+		return false;
+	});
+	$('.modal-backdrop').live('click',function(){
+		$('#settings_modal').hide();
+		return false;
+	});
+	$('button.close').live('click',function(){
+		$('#settings_modal').hide();
+		return false;
+	});
+	$('.my-modal *').live('click',function(e){
+		e.stopPropagation();
+	});
+	
+	$('#forgot_pwd_save').live('click',function(){
+		$.get('controller.php?change_pwd='+$('#forgot_pwd_email').val(),function(){
+			$('#modal_close').click();
+			$('#forgot_pwd_email').val('');
+			$.sticky('<i class="icon-info-sign icon-white"></i> A new password has been sent to your e-mail address');
+		});
+	});
+	
+	$('#list_view_search_value').live('keyup',function(){
+		var search_val = $('#list_view_search_value').val();
+		if(search_val=='') {
+			$('.viewer_track').show();
+		} else {
+			$('.viewer_track').each(function(){
+				var this_title = $(this).find('.name').html();
+				if(this_title.indexOf(search_val) != -1) $(this).show(); else $(this).hide();
+			});
+		}
+	}).live('keypress',function (evt) {
+		var charCode = evt.charCode || evt.keyCode;
+		if (charCode  == 13) { //Enter key's keycode
+			return false;
+		}
+	});
+	
+	$('#confirm_delete_recording').live('click',function(){
+		var button = $(this);
+		$.post('controller.php','action=disconnect_from_mioshare&route_id='+button.attr('rel'),function(data){
+			if(( $.cookie('connection_status')=='true' )&&(window.top.control.getHardwareDisplayName()!='Mio Cyclo 100' && window.top.control.getHardwareDisplayName()!='Mio Cyclo 105')) {
+				$('body').addClass('syncing');
+				var new_activityLibrary=[];
+				for(i in activityLibrary) {
+					if(activityLibrary[i]['o_hash']==button.attr('hash')) {
+						var result = control.deleteFile(activityLibrary[i]['o_file_location']);
+						control.deleteFile(activityLibrary[i]['o_file_location'].replace('.gpx','.bin'));
+						control.deleteFile(activityLibrary[i]['o_file_location'].replace('.gpx','.fit'));
+						if(control.getHardwareDisplayName()=='Mio Cyclo 100' || control.getHardwareDisplayName()=='Mio Cyclo 105') {
+							result = control.deleteFile(dataDrive+activityLibrary[i]['o_file']);
+						}
+					} else {
+						new_activityLibrary.push(activityLibrary[i]);
+					}
+				}
+				activityLibrary=new_activityLibrary;
+				control.saveStringToFile(JSON.stringify(activityLibrary), systemDrive+'RCF.txt');
+				$('body').removeClass('syncing');
+				GetDataDriveFreeFlashFunc();
+			}
+			navigate_go_back();
+		});
+		return false;
+	});
+	
+	$('.delete_recording').live('click',function(){
+		$('#delete_modal').show();
+		return false;
+	});
+	
+	$('#delete_modal .modal-backdrop, #delete_modal .close, #delete_modal #modal_close').live('click',function(){
+		$('#delete_modal').hide();
+	});
+	$('#track_delete_modal .modal-backdrop, #track_delete_modal .close, #track_delete_modal #modal_close').live('click',function(){
+		$('#track_delete_modal').hide();
+	});
+	$('#track_delete_all_modal .modal-backdrop, #track_delete_all_modal .close, #track_delete_all_modal #modal_close').live('click',function(){
+		$('#track_delete_all_modal').hide();
+	});
+	$('#recordings_delete_all_modal .modal-backdrop, #recordings_delete_all_modal .close, #recordings_delete_all_modal #close_this_modal').live('click',function(){
+		$('#recordings_delete_all_modal').hide();
+	});
+	
+	$('.track_page_delete_recording').live('click',function(){
+		$('#track_confirm_delete_recording').attr('hash',$(this).attr('hash'));
+		$('#track_delete_modal').show();
+	});
+	
+	$('#track_confirm_delete_recording').live('click',function(){
+	
+		$('body').addClass('syncing');
+		var new_activityLibrary=[];
+		for(i in activityLibrary) {
+			if(activityLibrary[i]['o_hash']==$(this).attr('hash')) {
+				var result = control.deleteFile(activityLibrary[i]['o_file_location']);
+				control.deleteFile(activityLibrary[i]['o_file_location'].replace('.gpx','.bin'));
+				control.deleteFile(activityLibrary[i]['o_file_location'].replace('.gpx','.fit'));
+				if(control.getHardwareDisplayName()=='Mio Cyclo 100' || control.getHardwareDisplayName()=='Mio Cyclo 105') {
+					result = control.deleteFile(dataDrive+activityLibrary[i]['o_file']);
+				}
+			} else {
+				new_activityLibrary.push(activityLibrary[i]);
+			}
+		}
+		activityLibrary=new_activityLibrary;							
+		control.saveStringToFile(JSON.stringify(activityLibrary), systemDrive+'RCF.txt');
+		$('.track[hash='+$(this).attr('hash')+']').remove();
+		$('body').removeClass('syncing');
+		if(activityLibrary.length==0) $('#blankstate_content').show();
+		GetDataDriveFreeFlashFunc();
+		$('#track_delete_modal').hide();
+		
+	});
+
+	$('#sort-by1').live('change',function(){
+		if($(this).val()=='az') sortByAZ('#recording_listing_container');
+		if($(this).val()=='size') sortBySize('#recording_listing_container');
+		if($(this).val()=='date') sortByDate('#recording_listing_container');
+	});
+	$('#sort-by2').live('change',function(){
+		if($(this).val()=='az') sortByAZ('#track_listing_container');
+		if($(this).val()=='size') sortBySize('#track_listing_container');
+		if($(this).val()=='date') sortByDate('#track_listing_container');
+	});
+  $('#sort-by3').live('change',function(){
+		if($(this).val()=='country') sortMapsByAZ('#eachDetailRegionDiv');
+		if($(this).val()=='size') sortMapsBySize('#eachDetailRegionDiv');
+		// if($(this).val()=='date') sortByDate('#track_listing_container');
+	});
+	$('#delete_all_recordings > a').live('click',function(){
+	
+		$('#recordings_delete_all_modal').show();
+	});
+	$('#recordings_confirm_delete_all_recording').live('click',function(){
+	
+		$('body').addClass('syncing');
+		var new_activityLibrary=[];
+		for(i in activityLibrary) {
+			var result = control.deleteFile(activityLibrary[i]['o_file_location']);
+			control.deleteFile(activityLibrary[i]['o_file_location'].replace('.gpx','.bin'));
+			control.deleteFile(activityLibrary[i]['o_file_location'].replace('.gpx','.fit'));
+			if(control.getHardwareDisplayName()=='Mio Cyclo 100' || control.getHardwareDisplayName()=='Mio Cyclo 105') {
+				result = control.deleteFile(dataDrive+activityLibrary[i]['o_file']);
+			}
+		}
+		activityLibrary=[];							
+		control.saveStringToFile(JSON.stringify(activityLibrary), systemDrive+'RCF.txt');
+		$('#recording_listing_container .track').remove();
+		$('body').removeClass('syncing');
+		if(activityLibrary.length==0) $('#blankstate_content').show();
+		$('#recordings_delete_all_modal').hide();
+		GetDataDriveFreeFlashFunc();
+		
+	});
+	
+	$('#delete_all_tracks > a').live('click',function(){
+		/*$('.device_save').each(function(){
+			if( $(this).is(':checked') ) $(this).click();
+		});*/
+		$('#track_delete_all_modal').show();
+	});
+	$('#track_confirm_delete_all_tracks').live('click',function(){
+		var mFilesList = "";
+		var mPath = "";
+		var mFileName = "";
+		try {
+			if (mac) {
+				mPath = dataDrive + 'Dodge/Tracks/';
+			} else {	
+				mPath = dataDrive + "\\Dodge\\Tracks";
+			}
+			mFilesList = control.loadFileList(mPath);
+			if(mFilesList !== errorList.get("E_MITAC_PLUGIN_CHECK_DIR_EXIST_FAIL")) {
+				for (var mFileCount=0; mFileCount<mFilesList.length; mFileCount++) { 
+			    	if (mFilesList[mFileCount].toUpperCase().indexOf(".GPX") != -1 && mFilesList[mFileCount].indexOf("[") == -1) {		    	
+			    		var gpxFilePath = "";
+			    		var binFilePath = "";
+			    		if (mac) {
+							gpxFilePath = mPath + "/" + mFilesList[mFileCount];
+			    		} else {
+							gpxFilePath = mPath + "\\" + mFilesList[mFileCount];
+			    		}
+						binFilePath = gpxFilePath.replace('.gpx','.bin');
+			    		control.deleteFile(gpxFilePath);
+			    		if (control.checkFileExist(binFilePath)) {
+			    			control.deleteFile(binFilePath);
+			    		}
+			       	}
+			    }	
+			}    
+		} catch (err) {
+			
+		}
+
+		$('.trackOnDevice').remove();
+		
+		var new_trackLibrary=[];
+		var tcfFilePath = "";
+		if (mac) {
+			tcfFilePath = systemDrive + '/TCF.txt';
+		} else {
+			tcfFilePath = systemDrive + '\\TCF.txt';
+		}
+
+		var saveResult = control.saveStringToFile(JSON.stringify(new_trackLibrary), tcfFilePath);
+		trackLibrary = new_trackLibrary;
+		
+		$('.device_save').each(function(){
+			if( $(this).parent().hasClass('ez-checked') ) {				
+				$(this).removeAttr('checked');
+				$(this).parent().removeClass('ez-checked');				
+				$('body').addClass('syncing');			
+				var loper = $(this);
+				while(!loper.hasClass('track')) loper=loper.parent();
+				var hash = loper.attr('hash');
+				// var hash = loper.attr('hash');
+				$(".track[hash=\"" + hash + "\"] .size").html('');				
+				$(this).parent().parent().next().find('i:first').addClass('hide');
+				$(this).parent().parent().next().find('i:last').removeClass('hide');
+				GetDataDriveFreeFlashFunc();
+				$('body').removeClass('syncing');			
+			}
+		});
+		$('#track_delete_all_modal').hide();
+		GetDataDriveFreeFlashFunc();
+	});
+	
+	$('#firmware_modal .close').live('click',function(){
+		$('#firmware_modal').hide();
+	});
+
+	$('[rel=tooltip]').tooltip();
+	
+	
+});
+/* ** RUN TIME END ** */
+</script>	
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-566852-10']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+
+	<script type="text/javascript">
+		var _uzactions= _uzactions|| [];
+		_uzactions.push(['_setID', '57B070A54FA3E211852B0022196C4538']);
+		_uzactions.push(['_setSID', '56B070A54FA3E211852B0022196C4538']);
+		_uzactions.push(['_start']);
+		(function() {
+		  var uz = document.createElement('script'); uz.type = 'text/javascript'; uz.async = true; uz.charset = 'utf-8';
+		  uz.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn4.userzoom.com/trueintent/js/uz_til.js?cuid=27B838912A3848EBBEC3E349450E5B82';
+		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uz, s);
+		})();
+	</script>	</body>
+</html>

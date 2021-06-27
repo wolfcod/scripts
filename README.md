@@ -3,6 +3,10 @@ scripts
 
 ## ITzip
 Visit [ITzip](/ITzip/README.md)
+# PHP commit
+Visit [phpcommit](/phpcommit/README.md)
+# MIO Sync
+Visit [miosync](/miosync/README.md)
 # IDA Scripts
 
 ## Delphi

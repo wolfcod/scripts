@@ -1,0 +1,351 @@
+ 8d743d5281c29e9750e183804b7ba02e1ff82f0b  Levi Morrison Sun, 28 Mar 2021 11:53:17 -0600  Revert "Revert "Revert "[skip-ci] Fix typo"""
+ 2b0f239b211c7544ebc7a4cd2c977a5b7a11ed8a  Nikita Popov Sun, 28 Mar 2021 18:15:57 +0200  Revert "Revert "[skip-ci] Fix typo""
+ 046827a7e867bb0e655923c75c25a20d06e3aa8b  Nikita Popov Sun, 28 Mar 2021 11:16:39 +0200  Revert "[skip-ci] Fix typo"
+ c730aa26bd52829a49f2ad284b181b7e82a68d7d  Rasmus Lerdorf Sun, 28 Mar 2021 05:57:07 +0200  [skip-ci] Fix typo
+ 4c6533c257cfabd5dd78988bb277f410b2778140  Máté Kocsis Wed, 17 Feb 2021 13:42:42 +0100  Generate class entries from stubs for com, standard, xmlreader, xmlwriter, xsl, zip, Zend
+ ce0bc58c2296c83da2d8c039e7fb2bb7d5ee2462  Nikita Popov Tue, 16 Feb 2021 14:22:03 +0100  Merge branch 'PHP-8.0'
+ b63ea1047a5c130231cec5571861f1dcdf63a063  Nikita Popov Tue, 16 Feb 2021 14:20:45 +0100  Mark resource-like objects as non-comparable
+ 3e01f5afb1b52fe26a956190296de0192eedeec1  Nikita Popov Fri, 15 Jan 2021 12:30:54 +0100  Replace zend_bool uses with bool
+ e950ca13ea2e8f012ded007ac1251eea01269542  Máté Kocsis Sun, 20 Sep 2020 10:41:10 +0200  Consolidate the usage of "either" and "one of" in error messages
+ d30cd7d7e7ddd0d06c18c47f43c7d2ee00de24a1  Máté Kocsis Tue, 26 May 2020 14:10:57 +0200  Review the usage of apostrophes in error messages
+ 2b5de6f839feea0ae1d5289d59dd7f159fcdcc8c  Max Semenik Wed, 1 Jul 2020 16:32:55 +0300  Remove proto comments from C files
+ 653e4ea1c57def2d5cd75b7da9e3943a841b7d6c  Nikita Popov Thu, 14 May 2020 11:51:36 +0200  Add flag to forbid dynamic property creation on internal classes
+ 314eedbc35116d61e97978f5fc822dfecd14053d  Máté Kocsis Wed, 17 Jun 2020 16:45:57 +0200  Convert resources to objects in ext/zlib
+ 1efaed7cf7f112fa9c5920626084e8a36b6af781  Máté Kocsis Wed, 17 Jun 2020 16:40:46 +0200  Improve error messages of ext/zlib
+ c6a6ca078becd374c083a66aa938f3a6cfcceb53  Nikita Popov Wed, 13 May 2020 14:55:08 +0200  Use zend_zval_type_name() API where possible
+ 8ddaf13ed3e91fdad56edf0d71663dcf074c9b75  Alex Dowad Wed, 29 Apr 2020 08:48:47 +0200  Code tweaks: Remove unneeded semicolons
+ 41c7d28c113d1c8e9c98cc834e8479f8567e5e3a  Nikita Popov Mon, 27 Apr 2020 10:21:26 +0200  Add macro to get ini target address
+ 21cfa03f1740042d0c48269430e0490e319e1408  Máté Kocsis Sun, 5 Apr 2020 21:15:30 +0200  Generate function entries for another batch of extensions
+ 01b266aac405c3c4c677d46f348dc6b227b69f7f  Máté Kocsis Wed, 18 Mar 2020 22:44:02 +0100  Improve error messages of various extensions
+ d1764ca33018f1f2e4a05926c879c67ad4aa8da5  Máté Kocsis Wed, 15 Jan 2020 11:27:29 +0100  Make error messages more consistent by fixing capitalization
+ 928afd8fb7228131356133546db1b704e035b998  George Peter Banyard Sun, 8 Dec 2019 14:15:27 +0100  Convert some warnings to Error in zlib extension
+ 345703724c633fb8c1b34e1299bf3375f000c398  Máté Kocsis Tue, 31 Dec 2019 11:27:02 +0100  Use RETURN_THROWS() during ZPP in most of the extensions
+ 94938934127c43b02b23c95de99e4a08aa194122  Máté Kocsis Tue, 29 Oct 2019 17:16:27 +0100  Cleanup return values when parameter parsing is unsuccessful
+ 5d6e923d46a89fe9cd8fb6c3a6da675aa67197b4  Gabriel Caruso Tue, 24 Sep 2019 23:54:04 +0200  Remove mention of PHP major version in Copyright headers
+ 70fa43edbe50d136d1f99182f897ee5ca8e7c8e0  Thomas Gerbet Wed, 21 Aug 2019 21:32:57 +0200  Add stub for ext zlib
+ 7686b0b88906e2522300b9e631ddde2051de839f  Nikita Popov Wed, 5 Jun 2019 14:38:01 +0200  Merge branch 'PHP-7.4'
+ a31f46421d7bf6f55dd9ac5876b8e2eacf7e0708  Nikita Popov Tue, 26 Feb 2019 15:32:18 +0100  Allow exceptions in __toString()
+ 623911f993f39ebbe75abe2771fc89faf6b15b9b  Peter Kokot Sun, 3 Feb 2019 21:23:18 +0100  Merge branch 'PHP-7.4'
+ 92ac598aabd336593a47ed3959f1031674b763e6  Peter Kokot Tue, 22 Jan 2019 21:39:32 +0100  Remove local variables
+ 0cf7de1c70a459a1207aea9efa780777faa96f2e  Zeev Suraski Wed, 30 Jan 2019 11:03:12 +0200  Remove yearly range from copyright notice
+ 38c337f22eff21ae4123ce1d4354154ee8c63983  Zeev Suraski Wed, 30 Jan 2019 11:00:23 +0200  Remove year range from copyright notice
+ c7d7af8069246c886606501e30e6e8741e6683c2  Nikita Popov Mon, 28 Jan 2019 17:40:39 +0100  Remove fgetss and friends
+ 67e0138c0dfd966624223911a0821f6c294ad1c6  Zeev Suraski Thu, 1 Nov 2018 18:30:28 +0200  Future-proof email addresses...
+ 8d3f8ca12a0b00f2a74a27424790222536235502  Peter Kokot Tue, 3 Jul 2018 02:52:16 +0200  Remove unused Git attributes ident
+ d9acfa45b849a9444ae5f341fd016137e4212066  Nikita Popov Thu, 5 Jul 2018 18:43:42 +0200  Deprecate fgetss() and gzgetss()
+ 5eb1f92f31cafc48384f9096012f421b37f6d425  Dmitry Stogov Mon, 28 May 2018 16:27:12 +0300  Use zend_string_release_ex() instread of zend_string_release() in places, where we sure about string persistence.
+ 524f5245c55223d36d1166554ca894fa77ea2dd1  Dmitry Stogov Tue, 8 May 2018 17:30:15 +0300  Avoid useless checks, using zend_string_efree(), in cases where the string is known to be a temporary allocated zend_string.
+ 64002648562362b97fcb78b68366b1b2118ffd5b  Gabriel Caruso Sun, 31 Dec 2017 05:35:25 +0100  Trailing whitespaces
+ a6519d051463f211fc1a23661e5dc4814bfbcf83  Xinchen Hui Tue, 2 Jan 2018 12:57:58 +0800  year++
+ 1f150fcde1cb777023a5c03e2869dd6496e2bcbe  Christoph M. Becker Wed, 11 Oct 2017 17:30:17 +0200  Merge branch 'PHP-7.1' into PHP-7.2
+ d3d23e0cb8295cd00eebd729ca182791bec22874  Christoph M. Becker Wed, 11 Oct 2017 17:29:02 +0200  Merge branch 'PHP-7.0' into PHP-7.1
+ 9d9873b3b5f6f6dcdbe7d4e981c1b5eda6d7da56  Fabien Villepinte Sun, 1 Oct 2017 11:27:16 +0200  Fix Bug #75299 Wrong reflection on inflate_init and inflate_add
+ 7360e6a36f2ec36c951ddf8a4db822ef685ef308  Anatol Belski Mon, 10 Jul 2017 17:01:25 +0200  Merge branch 'PHP-7.0' into PHP-7.1
+ a797421e9887ace7c1cb9d8c5aa63c21894a8a59  Anatol Belski Mon, 10 Jul 2017 16:53:56 +0200  Revert "Add more constants, improve comments, and add tests"
+ 44d734254a7a58d484023fb5026f1f9a640c619a  Bob Weinand Sun, 25 Jun 2017 20:13:48 +0200  Merge branch 'PHP-7.0' into PHP-7.1
+ 0c4f11ecaad213483f98c39128e217f9b389f604  Matthew Trescott Sun, 25 Jun 2017 11:07:14 +0200  Add more constants, improve comments, and add tests
+ bda0f4e8dce25280ee9db4b6058b80b74a80991f  Nikita Popov Sun, 25 Jun 2017 15:30:29 +0200  Merge branch 'PHP-7.0' into PHP-7.1
+ cd1869bcf2c6dc981133b844d915bd93f82f786c  wapmorgan Sat, 24 Jun 2017 22:44:01 +0300  Remove invalid check of dictionary content and add initialization of dictionary if raw compression used
+ f3ab4c1a086b17daad7a8ecf34292fff6b9566ce  Bob Weinand Wed, 15 Mar 2017 00:09:42 +0100  Merge branch 'PHP-7.0' into PHP-7.1
+ 7fba8bda4c9e89c522e5d27a38489125e36b9904  Matt Bonneau Mon, 13 Mar 2017 00:11:30 -0400  Fixed bug #74240 (deflate_add can allocate too much memory)
+ b38e6a54cf4500780fd8ba68ae66714a0f21dd86  Nikita Popov Sun, 8 Jan 2017 13:48:48 +0100  Merge branch 'PHP-7.0' into PHP-7.1
+ b36f4ac7089a05682081385cb4e6c1051cba9bc1  Nikita Popov Sun, 8 Jan 2017 13:47:20 +0100  deflate_add(): Don't add unnecessary +1 to size
+ dac6c639bb54e93fb24b82d25f74daaa12763512  Sammy Kaye Powers Wed, 4 Jan 2017 11:23:42 -0600  Update copyright headers to 2017
+ 478f119ab9100dbd345a6db5287a0cfb5fda5bf3  Sammy Kaye Powers Wed, 4 Jan 2017 11:14:55 -0600  Update copyright headers to 2017
+ 898e439333eab07103d7ecbd9b0b9f4b2cb32b68  Bob Weinand Thu, 22 Dec 2016 15:31:39 +0100  Merge branch 'PHP-7.0' into PHP-7.1
+ 8823b68c41fe79842bf53bbc50435978a56bf5a6  Bob Weinand Thu, 22 Dec 2016 15:29:17 +0100  Fixed bug #73373 (deflate_add does not verify that output was not truncated)
+ 323b2733f6b42d00dd86e77ac524d64f6ddc4e22  Dmitry Stogov Wed, 22 Jun 2016 00:40:50 +0300  Fixed compilation warnings
+ 16160386982a86e6ec7969c6c89707d38228f19e  Dmitry Stogov Tue, 21 Jun 2016 16:00:37 +0300  Added ZEND_ATTRIBUTE_FORMAT to some middind functions. "%p" replaced by ZEND_LONG_FMT to avoid compilation warnings. Fixed most incorrect use cases of format specifiers.
+ 1ac152938cfe40e98b7b3c8cf403abb113266cfa  Nikita Popov Thu, 3 Mar 2016 16:46:04 +0100  Move semicolon into TSRMLS_CACHE_EXTERN/DEFINE
+ c9357f82d3882eb3c7cb9f63dbc98d354fb20739  Nikita Popov Sun, 14 Feb 2016 14:02:19 +0100  Format string fixes
+ ed35de784f4ea53927e906ba4af335778de4d16a  Lior Kaplan Fri, 1 Jan 2016 19:47:16 +0200  Merge branch 'PHP-5.6' into PHP-7.0
+ 49493a2dcfb2cd1758b69b13d9006ead3be0e066  Lior Kaplan Fri, 1 Jan 2016 19:19:27 +0200  Happy new year (Update copyright to 2016)
+ aae9004ebdf42fbebafa461902009a936285415c  Julien Pauli Mon, 17 Aug 2015 17:18:25 +0200  Removed dead code
+ 4a2e40bb861bc3cf5fb6863e57486ed60316e97c  Dmitry Stogov Tue, 30 Jun 2015 04:05:24 +0300  Use ZSTR_ API to access zend_string elements (this is just renaming without semantick changes).
+ 9b6bb2d451cd43918214ab7d6d9dd7ec8ae0ee3c  Bob Weinand Thu, 21 May 2015 04:17:17 +0200  Add support for string dictionaries, fix array dictionaries ({de,in}flate)
+ 6868b56e25e6ce80418219bd876ee2de7646cf63  Bob Weinand Fri, 15 May 2015 13:59:47 +0200  Fix unrelated tests and zlib window size
+ 00ea48ad43122c67c904965d4c315237740685ea  Bob Weinand Fri, 15 May 2015 02:42:11 +0200  Minor typo in warning message
+ 227a21b297c73f09e15e72a80c21254554d49d66  Bob Weinand Fri, 15 May 2015 02:28:22 +0200  Add strategy option to deflate_init()
+ dd17e18f41439ecf04eda48420771e1753ee77cd  Bob Weinand Fri, 15 May 2015 02:18:53 +0200  Add dictionary option to {in,de}flate_init()
+ a129ded3c18e9446ca75c12d03f678177808a26e  Bob Weinand Thu, 14 May 2015 22:58:13 +0200  Add window option to {de,in}flate_init()
+ c48817297505b5181321047d0a5704e55a6efd6e  Daniel Lowrey Thu, 7 May 2015 10:26:56 -0400  Improve ZBLOCK handling with zlib < 1.2.4
+ 62b1293e3df520d104c678bc520b413386b628c5  Daniel Lowrey Thu, 7 May 2015 09:02:30 -0400  Fix Z_BLOCK breakage when built against zlib < 1.2.4
+ 40e465e3575443757693146bb141a4de02cc697c  Nikita Popov Sat, 25 Apr 2015 20:43:11 +0200  Clean up some type conversions
+ 300b1db09fc093c7224bb3e1016534378fcf92bc  Nikita Popov Sat, 25 Apr 2015 19:00:41 +0200  Tweak new deflate/inflate implementations
+ 38ea6a827ebb3c55e84b369b10ba4a6e5eb0e84b  Daniel Lowrey Fri, 24 Apr 2015 09:27:24 -0600  Fix vim folding block
+ 852904173e9a9171a059ce0b368e1fdb00038513  Daniel Lowrey Fri, 24 Apr 2015 09:02:59 -0600  Merge branch 'deflate'
+ 585037c1960a597a456c1cbdc210e574b3ec0e88  Daniel Lowrey Wed, 22 Apr 2015 10:02:19 -0600  Add incremental zlib inflate API
+ daecc326188d7d3ced05e42f0c07ded4e9b130aa  Daniel Lowrey Tue, 21 Apr 2015 23:00:10 -0600  Several deflate_* changes (more after the jump)
+ e0e1d99c719a228d4702d3b71eb4ae8dfc47d539  Bob Weinand Fri, 27 Feb 2015 17:24:32 +0100  Add incremental zlib deflate API
+ b3709bfc52fa60acef1376dbff9ec09f52ed8a5a  Stanislav Malyshev Tue, 14 Apr 2015 01:20:31 -0700  Merge branch 'PHP-5.6'
+ 0cb9d75cb6dfea4ad31ea794856489854ff20e16  Stanislav Malyshev Sat, 11 Apr 2015 16:56:12 -0700  Merge branch 'PHP-5.4.40' into PHP-5.5.24
+ 4435b9142ff9813845d5c97ab29a5d637bedb257  Stanislav Malyshev Sun, 5 Apr 2015 16:01:24 -0700  Fixed bug #69353 (Missing null byte checks for paths in various PHP extensions)
+ 663074b6b1fa4534fbbb65462aeef40f2c983ad5  Anatol Belski Mon, 23 Mar 2015 21:30:22 +0100  cleanup mod version macros and mod defs, round x
+ d146d15003442a2e5234dd2fab1605094dc21630  Dmitry Stogov Fri, 20 Mar 2015 02:02:42 +0300  Optimize zend_string_realloc() add more specialized versions zend_string_extend() and zend_string_truncate()
+ af3ca74501c5d0be273e47c618d37b8ddcbb5c7f  Anatol Belski Mon, 16 Feb 2015 17:19:32 +0100  made ZEND_TSRMLS_CACHE_* macros look like function calls
+ da7d94cd73a1f654bf49b16b5d1bf221255710de  Xinchen Hui Fri, 13 Feb 2015 13:18:14 +0800  Merge branch 'PHP-5.6'
+ 3a71fa36a230d1908d71a98086ab7c6fa9519530  Xinchen Hui Fri, 13 Feb 2015 13:09:56 +0800  Micro opt
+ fc33f52d8c25997dd0711de3e07d0dc260a18c11  Xinchen Hui Thu, 15 Jan 2015 23:27:30 +0800  bump year
+ 73c1be26531f730d64d61962b56eaf28ce3fc6aa  Xinchen Hui Thu, 15 Jan 2015 23:09:28 +0800  Bump year
+ b7a7b1a624c97945c0aaa49d46ae996fc0bdb6bc  Stanislav Malyshev Sat, 3 Jan 2015 01:22:58 -0800  trailing whitespace removal
+ bdeb220f48825642f84cdbf3ff23a30613c92e86  Anatol Belski Sat, 13 Dec 2014 23:06:14 +0100  first shot remove TSRMLS_* things
+ c6bad96f306df8e8b656472e618283ced5083cdb  Anatol Belski Tue, 18 Nov 2014 21:18:52 +0100  Merge remote-tracking branch 'origin/master' into native-tls
+ 1f1b412e5a434304289b523266f2d47483d21f84  Matteo Beccati Wed, 12 Nov 2014 11:23:24 +0100  Merge branch 'PHP-5.6'
+ 65fee904622160781db05b0a469d67b4414cbd7f  Matteo Beccati Wed, 12 Nov 2014 11:21:11 +0100  Fixed bug #53829 Compiling PHP with large file support will replace function gzopen by gzopen64
+ 98a8481e5e6bb111e8bb17af929f6fdbda308cb9  Anatol Belski Wed, 15 Oct 2014 12:08:25 +0200  converted some ext/mysql* and fixed ext/zlib
+ 236857cb476f0b83a2bfebac5308b907ecd875b8  Anatol Belski Wed, 15 Oct 2014 11:27:20 +0200  converted ext/zlib with static tsrm ls cache
+ c00424e427930a33e6d8645cc3f23fb78ed29b9f  Anatol Belski Wed, 15 Oct 2014 09:37:55 +0200  bring back all the TSRMLS_FETCH() stuff
+ 14eefc82b5daafc8bd095c006fca6f21d2ad8478  Anatol Belski Fri, 26 Sep 2014 12:09:33 +0200  cleanup after the removed PHP_OUTPUT_TSRMLS
+ d0cb715373c3fbe9dc095378ec5ed8c71f799f67  Johannes Schlüter Fri, 19 Sep 2014 18:33:14 +0200  s/PHP 5/PHP 7/
+ e90ec235dc0eaae2eef2d2db585f619bfff6c5ee  Xinchen Hui Thu, 4 Sep 2014 11:56:13 +0800  Use PHP_GINIT to suppress incompatible pointer type
+ 88d7ca44f645c6e1bbdb17affd7a34113911093d  Dmitry Stogov Mon, 1 Sep 2014 20:57:33 +0400  Refactored INI subsystem to use zend_string* instead of char*
+ 451856420c42d4fc2f2ab579135c23eb78ae7378  Anatol Belski Fri, 29 Aug 2014 12:53:37 +0200  data type fixes
+ 3234480827b27ff5d3469a732167afd289632a96  Anatol Belski Wed, 27 Aug 2014 15:31:48 +0200  first show to make 's' work with size_t
+ c3e3c98ec666812daaaca896cf5ef758a8a6df14  Anatol Belski Mon, 25 Aug 2014 19:24:55 +0200  master renames phase 1
+ beec26b5fed95b1638269b66d4a5c9aad28653ea  Anatol Belski Tue, 19 Aug 2014 11:33:51 +0200  ported ext/zlib
+ 63d3f0b844b3a5f1c94be3c97bca29235dc2b3fc  Anatol Belski Tue, 19 Aug 2014 08:07:31 +0200  basic macro replacements, all at once
+ 72f46a34b8aed7ec9ce1a31b111f3bf35075ffa6  Xinchen Hui Mon, 5 May 2014 15:51:55 +0800  Refactor zlib (all tests pass)
+ 050d7e38ad4163e7fa65e26724d3516ce7b33601  Dmitry Stogov Tue, 15 Apr 2014 15:40:40 +0400  Cleanup (1-st round)
+ c081ce628f0d76d44784d7bb8e06428b06142ac0  Xinchen Hui Fri, 3 Jan 2014 11:08:10 +0800  Bump year
+ 47c902777297ce895aa915c13efdb00881af3669  Xinchen Hui Fri, 3 Jan 2014 11:06:16 +0800  Bump year
+ c0d060f5c02db168f1de895b41afffbc6e3cacfb  Xinchen Hui Fri, 3 Jan 2014 11:04:26 +0800  Bump year
+ 5cea7a9047ca45c99b107a89d833c2d0dbe96ec8  Michael Wallner Fri, 9 Aug 2013 11:14:04 +0200  fix bug #65391
+ ac28283beb58b367ef1f842b5ee0d6397eb4b516  Michael Wallner Fri, 9 Aug 2013 11:14:04 +0200  fix bug #65391
+ a666285bc2488b7f7362368c388e41428610ad1d  Xinchen Hui Tue, 1 Jan 2013 16:37:09 +0800  Happy New Year
+ 0a7395e009b2df94c2a3f05aef69fb1779edf8f8  Xinchen Hui Tue, 1 Jan 2013 16:28:54 +0800  Happy New Year
+ 4c1e2bbd6f744b4048d4e0540ecc5dbe005494fe  Xinchen Hui Tue, 24 Jul 2012 14:43:53 +0800  Re-fix bug #55544
+ c20b2ab0bd8eae770088fca9dff50da76c2117e4  Xinchen Hui Tue, 24 Jul 2012 13:37:44 +0800  folders
+ a6f1533789b897d3b8930b437164e81e0a0f4c72  Xinchen Hui Sat, 21 Jul 2012 02:56:28 +0800  Fixed bug #55544 (ob_gzhandler always conflicts with zlib.output_compression)
+ 0ad53bfd7da12a92a46c08e3fff579a15026b88b  Michael Wallner Tue, 15 May 2012 09:33:07 +0200  fix bug #60761 zlib.output_compression fails on refresh
+ 7c93a16477d7e4d6e0386d0613558360f036d57b  Michael Wallner Tue, 24 Apr 2012 20:35:49 +0200  fix bug #61443
+ df00b64cb93dafbe5ae47bf733e826b54b32ae37  Michael Wallner Tue, 24 Apr 2012 19:50:00 +0200  fixed bug #61820
+ d13f833875b04368732900341b12c6db031c452b  Gustavo André dos Santos Lopes Wed, 7 Mar 2012 08:51:30 +0000  - Tentative fix for bug #61306. #cjones: Will update NEWS when confirmed it fixes the problem.
+ 39d2996c57a991432eca023f91e92a480cabe276  Michael Wallner Mon, 5 Mar 2012 15:38:24 +0000  MFH: Fixed bug #61287 (A particular string fails to decompress)
+ 4e198252811dbf16984cf84ee49d5e93ac642f88  Felipe Pena Sun, 1 Jan 2012 13:15:04 +0000  - Year++
+ 850168ba62e8396246ab508e06afd5c9f3093680  Pierre Joye Mon, 26 Dec 2011 22:53:12 +0000  - Fix bug #60326, fix crash introduced by initial fix
+ 7dcc4c0d0e44ccfe6018b2630e5721772d19b2e4  Pierre Joye Mon, 26 Dec 2011 12:32:05 +0000  - Fix bug #60326, fix TS build (introduced by r321406)
+ e665e01e880bb9bbfcff065825f4d6db48e5515b  Stanislav Malyshev Mon, 26 Dec 2011 08:29:11 +0000  fix bug #60326 - restore ob_gzhandler
+ 3e221129a7e6e1c3a1573f2226be08de6d9e8fcf  Michael Wallner Mon, 19 Sep 2011 15:20:38 +0000  fix r316992
+ 85a62e9086db7a8ddfcda4ab1279a2439935f8d5  Michael Wallner Mon, 19 Sep 2011 14:37:00 +0000  Fixed bug #55544 ob_gzhandler always conflicts with zlib.output_compression
+ 4b30846b50b3c42d6787f82fe37525028e094a09  Felipe Pena Mon, 25 Jul 2011 11:35:02 +0000  - Make usage of new PHP_FE_END macro
+ 9805e1674aefbc9e2a529a7351a045dab0282eb4  Pierre Joye Fri, 22 Jul 2011 11:25:30 +0000  - remove magic quotes support, functions are kept (see the NEWS entry for the details) for BC reasons but do not allow to set enable MQ
+ 32b5f8a1a3552f48d6e91c17b6d9d441c665a44d  Felipe Pena Mon, 6 Jun 2011 21:28:16 +0000  - Added new parameter parsing option (p - for valid path (string without null byte in the middle)) # The tests will be fixed in the next commits
+ 0203cc3d446b659e477ae488eaf4780bf58384d5  Felipe Pena Sat, 1 Jan 2011 02:17:06 +0000  - Year++
+ 80926568f19901678754d37e3b4039ad2b1ffb48  Felipe Pena Sat, 26 Jun 2010 16:03:39 +0000  - Fixed bug #52183 (Reflectionfunction reports invalid number of arguments for function aliases)
+ ebd7c3b37ef55fecbc99a85b25ffb42a8ebdca5a  Antony Dovgal Mon, 31 May 2010 12:02:55 +0000  fix ZTS build
+ 11d24c1593d6617f73d3f290617bd8994182f4dc  Michael Wallner Mon, 31 May 2010 10:29:43 +0000  * implement new output API, fixing some bugs and implementing some feature   requests--let's see what I can dig out of the bugtracker for NEWS--   and while crossing the road:    * implemented new zlib API    * fixed up ext/tidy (what was "s&" in zend_parse_parameters() supposed to do?)
+ dd8e59da8f5aafd9d77a0f1f17e5e272d09f643f  Kalle Sommer Nielsen Mon, 26 Apr 2010 23:53:30 +0000  Removed safe_mode  * Removed ini options, safe_mode*  * Removed --enable-safe-mode --with-exec-dir configure options on Unix  * Updated extensions, SAPI's and core  * php_get_current_user() is now declared in main.c, thrus no need to include safe_mode.h anymore
+ af49e58f5155383a440041c77cc1ecbaf507fde7  Jani Taskinen Fri, 12 Mar 2010 10:28:59 +0000  - Reverted r296062 and r296065
+ 06f072cb5e4e3582e20b8762141eccbc4dce85fa  Jani Taskinen Thu, 11 Mar 2010 10:24:29 +0000  MFH: Improved / fixed output buffering (Michael Wallner)
+ f60946eb5430cd11daa9f88503dc9b1a9b7bd634  Adam Harvey Thu, 11 Mar 2010 06:20:22 +0000  Fixed bug #51269 (zlib.output_compression Overwrites Vary Header).
+ 9ba1e81665df38fec244c926b3eff78034baa35a  Sebastian Bergmann Sun, 3 Jan 2010 09:23:27 +0000  sed -i "s#1997-2009#1997-2010#g" **/*.c **/*.h **/*.php
+ f1cf3fb185b52966f92724e0182c9982d68d4fdc  Jani Taskinen Sun, 15 Nov 2009 00:13:19 +0000  - Temporary hack to fix bug #49816 (works fine in HEAD which has working output buffering..)
+ db53d496233c06b8df9caa1236d2c87427b70604  Jani Taskinen Mon, 17 Aug 2009 17:30:32 +0000  - Fixed bug #49248 by fixing bug #48994 properly
+ 6a9aa30d858eb61316410b7fb87662f3288869f0  Arnaud Le Blanc Thu, 28 May 2009 10:15:14 +0000  MFB52: Fix "request_startup() for zlib module failed" when client does not accepts compression and zlib.output_compression is On # (not in HEAD)
+ 7811bcb155d2ede7a715519e09a9220a8b452e2c  Jani Taskinen Tue, 26 May 2009 08:03:07 +0000  - Added note about omitted break
+ c3795a63e0cdf552bc17634ac9de39834c24ddef  Jani Taskinen Tue, 26 May 2009 05:54:50 +0000  - Fixed bug #45202 (zlib.output_compression can not be set with ini_set())
+ e179d7c26e46e26ab64a2c0d9977d771a1c5bcd4  Jani Taskinen Tue, 26 May 2009 04:44:54 +0000  ws + cs
+ da0eb9b8e8020798edae0a0665864a276c1f6c30  Scott MacVicar Tue, 24 Mar 2009 01:57:53 +0000  Fix bug #42362 - certain status codes never have output, so sending the gzip compression headers cause problems
+ 08659c2dcdf169368ba6af691310e4a150596f48  Sebastian Bergmann Wed, 31 Dec 2008 11:15:49 +0000  MFH: Bump copyright year, 3 of 3.
+ fc2fb50d095d80a957117ecf52bd817a609e1dcf  Felipe Pena Mon, 17 Nov 2008 11:28:01 +0000  - MFH: Added 'static' into ZEND_BEGIN_ARG_INFO_EX macro
+ 7a37fa2d6bd740c70dab947718ba7ea2d0b99c47  Felipe Pena Sun, 2 Nov 2008 21:19:39 +0000  - Revert ZEND_BEGIN_ARG_INFO change
+ df100055639c42e28029cf2f6983246ed3f98c40  Felipe Pena Fri, 24 Oct 2008 14:35:40 +0000  - MFH: Added 'static' into ZEND_BEGIN_ARG_INFO_EX macro
+ 93b7cb0a0a4ba5053a4c3de9527e289b61980c3b  Arnaud Le Blanc Sat, 2 Aug 2008 02:36:25 +0000  MFH: Avoid leaks when zlib streams can not be closed properly.
+ 236b03985d81c2a8e65148b4fb28b0c3acd4f259  Arnaud Le Blanc Thu, 24 Jul 2008 14:38:37 +0000  Fixed #42663 (gzinflate() try to allocate all memory with truncated data), not present in HEAD.
+ bedd3238786e225e2b46f9763f9704dc3c35490f  Felipe Pena Thu, 3 Jul 2008 01:55:48 +0000  - Added arginfo (functions)
+ d1dded875129c9f6f3ed191653ac5c8fdaad7f13  Sebastian Bergmann Mon, 31 Dec 2007 07:17:19 +0000  MFH: Bump copyright year, 2 of 2.
+ 6c810b0d4c1b12c675f69f5cfb32f26b6179d460  Dmitry Stogov Thu, 27 Sep 2007 18:00:48 +0000  Improved memory usage by movig constants to read only memory. (Dmitry, Pierre)
+ 4223aa4d5e0f643c2f78f509a32a0ada4eddce91  Sebastian Bergmann Mon, 1 Jan 2007 09:36:18 +0000  MFH: Bump year.
+ ddb4d1fdcc2162edd7432080b117eaae6e24eb87  Nuno Lopes Mon, 14 Aug 2006 20:08:18 +0000  move static declaration to *.c files mroe static/const keywording
+ e24fe395a2118efbb5456e5cce75988e4739d3bb  Antony Dovgal Mon, 26 Jun 2006 23:22:58 +0000  MFH: zero-terminate strings produced with FORCE_DEFLATE
+ 3d97f45bc43ff0a9c6e40a4f08f5283866fa6a92  Antony Dovgal Mon, 26 Jun 2006 22:53:10 +0000  don't try to inflate empty strings (and stop segfaulting!)
+ 1dbaae2795b756a3875c53da00b277f241cc04b8  Dmitry Stogov Thu, 15 Jun 2006 18:33:09 +0000  Added automatic module globals management
+ 5bd93221a8d7f697cad7aeda4f10da08372315e0  foobar Sun, 1 Jan 2006 12:51:34 +0000  bump year and license version
+ 3e669bc950eb5f36e5f0bec199f8e4b9de4d13f2  foobar Tue, 6 Dec 2005 02:28:41 +0000  MFH: nuke php3 legacy
+ 2c5c8c161cc5009b5c2921299a3b0e7a2428bdce  Michael Wallner Tue, 25 Oct 2005 15:35:39 +0000  - fix the fix
+ 3bbd4b17a901047107bda77ad31509e0269061d0  Michael Wallner Tue, 25 Oct 2005 15:16:20 +0000  - MFH: fix bug #34821 zlib encoders fail on widely varying binary data on windows
+ 2b32ff53cdbb722d945f7fd437ddfc13c4e62839  Ilia Alshanetsky Fri, 2 Sep 2005 17:25:16 +0000  MFH: Resolved bug #34240.
+ daa209297d56e8c759fe2bd66c57c5647f0b7e9f  Ilia Alshanetsky Sun, 21 Aug 2005 16:03:21 +0000  MFH: Fixed bug #34191 (ob_gzhandler does not enforce trailing \0).
+ 23e671a51ee7bf5abca3d9e2326d2adbd524b30b  foobar Wed, 3 Aug 2005 14:08:58 +0000  - Bumber up year
+ 5289adbe99f37847a54785f68748380e1a49050a  Sara Golemon Sat, 17 Jul 2004 00:05:31 +0000  Add zlib stream filter support
+ dbeb4158d2276600edf3d08caba62770b022bb69  Andi Gutmans Thu, 8 Jan 2004 08:18:22 +0000  - A belated happy holidays and PHP 5
+ 075e66cc086255ea8a4b2d9583e0a5970918d3e1  Hartmut Holzgraefe Fri, 26 Sep 2003 08:09:56 +0000  signed/unsigned compiler warning fixes
+ 620683792942d458df0a2a09aff2f163074f77ae  Stefan Roehrich Sat, 6 Sep 2003 15:31:35 +0000  Code cleanup: Fixed ob_gzhandler with register_long_arrays = On. Unified compression_coding global var (removed ob_gzip_coding). Switched to zend_parse_parameters(). Added some tests.
+ 5b09f342fe8fdba2b397803eb6df1b8b74133ba5  Sascha Schumann Fri, 29 Aug 2003 07:34:47 +0000  improve format string
+ aa632187cd869dad09369f0b3200a1b75c8fe26e  Stefan Roehrich Sun, 24 Aug 2003 13:59:34 +0000  Fixed bug #25218 ("deflate" compressed pages had a gzip header, which should only be sent with "gzip" compressed pages).
+ 8828e17a4461653ddd0d667c0598292b5ef5f8df  Stefan Roehrich Sun, 24 Aug 2003 13:32:50 +0000  Fixed zlib.output_compression without register_long_vars set.
+ e9eb29011cd3832a90678a4e382fd94c675606b2  foobar Mon, 11 Aug 2003 01:56:43 +0000  Nuke unused variable
+ e491d75df3a2455506fc00af0eb3e80240d6a43f  Derick Rethans Sat, 9 Aug 2003 11:20:38 +0000  - Fix memleak (this strndup is totally unnecessary)
+ 308df2af54ac666647b24e311b20211011ede67e  Ilia Alshanetsky Sun, 27 Jul 2003 18:16:06 +0000  Fixed bug #24827 (ob_gzhandler overrides Vary header)
+ 5fcc682ebc5968fa4cbdf04ce143f801cd059fdd  Andrey Hristov Sat, 19 Jul 2003 19:23:34 +0000  proto fixes
+ f68c7ff249f9d64f5381063711349bca18671dcc  James Cox Tue, 10 Jun 2003 20:04:29 +0000  updating license information in the headers.
+ 18954d8bd2b96eed14c0f83cb2dac4f3be549f0e  Rasmus Lerdorf Wed, 21 May 2003 17:02:40 +0000  Remove bogus commit here too
+ ff36043d142d4a4545bbf8cabfdf2825a8cc0685  Sander Roobol Wed, 21 May 2003 16:05:03 +0000  ob_gzhandler and zlib.output_compression should send a Content-Length header if the length of the complete compressed  output is known # MFH follows in a few minutes, please wait with the release :)
+ d8a62b8e4d303ed3d0d8739d0bf9b51090bc5726  foobar Mon, 17 Mar 2003 14:45:07 +0000  WS & CS fixes
+ fa692f6744ce137a8a996124acb797b67885443e  Hartmut Holzgraefe Mon, 17 Mar 2003 13:08:59 +0000  proto fix
+ 3c9155e0cba948820f809564f1c2b99e4792e256  foobar Fri, 7 Mar 2003 05:15:28 +0000  Renamed OnUpdateInt -> OnUpdateLong to prevent further misunderstandings. # Intentionally left out any 'alias' for it, this way 3rd party extension # maintainers will really NOTICE the change.
+ 5c90216d2ce8d8cc8d1453eee1a1e5099bd46631  David Hill Thu, 6 Mar 2003 23:07:28 +0000  64-bit correction to variables passed to zend_parse_parameters @64-bit correction to variables passed to zend_parse_parameters (Dave)
+ af4aa97d1ec853836f70601cb9666794476cd140  Stefan Esser Thu, 6 Mar 2003 20:31:20 +0000  Fixing functionicalls with variable number of parameters...
+ 4934744b9334b7f0ba31f31830896d2c1f089246  Zeev Suraski Mon, 17 Feb 2003 13:29:59 +0000  Win32 build improvements
+ 0a18a9d744afb9d97d46bad1f40c11a047bad5df  Wez Furlong Sun, 16 Feb 2003 03:48:49 +0000  A add much more useful select(2) implementation than is provided by windows sockets.  The winsock implementation will only work with sockets; our implementation works with sockets and file descriptors. By association, stream_select() will now operate correctly with files, pipes and sockets.
+ 21f766b7a4a9ce040ccb6f8aa321ca95a346914b  Moriyoshi Koizumi Mon, 10 Feb 2003 19:04:44 +0000  Fixed zlib.output_compression so it can work even if zlib extension is built as shared
+ 72b356c1bccb511e9a3414cbfe6ff25b5a20b91f  Ilia Alshanetsky Sat, 18 Jan 2003 19:28:10 +0000  Removed pointless memory allocation checks.
+ b506f5c8f803e32cdc3478ae25eec4f8bb566e58  Sebastian Bergmann Tue, 31 Dec 2002 16:08:15 +0000  Bump year.
+ abc4b4bb99d998a57b8a4f9ab6edfefcd6130b60  Wez Furlong Tue, 31 Dec 2002 11:42:15 +0000  Fix for #21304 (gzopen did not report errors on open; "a" mode broken)
+ 87a8b040512601a9b1c82b490a9e3d2d6fadfc26  Ilia Alshanetsky Tue, 31 Dec 2002 00:04:52 +0000  Fix ZTS build.
+ 0acb52fc3b8807d957165e2dd84f8af7cdcd826c  Ilia Alshanetsky Mon, 30 Dec 2002 19:39:31 +0000  Fixed bug #21228 (broken check for ob_gzhandler). Fixed a bug that made ob_start return incorrect return value.
+ e50dc16b2188e2c4a0052f670273b7b21cce08a3  Stefan Roehrich Sun, 1 Dec 2002 18:48:51 +0000  Comment about maximal length now matches code.
+ ca58966a0d12c21599edb25281ace01caf12f5c1  Wez Furlong Mon, 18 Nov 2002 11:39:42 +0000  Merge streams changes from branch.
+ 7f5d98203ee0be938fe51f49272de39c04fcfebf  Moriyoshi Koizumi Sun, 3 Nov 2002 20:31:00 +0000  Fixed OnUpdate_zlib_output_compression() behaviour
+ 22bf29384e000df1331cdaa9069133e09c989405  Yasuo Ohgaki Thu, 3 Oct 2002 03:58:12 +0000  Move wrong output buffer usage check to ob_gzhandler init. Export some output buffer functions.
+ d4bba6d158b75128c590dc6de7ec07ccbdf2a7c9  Marcus Boerger Wed, 2 Oct 2002 15:02:16 +0000  Revisted Wez patch: chunk_size 0 means cahce the whole output. So we must apply the default before calling php_enable_output_compression(). I have left the default setting in the rinit function even though i do think it is not necessary.
+ 4356932dfe142bcd4f8ede540c8a7415b175445d  Wez Furlong Mon, 30 Sep 2002 10:18:06 +0000  Fix infinite recursion bug when using zlib output compression. Cause: the chunk size is taken from the zlib.output_compression setting, which is 0 or 1.  This causes the block_size for output buffer to be set to 0 (1 / 2) and thus causes infinite recursion in php_ob_allocate(). Solution: use a value of 0 for the chunk size which will use the default sizes.  Also add a sanity check which will default the block_size to 1 if it ends up as 0.
+ 639221694fa5104512e8a905fb09036af90cffbf  foobar Tue, 3 Sep 2002 22:54:02 +0000  Use zend_ini_string instead of the 'alias'.
+ a6e8e723728a1b8976e9a24e77abe3e0b3e6c294  Zeev Suraski Fri, 23 Aug 2002 08:37:35 +0000  Fix ob_gzhandler()'s handling of requests w/o compression but that do have the Accept-Encoding header
+ a388ab620548907de9e4304d34f0ee76f54ee3c5  Wez Furlong Thu, 22 Aug 2002 17:37:46 +0000  Fix error messages.
+ 0ea1dda8cde00bba9b2eea0fd871f5488b337a8b  Stefan Roehrich Thu, 22 Aug 2002 09:38:55 +0000  Fixed prototype. Fixed double printing of function name in docref error messages.
+ f15b4c1e3070fcdbe40adbb0b0872bf392d109d0  Marcus Boerger Tue, 20 Aug 2002 20:22:30 +0000  change to php_error_docref() #documentation about output relevant ini settings will be in ref.outcontrol
+ fdf514f45c4501ef92a4e93a4e377c9409c2af6c  Marcus Boerger Tue, 20 Aug 2002 19:51:00 +0000  Changed handling of output buffer sizes.
+ 42355837c1e220a423c66165a0a197f2866259c8  Yasuo Ohgaki Sun, 11 Aug 2002 02:32:49 +0000  Changed my mind. Let users decided whether users want larger chunk size or not. @ Changed zlib.output_compression behavior. If larger chunk is preferred,   enable output_buffering also. (Marcus, Yasuo)
+ 02ed7058187c8edf47adccfd0924bbd7400992c4  Yasuo Ohgaki Sun, 11 Aug 2002 01:11:11 +0000  Generally speaking, sending packets less than 1KB is not efficient. We're better to take some benchmarks see if removing extra buffer is actually a good idea or not.
+ 21903dfc7e9763afc53e641e7f1a5eb34334929d  Marcus Boerger Sat, 10 Aug 2002 16:12:36 +0000  corrected handling of internal output buffers minor fixs
+ ff63bf2a4f698c424cf9b8cd6aa900f35a13a2e8  Marcus Boerger Sat, 10 Aug 2002 12:58:46 +0000  no need to start additional first buffer when output compression is first buffer
+ 289607970cdab826ee468a5ab9ff5298ebf2501c  Marcus Boerger Sat, 10 Aug 2002 10:40:59 +0000  should fix all windows warnings
+ 9c8ba935d6cce59d515087b5ce222f22619726f7  Marcus Boerger Fri, 9 Aug 2002 22:29:58 +0000  Improved handling of output buffers (see news)\n#No trim for the string parameter...
+ 6f786ebf3ed3c1e499231cab0cc99fd7faf8c0fb  Stefan Roehrich Sun, 28 Jul 2002 14:08:08 +0000  Commit patch as discussed on LinuxTag and posted to php-dev in June. Disables zlib.output_compression for scripts with image/ content-type header (fixes bug #16109) and makes it possible to switch zlib.output_compression during script execution before the headers are sent. @- zlib.output_compression is disabled for "image/" content-type @  headers and can be changed during script execution. (Stefan)
+ 94127f25e300a4e6c529a875a77796b2491af9cb  Derick Rethans Tue, 18 Jun 2002 10:09:41 +0000  - oops... read before commit :)
+ 81860467d4ac8d77b3c527f3635ff0d20dababa7  Derick Rethans Tue, 18 Jun 2002 10:06:54 +0000  - It doesn't work from within a script... so we disallow it
+ cce0d2f72d5a125bf7d7e74c60b38cc829ecabfc  Stefan Roehrich Sun, 2 Jun 2002 21:35:06 +0000  Added "Vary: Accept-Encoding" header to zlib.output_compression compressed output as with obgzhandler(). @ If zlib.output_compression is enabled and a page is compressed @ a "Vary: Accept-Encoding" header is added. (Stefan) # obgzhandler() sends this header, I think it is recommened by # RFC 2616. If there are problems (e.g. with some browsers) # it should be reverted.
+ 43df0c78c051c87d4cca21fafb09f02526e19f8d  Yasuo Ohgaki Thu, 2 May 2002 01:12:01 +0000  Move Content-Length: header handling from zlib.c to output.c When output buffer is enabled and header can be sent, Content-Length: header is added always from now on.
+ 30fd7de1faef23eec31805294f396de66b634a8f  Sascha Schumann Sat, 27 Apr 2002 23:37:17 +0000  s/len/xln/ was necessary here
+ aab439f26fcf28b42f9ec99149df5365112405fe  Sascha Schumann Sat, 27 Apr 2002 18:41:38 +0000  Use a single macro to set cl header
+ 7b59a131b6e75deeb88ea35bbac372d6d87b9c87  Thies C. Arntzen Sat, 27 Apr 2002 17:03:32 +0000  @ - If possible set Content-Length header in zlib.output_compression mode. (thies)
+ 928bae9cf885ea5e4d76f980de8459b6dcad0cd1  Wez Furlong Fri, 19 Apr 2002 10:06:41 +0000  Make scheme part decoding rfc2396 compliant. Change zlib:// and bzip2:// to compress.zlib:// and compress.bzip2:// Tidy up old socket/network code/comments.
+ b10b24d50cd4fb584897badee0c6b809b02d7fcb  Wez Furlong Tue, 16 Apr 2002 22:14:27 +0000  Always initialize wrappers, regardless of PG(allow_url_fopen). Add is_url field to wrapper structure; the stream wrapper openers will disallow opening is is_url && !PG(allow_url_fopen). Add infrastructure for stat($url) and opendir($url). Tidy up/centralize code that locates and instantiates wrappers for the various operations. Implement opendir for plain files. Make the PHP opendir and dir functions use the streams implementations. Add modelines for syntax highlighting the pear scripts in vim
+ 1f4d4873dccf0fe6d7d5140b3e8c402e899da559  Wez Furlong Tue, 16 Apr 2002 14:47:20 +0000  remove old code
+ 067ca4e813a86793a2d56c6d5b21fb7f578851ce  foobar Fri, 12 Apr 2002 21:19:59 +0000  Do NOT use C++ comments in C code.
+ 7ff43f040ffbf27bf6b38cd8584c44bec02473fd  Frank M. Kromann Fri, 12 Apr 2002 16:25:31 +0000  Removing a unused local variable. Setting the size before returning the value in readgzfile
+ e1d0a147901d27bb01b0ccda315a9fdd3474e1ee  Wez Furlong Wed, 10 Apr 2002 22:42:32 +0000  Implement stream context and status notification system. Bump the BC for zlib notice to a warning # See my RFC to php-dev a few days ago
+ dedf2a4c39853aba38bd471767f80e4dc72ddd14  Stig Bakken Fri, 5 Apr 2002 13:07:43 +0000  @Add zlib.output_compression_level option (Stig)
+ 385b233040e2fb7d0f095aee561ff4e2e76dde11  Zeev Suraski Fri, 5 Apr 2002 11:51:43 +0000  Fix gzip/bz2 builds for Windows
+ 5ee65bd8f5e6b3b205bc3eb08e019f2a15c07a35  Wez Furlong Sun, 24 Mar 2002 18:05:49 +0000  Phase 1 of wrapper OO cleanup. # Collecting underpants
+ 8da009393583366bd1d2712c17a7e3a2da824a95  Wez Furlong Thu, 21 Mar 2002 01:22:36 +0000  really nuke it...
+ a662f012bba5a6fdc50533673f3fff47bf9af219  Wez Furlong Thu, 21 Mar 2002 01:11:52 +0000  Convert the gzfile related functions into aliases for their equivalents in ext/standard/file.c, so a gzopen()ed file pointer can be used in fread, fseek etc. Improved behaviour of zlib stream. Moved passthru code into streams.c # I'm not happy about BG(mmap_file) Nuked gzgetss_state as no longer needed.
+ 3dbde958967b28cba3f03629b21081208d1e0ac2  Wez Furlong Wed, 20 Mar 2002 14:38:13 +0000  Make state parameter of php_strip_tags passed by reference. Move state tracking to stream structure.
+ 659a071e3df2f16cd21083d1dec8c19e199f7757  Wez Furlong Wed, 20 Mar 2002 14:21:30 +0000  Streams are all tracked as resources now. Add some logic that will help track down leaks when debug is enabled.
+ 14d62c7b624cdcec1006c7d164bfb12b10ae18e5  Wez Furlong Wed, 20 Mar 2002 13:50:16 +0000  Add parameter here too...
+ 06712a508a82965acbfa9a59eb8a55df11948acd  Wez Furlong Tue, 19 Mar 2002 03:51:01 +0000  Implement user-space streams. There's probably room for improvement, docs will following some time this week.
+ c9d5e137380893c2608ebe4aefeb46026d5efcef  Wez Furlong Mon, 18 Mar 2002 18:54:32 +0000  TSRMLS related work on streams, as discussed with Zeev. # Should be the last "broad" commit for a while # Don't forget to make clean ; make
+ 73e79322ba9eb710a407629d26185f23c36fadd7  Zeev Suraski Mon, 18 Mar 2002 08:05:28 +0000  Fix the build and all of the outstanding VC++ warnings
+ d2d8762267de33b954363189b4ec710e70527a2a  Wez Furlong Sun, 17 Mar 2002 22:50:59 +0000  Streams now make more use of the memory manager, so tracking down leaking streams should be easier. # I hate these big commits
+ 5d0c53eecf5e720dd73d14c602a3df9c752e3a67  Wez Furlong Sat, 16 Mar 2002 18:42:42 +0000  Fix some issues with gzFile and fsockopen.
+ bc264db92197bfcb15bbb97f01be237a32a7fb57  Wez Furlong Sat, 16 Mar 2002 01:37:24 +0000  change * formatting
+ 0f65280cb5118d8c1a85db6626f7be365f3d1b26  Wez Furlong Fri, 15 Mar 2002 21:03:08 +0000  New PHP streams...
+ edcb5813db43c86dbe415c861c47207aa457cfa2  Stefan Roehrich Tue, 12 Mar 2002 13:23:58 +0000  (PHP gzencode) Reimplementation of gzencode(). Now works as documented                (gzencode(string data [, int level [, int encoding_mode]])),                should fix #15930. @- The second parameter of gzencode() now is the compression level like @  in the documentation. The encoding mode is a third (optional) parameter. # Rework of gzencode(), output should be closer to real gzip output. # I think in the old version there could be some problems with # this function and output compression, should be fixed, too.
+ cede952f6a51eb0923e51d22481cd03481c51b9b  Stefan Roehrich Tue, 12 Mar 2002 13:06:40 +0000  (PHP gzinflate) Workaround for bug #14939 (buffer error in gzinflate()).                 Fixed prototype and added test for #14939.
+ 82a8d372e5fcbee52769f2c376fad34fec4bf63e  Yasuo Ohgaki Fri, 1 Mar 2002 03:05:50 +0000  Added ob_get_status() to get array of buffers and it's status. (DO NOT document this function yet)
+ 38933514e1d60ac2f93225a705ed36b5b23d4e45  Sebastian Bergmann Tue, 11 Dec 2001 15:32:16 +0000  Update headers.
+ cc196f5b54b99db14609fd986203c98a91bf3297  foobar Mon, 26 Nov 2001 22:56:36 +0000  Show the registered ini entry in phpinfo()
+ 506eec88b439982994b290f171a75a6fddb91828  Rui Hirokawa Fri, 23 Nov 2001 02:53:16 +0000  restriction is relaxed because output handler couldn't be used even if zlib.output_compression is set to off.
+ 10fe28c8ab70860c94fe0e21d43eac9fb0144089  Derick Rethans Sat, 27 Oct 2001 18:22:56 +0000  - fix crash bug
+ 5ee719bae00cabf037b93a99dbf50485aba40e17  foobar Sat, 27 Oct 2001 10:14:14 +0000  Modified the error message a bit. Happy now Andi? :)
+ 609271e651c237e343529f5d3635c3afad2e4f88  foobar Sat, 27 Oct 2001 05:22:19 +0000  - Prevent PHP from starting if output_handler is set and   zlib.output_compression is on - Added notes to the bundled php.ini files about this.
+ 689252082c2660e2b6fddc674047922d8b2c7845  Stig Bakken Thu, 11 Oct 2001 23:33:59 +0000  * zend_module_entry change: apino, debug and zts are moved first,   see README.EXTENSIONS file for upgrade help. @Introduced extension version numbers (Stig)
+ 6cfba2a3ea0c59f63b8c225b2a0ff85194f432f5  Jeroen van Wolffelaar Tue, 25 Sep 2001 22:49:04 +0000  2nd phase in back-substitution those macro's
+ c03328857394bef36ffa9678d33079ad96e4a4e4  Jeroen van Wolffelaar Tue, 25 Sep 2001 21:58:48 +0000  Back-substitute for Z_* macro's. If it breaks some extension (the script isn't optimal, it parses for example var->zval.value incorrect) please let me know.
+ 78747bd2df44ad9342d735f2c9376bc143664b42  Derick Rethans Sun, 9 Sep 2001 13:29:31 +0000  - Don't wrap lines... this is annoying while coding.
+ e9da242ed4654d99a909993e6919c37f7fbca9f3  Zeev Suraski Thu, 16 Aug 2001 23:34:25 +0000  Send Content-Length if we're sending just one chunk
+ 23b9300fd1c854371f0f9b95dce5e259cef653d9  Sascha Schumann Mon, 6 Aug 2001 03:50:52 +0000  more tsrm cleanup
+ b349df63645e48eade0481238e6ca3feb90f18fa  Sascha Schumann Sun, 5 Aug 2001 16:21:33 +0000  some more eliminate-fetches-or-escalate-them-at-least
+ 8aef1930565d36807647e52b5e5b7c4e3f4a57b1  Sascha Schumann Sun, 5 Aug 2001 15:29:47 +0000  more tsrm cleanup
+ b1de7fc900766b229f17bf9e1020b5a67b5b0964  Zeev Suraski Tue, 31 Jul 2001 07:09:49 +0000  More TSRMLS_FETCH annihilation.  Enough for today...
+ bc42c37513a730b0b3ff9cf29e14e45e4ec50c71  Zeev Suraski Tue, 31 Jul 2001 06:28:05 +0000  More TSRMLS_FETCH work.  Got it under 400 now.
+ aa1772ca7263173ee47af0d83fea866f194757ba  Zeev Suraski Tue, 31 Jul 2001 05:44:11 +0000  More TSRMLS_FETCH annihilation
+ 3b7bc2535abea052548fe7635f2c3ec530af4ae7  foobar Mon, 30 Jul 2001 19:39:26 +0000  Make this compile in ZTS mode.
+ 797a079a95585a07bc7f26a79e04521d3b370177  Zeev Suraski Mon, 30 Jul 2001 06:18:13 +0000  More TSRMLS_FETCH work, and a bit of cleanup
+ 1c25b8dd532961ecb09932b182457ca0adcf8b57  Zeev Suraski Mon, 30 Jul 2001 01:56:43 +0000  Avoid TSRMLS_FETCH()'s, and clean up a bit of stale extern's and layout on the way
+ d87cc976e1156b839fc6d4aa6b473a126802b8e3  Zeev Suraski Sat, 28 Jul 2001 11:36:37 +0000  Redesigned thread safety mechanism - nua nua
+ fe6f8712a439c8b5046a03bca9ce5ae8e75aa4f5  Zeev Suraski Fri, 27 Jul 2001 10:16:41 +0000  - Get rid of ELS_*(), and use TSRMLS_*() instead. - Move to the new ts_allocate_id() API This patch is *bound* to break some files, as I must have had typos somewhere. If you use any uncommon extension, please try to build it...
+ d30590369a07d6d85fc79eecd18ecfab1699e8bf  Thies C. Arntzen Fri, 13 Jul 2001 15:48:37 +0000  make sure all string from zlib are \0 terminated. change one realloc to erealloc (though this code is never reached IMHO) add regression tests
+ 11eca11dca8152b9c1f8693507670db0969a842e  Thies C. Arntzen Fri, 13 Jul 2001 15:19:17 +0000  fixed #12091. added \0 bytes at EOS in a few cases.
+ bbe83e4f29a7f04a59046c62832a63d3f09c9775  Thies C. Arntzen Wed, 11 Jul 2001 15:26:42 +0000  gzencode() now zero-terminates its buffer.
+ 81e2cf03ac62c29c6bb365c31b9229aa3b4deff8  Rasmus Lerdorf Wed, 6 Jun 2001 13:06:12 +0000  Fix folding and clean up some extensions
+ 25c3a3a39d7aebdce95825e6af2ad8c62905b7cc  Rasmus Lerdorf Tue, 5 Jun 2001 13:12:10 +0000  vim-6 does folding - clean up a bunch of missing folding tags plus some misguided RINIT and RSHUTDOWN calls in a few fringe extensions
+ 1beda9ee1e7a7bd317d65ddc05502047ce1af4b2  Stig Bakken Thu, 24 May 2001 10:07:29 +0000  * include "config.h" if HAVE_CONFIG_H is defined (for standalone dso build)
+ 2df7c8a0f1044ecc0be9f6a113e42aa997dd5e88  Anil Madhavapeddy Fri, 30 Mar 2001 17:44:08 +0000  Send the correct Vary headers, if we negotiate a gzip/deflate session via Accept-Encoding.  This obeys a SHOULD directive in RFC2616
+ 177f9bd1f5a2c401c3d7139c49cd165ac6336d35  Daniel Beulshausen Wed, 7 Mar 2001 17:23:30 +0000  add missing globals fetches
+ 0b65578ec7e55e50b8b260ae39e2edd0f9ef5c14  Zeev Suraski Tue, 6 Mar 2001 20:43:54 +0000  Implement internal output compression?\0020:wq
+ 39724f6e4a6eeb83ca0d32f1202b4a135b5e8e44  Zeev Suraski Sun, 4 Mar 2001 15:12:38 +0000  Implemented chunked output buffering support - it's quite cool!
+ eb6ba01d1c739f1005554034fcdb991e810dfc21  Andi Gutmans Mon, 26 Feb 2001 06:11:02 +0000  - Fix copyright notices with 2001
+ c2fb53bed76d5e7c2aa6fbe69d98c3c442255a00  Sascha Schumann Fri, 23 Feb 2001 22:07:16 +0000  Finish fopen-wrappers rename.
+ 9c1abab2db3214fced0b9e803a22924d39a8b23e  Thies C. Arntzen Thu, 1 Feb 2001 17:16:35 +0000  ws-only
+ 1366f67d0b1bbe52796aa5f7080a0e5cde90e688  Thies C. Arntzen Thu, 1 Feb 2001 17:14:18 +0000  @- When using the ob_gzhandler() PHP now automagically also sets the @  Content-Lengh correctly which enables browsers to use the HTTP @  Keep-Alive feature. (Thies)
+ a4df53ad1ce3cc4b2d0d1f38bc8d7dd1cfa02da9  Sascha Schumann Thu, 1 Feb 2001 16:29:07 +0000  Fix a huge memory leak in the ob_gzhandler.
+ cedb39ee560fde66b7c5fddeaba2aeed0deffcf5  Hartmut Holzgraefe Tue, 21 Nov 2000 00:40:13 +0000  all the _GNU_SOURCE dependant stuff is now in zlib_fopen_wrapper.c so all the #define/#include workarounds in zlib.c are no longer needed
+ 67bb9d1ae23fe4c7e4160dabfb4f07b51dccabf1  Hartmut Holzgraefe Mon, 20 Nov 2000 21:36:38 +0000  fixed a compile problem with glibc<=2.1.1 (#7327, #7892) # zlib.c still produces a warning, perhaps i should move # the fopen wrapper to a seperate file to get things right # but i think i will wait for the autoconf book to arrive
+ 6a86b6fad50cc940e6e66bfe307b54aa03087ee6  Zeev Suraski Mon, 13 Nov 2000 19:05:25 +0000  Handle unable-to-add-new-headers error nicely
+ 0f7f5c2c0e616445d14b49641e85dbddcc1651e5  Zeev Suraski Mon, 13 Nov 2000 18:54:37 +0000  - Import Jade Nicoletti's transparent gzip encoding support as an output   handler.  Works quite nicely! - Fix buglets in output buffering - Add output_handler INI directive
+ 4eece9b1bd10b37e45b53e05606efa79dfa45820  Marc Pohl Wed, 8 Nov 2000 21:40:34 +0000  add gzdeflate() and gzinflate() for handling of pure gzip-datastreams
+ 6b435870ded5c3dda4c4981b4c78e525aa188332  Hartmut Holzgraefe Fri, 27 Oct 2000 10:48:07 +0000  type fixes to make compilers happy
+ f1dcb32c9fb395b68e0fe5d39dc3aa6bd7f8eff6  Andrei Zmievski Wed, 25 Oct 2000 17:44:02 +0000  Use zend_register_list_destructors_ex() instead.
+ 2d7860edc758d7a4586da0021846dc5358080bd1  Sascha Schumann Mon, 23 Oct 2000 14:04:54 +0000  __USE_GNU shall not be defined by application
+ 6911ee5b9947a0cbd8de858a9717b892f23cc37a  Daniel Beulshausen Mon, 23 Oct 2000 13:56:22 +0000  it's n.a. on win32 :)
+ 48e5d3189f491ba92d2bc1a4bada800df05980df  Stanislav Malyshev Mon, 23 Oct 2000 13:19:07 +0000  Make zlib compile again
+ 4d676fe9d8aa5f367292d2df0f90cc48860f1a76  Andi Gutmans Sat, 21 Oct 2000 19:18:55 +0000  - including php.h automatically includes the PHP config file.
+ bef776742cf23a18dcfb2b3370fa6b0781514087  Daniel Beulshausen Sat, 21 Oct 2000 17:19:23 +0000  i can find no php_config.h on win32 :)
+ 7b4983c8f82c4f361df787f58c6f5cf88d5def0b  Andrei Zmievski Fri, 20 Oct 2000 18:25:16 +0000  Mega-patch to get better resource information for modules.   * Fixed a bug in zend_rsrc_list_get_rsrc_type()   * Switched register_list_destructors() to use     zend_register_list_destructors_ex() instead   * Updated all relevant modules to provide the resource type name     to register_list_destructors() call   * Updated var_dump() to output resource type name instead of number
+ cae27179ce1f84d47de87c4efbbcbd814f3c7bc6  Hartmut Holzgraefe Fri, 13 Oct 2000 00:09:31 +0000  fopen wrappers cleanup   - comfiguration is now done by an ini parameter     instead of a compile time option   - the implementations of the three standard wrappers     now live in seperate files in ext/standard   - the compiler is happy again, no more warnings
+ 5423a08558e6be4658461d86c3496e3292471de0  Hartmut Holzgraefe Wed, 11 Oct 2000 22:40:22 +0000  @ -read and write .gz-files transparently on glibc based systems @  using the 'zlib:' fopen wrapper (Hartmut)
+ 7ad2213278935179cabe76d059dea8fa25013b3a  Egon Schmid Thu, 13 Jul 2000 18:27:10 +0000  Forgotten to change.
+ 86dfb4c292f84593ec31a92da0698f4dfbbdb9cc  Egon Schmid Thu, 13 Jul 2000 18:21:40 +0000  Corrected some protos.
+ 2b70aaf12d95dd640203b6141bf2e730dbfa705f  Thies C. Arntzen Thu, 6 Jul 2000 11:25:24 +0000  @- Fixed crash in gzopen(). (Thies) # hmm - this should be rethought as one should be able to do # gzopen("http://..")
+ 229b1708851645810b56cfe410ead8ba59a0083e  Andi Gutmans Mon, 26 Jun 2000 18:19:35 +0000  - Don't depend on USE_PATH being equal to 1. Use #define value
+ 90feef368b8fea39b79da36092a6234660f9fea9  Zeev Suraski Mon, 26 Jun 2000 17:40:24 +0000  - Please NEVER copy fopen_wrappers.c functions to modules. They are ugly - enough as is and need cleaning up. Duplicating the mess makes things just - worse and prevents bug fixes in the functions from propogating throughout - PHP. - This fix is untested so someone who uses zlib, please test it and report - back.
+ 6614e8edb43e8f38394bf25cf26399fab1cbf6b2  Zeev Suraski Sun, 25 Jun 2000 17:02:59 +0000  - I wrote a long msg but the commit didn't go through. - So here is the short version: - a) Start moving to binary opens in Windows - b) Give checkuid_mode() a small face lift including the fopen-wrappers.c - The mode to this function should at least be a #define but that is for - another day. Anyway this whole stuff should be given more face lifts in - the future.
+ 0c032536359542facacffbcad05f97c04f08fdf3  Sascha Schumann Sat, 24 Jun 2000 15:36:04 +0000  Stop including dl/phpdl.h.
+ 87a491d7b64f34a9692af3edc58151e9baa2e275  Hartmut Holzgraefe Fri, 16 Jun 2000 18:24:02 +0000  C++ // comments are evil ...
+ 3701bc420774c1b689f8a43f0ed891c99fea3cd2  Andi Gutmans Mon, 5 Jun 2000 19:47:54 +0000  - ARG_COUNT(ht) -> ZEND_NUM_ARGS() mega patch
+ a9abc3ab6b15a80bac4350761bd1e5f27992cc98  Hartmut Holzgraefe Thu, 25 May 2000 16:35:49 +0000  added functions gzcompress() and gzuncompress() for direct string compression as requested by BugId #1151
+ 4686a3b50ee86aa25e341aaa45376e637a42330f  Sascha Schumann Tue, 23 May 2000 09:33:51 +0000  Use #ifdef COMPILE_DL_EXTNAME solely.
+ e043439ff61535bf6994d55a5056ff8b29b9828e  Zeev Suraski Thu, 18 May 2000 15:34:45 +0000  Update the license with the new clause 6
+ fe50664d4d0d5fad0e7ca52a42fe1d96461a4f31  Sascha Schumann Tue, 2 May 2000 00:44:35 +0000      #if COMPILE_DL
+ 0d383d9373e6764d4f36cfce41cb8a610766e9b6  Sascha Schumann Tue, 2 May 2000 00:30:36 +0000  Replace the various get_module() functions with a uniform ZEND_GET_MODULE(name) macro.
+ 883bd2b1de0afae5a3b9f36c0778ba0b08390e25  Zeev Suraski Thu, 20 Apr 2000 17:24:01 +0000  - Fix virtual cwd bug - Add more V_STAT() V_LSTAT() changes
+ 7412bd5c849ac8b49da2ffc195110307fae2ba37  Frank M. Kromann Thu, 20 Apr 2000 16:59:55 +0000  Making zlib compile under Win32 and fixing a typo
+ 0c2b366ce18ec4927ae31151ad05249c857e2e72  Colin Viebrock Wed, 5 Apr 2000 21:43:03 +0000  phpinfo() prettying
+ caeaaf4d98bbc0369f0216c98242eca9f00026e6  Sascha Schumann Sun, 12 Mar 2000 15:47:34 +0000  Fix build on systems which lack snprintf or vsnprintf.
+ c07b5282af83c8bb3c1fe770c6f35cd64cfcb474  Egon Schmid Thu, 24 Feb 2000 14:43:53 +0000  More protos.
+ 86fa2aade2fdac04b2d23cd84c39ffbd14f6a9be  Zeev Suraski Sat, 19 Feb 2000 23:41:32 +0000  the pipe is breaking all the time
+ 80bdd19e031ca0dac2dfd4cb62ff43558d477663  Zeev Suraski Fri, 11 Feb 2000 15:59:30 +0000  Fine tune Andi's patch
+ 8d012c45e257214b79f22c207deed551c366bdad  Andi Gutmans Thu, 10 Feb 2000 21:55:30 +0000  - A bit more PHP_WIN32 work
+ 489b705d4b15ac0774cd30bf011c32abcfc1af23  Zeev Suraski Tue, 8 Feb 2000 21:29:18 +0000  @- Fixed memory corruption in fgetss(), strip_tags() and gzgetss() (Zeev)
+ 43ae2bffbb876b0ad686e1fbe51712dacc76ac2f  Sascha Schumann Sat, 1 Jan 2000 01:32:05 +0000  Happy Y2K patch! Happy new year (or the new millennium, depending on whether you start counting at 0 or 1).
+ a1ad2872eebc17448b115a1817e95b63e3ad17e9  Zeev Suraski Sat, 18 Dec 1999 22:40:35 +0000  - The tree compiles again
+ 396bccfb1d686ee76f3718019f42d4841e36ae9d  Zeev Suraski Fri, 17 Dec 1999 22:34:04 +0000  More php3_ cleanup
+ fb1c77bd4f8a636ba47d720f8ca65fc6baae836d  Zeev Suraski Fri, 17 Dec 1999 20:55:31 +0000  - Made PHP_VERSION and PHP_OS work again - More php3_ cleanup @- Restored the PHP_VERSION and PHP_OS constants (Zeev)
+ 02d3b39420839c9e09fd7c391f158e5c510bd600  Zeev Suraski Fri, 17 Dec 1999 19:16:50 +0000  More php3_ annihilation
+ 5928624a1cfe20ea2f83a713dcbdf455ee413962  Sascha Schumann Sun, 12 Dec 1999 11:02:24 +0000  Kill a warning
+ 5b983c944f66b55192c901ce3fa38fcce6ca21e3  Sascha Schumann Sat, 4 Dec 1999 19:19:57 +0000  Clean up php3.*\.h files. The files itself are renamed, and references in all .*\.[ch] files were changed. There is a slight chance that my script missed a few changes, please correct them manually.
+ d8868ab205a3b42afa8eac0045f84dcedd8d9875  Andrei Zmievski Sun, 17 Oct 1999 00:20:17 +0000  Fix bug #2548.
+ 2c9ee9974335d9b5b33e07364b450a2f0833966a  Stefan Roehrich Sat, 25 Sep 1999 11:23:02 +0000  Use new Zend API.
+ 360675cee31e8cdab9249565d048f6e199a6bd7c  Zeev Suraski Fri, 24 Sep 1999 14:14:47 +0000  Compile fixes for WDDX, XML and Zlib (untested)
+ 0b1226219c4427d1850236504ab20a083579bad2  Stefan Roehrich Wed, 22 Sep 1999 07:43:36 +0000  Fixed gzgetss() with new _php3_strip_tags, corrected prototype.
+ cd0957112b147b434c6896e4c7382f98d595defb  Rasmus Lerdorf Tue, 21 Sep 1999 17:50:51 +0000  fgetss/gzgetss fixes
+ 1324095627e049fe0d7ce8be4558b5556d26d24b  Rasmus Lerdorf Tue, 21 Sep 1999 00:21:01 +0000  woops
+ 08389808ee1a6dca90b8ab1c9b0179638e269ae9  Rasmus Lerdorf Tue, 21 Sep 1999 00:15:21 +0000  Fix zlib compile problem
+ de130563071d594af0122dee639e566d6a101f8f  Stefan Roehrich Sat, 18 Sep 1999 19:03:35 +0000  Fixed prototype.
+ 100148168ab400ec7d0ccc16f2d72c06b6170570  Andi Gutmans Wed, 15 Sep 1999 05:42:36 +0000  - Thread-unsafe win32 compiles again - Some strlcpy changes including one bug fix.
+ 06362129fa680fb26fe0ecb5eab2489c9a31959c  Stefan Roehrich Tue, 7 Sep 1999 19:05:37 +0000  Fixed behavior with empty doc_root. gzgetss() now uses _php3_strip_tags.
+ e4b7bf4ae8b4d992b71301547c450e5582984bdc  Stefan Roehrich Mon, 6 Sep 1999 19:09:47 +0000  Removed remaining PHP_31 defines. First try with ZTS support, can someone with a working ZTS enabled setup test this, please?
+ 93252bd556ecca2f0daba41ef6e3a994c041a36c  Stefan Roehrich Mon, 6 Sep 1999 08:59:48 +0000  Fixed prototype.
+ fcd55e03cb1202abf26f5e3dfa6bcee3a9de3527  Stefan Roehrich Sat, 4 Sep 1999 21:51:54 +0000  First try with new resource handling in zlib module.
+ c12d4bc7d46654c526ba94f48ff49c88b2838a91  Zeev Suraski Sat, 4 Sep 1999 13:18:59 +0000  *** empty log message ***
+ 17bd9955683cece78947542ce94f7520561a8e63  Egon Schmid Mon, 9 Aug 1999 20:18:00 +0000  I missed that also.
+ 5d10addd01b521d2941fa62f6577d77578641d65  Stefan Roehrich Mon, 2 Aug 1999 21:12:16 +0000  Fix for Redhat libc 2.1 and dynamic loading in zlib module. Adapted zlib module to new PHP_Mxxx macros.
+ 3cb1eb047187d53688545ae6f64d4df880298e72  Zeev Suraski Mon, 2 Aug 1999 19:17:14 +0000  Removed '3' from key functions in PHP (maintained compatibility through php3_compat.h)
+ c5724cbd143d56c48e933ee49c10141228dd64b5  Zeev Suraski Fri, 16 Jul 1999 13:13:16 +0000  License update
+ b57dc275950b228f2399990471c4f22b7d154c6c  Sascha Schumann Fri, 21 May 1999 10:06:25 +0000  - run ext sources through conv_proto - add necessary phpext_*_ptr
+ bc415d5a8883bbe5b15c12e9a30f916c8010204a  Zeev Suraski Sun, 9 May 1999 08:48:05 +0000  * Finalizing the PHP version of SAPI.  Support POST and cookies among other things. * Fully implement ISAPI support - POST and cookies among other things. * Almost completely rewrote phpinfo().  Allow modules to easily display their   information in phpinfo() without modifying phpinfo() itself (prototype for   the module info function was changed, thus the large amount of updated module   files). * Initial extended SAPI support for Apache, completely untested. * CGI now uses SAPI fully as well.
+ 6f7c0edee361e15295b85ad6e03f3d109e446f22  Zeev Suraski Fri, 23 Apr 1999 20:06:01 +0000  Remove tls.[ch]
+ 806dfc2a7616201efa2edc429ffeb8d08091085f  Rasmus Lerdorf Fri, 23 Apr 1999 04:12:13 +0000  Make zlib compile
+ 2c0ad3ee25cd8e449b02c4668a39f48998507739  Stig Bakken Thu, 22 Apr 1999 02:48:28 +0000  last bunch of extensions moving to ext/ fhttpd module taken out of functions, functions is ready to go. The only extensions I have tested are gd+freetype and odbc(solid). Please try compiling in your favourite extensions and let me know how it works.
